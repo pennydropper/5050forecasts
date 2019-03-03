@@ -13,8 +13,8 @@ tags:
 draft: false
 
 thumbnailImagePosition: left
-thumbnailImage: /img/fcst_snaps.png # //d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city-750.jpg
-coverImage: /img/fcst_snaps.png # //d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city.jpg
+thumbnailImage: /img/fcst_snaps.jpg # //d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city-750.jpg
+coverImage: /img/fcst_snaps.jpg # //d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city.jpg
 coverSize: partial
 metaAlignment: center
 coverMeta: out
