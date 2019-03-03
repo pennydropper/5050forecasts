@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tranquilpeak on Hugo tranquilpeak theme</title>
+    <title>Tranquilpeak on Making 50-50 Demand Forecasts</title>
     <link>/categories/tranquilpeak/</link>
-    <description>Recent content in Tranquilpeak on Hugo tranquilpeak theme</description>
+    <description>Recent content in Tranquilpeak on Making 50-50 Demand Forecasts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 23 Feb 2019 00:00:00 +0000</lastBuildDate>
@@ -12,21 +12,13 @@
     
     
     <item>
-      <title>Forecasts are deliberately wrong</title>
+      <title>&#34;Forecasts are deliberately wrong&#34;</title>
       <link>/2019/02/forecasts-are-deliberately-wrong/</link>
       <pubDate>Sat, 23 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/2019/02/forecasts-are-deliberately-wrong/</guid>
-      <description>“Forecasts are deliberately wrong”. This confronting remark shot back at me when I told a data science colleague that I am an experience Demand Manager. A part of my shock came from realising that I could see where he was coming from, despite always striving towards achieving a “50/50” forecast; i.e. a forecast with a 50% chance of sitting too high balanced by a 50% chance of sitting too low.</description>
-    </item>
-    
-    <item>
-      <title>Cover image showcase</title>
-      <link>/2015/05/cover-image-showcase/</link>
-      <pubDate>Wed, 13 May 2015 00:00:00 +0000</pubDate>
-      
-      <guid>/2015/05/cover-image-showcase/</guid>
-      <description>&lt;p&gt;Tranquilpeak integrate a unique &amp;ldquo;cover image&amp;rdquo; feature. Open this post to see how this feature sublimate your article.&lt;/p&gt;</description>
+      <description>“Forecasts are deliberately wrong”.
+Whoa! This confronting remark shot back at me when telling a data science colleague that I am an experienced Demand Manager. A part of my shock came from realising that I could see where he was coming from despite always striving towards achieving a “50/50” forecast; i.e. a forecast with a 50% chance of sitting too high balanced by a 50% chance of sitting too low.</description>
     </item>
     
   </channel>
