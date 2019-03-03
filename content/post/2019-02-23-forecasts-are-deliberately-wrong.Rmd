@@ -1,5 +1,5 @@
 ---
-title: Forecasts are deliberately wrong
+title: '"Forecasts are deliberately wrong"'
 author: James Northrop
 date: '2019-02-23'
 slug: forecasts-are-deliberately-wrong
@@ -10,26 +10,30 @@ tags:
   - budget
   - uncertainty
   
-draft: true
+draft: false
 
 thumbnailImagePosition: left
-thumbnailImage: //d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city-750.jpg
-coverImage: //d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city.jpg
+thumbnailImage: /img/fcst_snaps.png # //d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city-750.jpg
+coverImage: /img/fcst_snaps.png # //d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city.jpg
+coverSize: partial
 metaAlignment: center
 coverMeta: out
 # date: 2015-05-13
 categories:
 - tranquilpeak
 - features
+
+comments: true
 ---
 
-“Forecasts are deliberately wrong”.  This confronting remark shot back at me when I told a data science colleague that I am an experience Demand Manager.  A part of my shock came from realising that I could see where he was coming from, despite always striving towards achieving a “50/50” forecast; i.e. a forecast with a 50% chance of sitting too high balanced by a 50% chance of sitting too low.  
-<!--more-->
+“Forecasts are deliberately wrong”.  
+Whoa! This confronting remark shot back at me when telling a data science colleague that I am an experienced Demand Manager.  A part of my shock came from realising that I could see where he was coming from despite always striving towards achieving a “50/50” forecast; i.e. a forecast with a 50% chance of sitting too high balanced by a 50% chance of sitting too low.  
+
 
 **Why would we make forecasts “deliberately wrong”?**  
-What are some of the reasons for forecasts being deliberately wrong?  My colleague offered just on of the endless number of reasons: he suggested that forecasts are framed to impress an audience.  To a certain extent, I would concur that I’ve seen situations where this could be true, though listed corporations hold disclosure responsibilities. 
+What are some of the reasons for forecasts being deliberately wrong?  My colleague offered just one of the endless number of reasons: he suggested that forecasts are framed to impress an audience.  To a certain extent, I concur that I’ve seen situations where this could be true, even though listed corporations hold disclosure responsibilities. 
 
-Making a forecast “deliberately wrong” distinguishes forecast bias from subconscious bias, but even the boundary between conscious and subconscious bias is blurred.  For instance, consider scenarios where a brand manager submits forecasts for a proposed new product.  Almost certainly, the proposed new product will proceed only if the forecasted volumes, revenue and return on investment exceed key targets.  On one hand, a good manager will conscientiously submit forecasts based on key assumptions.  However, at almost every step, there are opportunities and temptations to overstate impacts and even to “reverse engineer” the forecast to achieve targets.
+Making a forecast “deliberately wrong” distinguishes conscious forecast bias from subconscious bias, but even the boundary between these types is blurred.  For instance, consider scenarios where a brand manager submits forecasts for a proposed new product.  Almost certainly, the proposed new product will progress only if the forecasted volumes, revenue and return on investment exceed key targets.  On one hand, a good manager will conscientiously submit forecasts based on key assumptions.  However, at almost every step, there are opportunities and temptations to overstate impacts and even to “reverse engineer” the assumptions to achieve required forecasts.
 
 **There are sales plans, forecasts, targets and then budgets**  
 It is vital for all participants in the demand planning process to understand the distinct but related concepts of sales planning, forecasting, setting targets and budgeting.
@@ -38,32 +42,33 @@ It is vital for all participants in the demand planning process to understand th
 Sales planning is the process of setting activity plans to achieve sales targets.  Activity plans include sales calls, special offers, marketing campaigns and pricing promotions.
 
 **Forecasting**  
-I define forecasting as the science of establishing the best estimate of the outcome of a set of actions and domain dynamics.  Forecasting requires assessment and modelling of a broad range of dynamics, from the likely affect of sales planning activities, which the sales team can actively influence, to the broader market and competitor activity, over which the sales team has little influence.  Forecasts can and should constantly evolve, as frustrating as that can be for users of the forecast.
+I define forecasting as the science of establishing the best estimate of the outcome of a set of actions and domain dynamics.  Forecasting requires assessment and modelling of a broad range of the dynamics, from the likely affect of sales planning activities, which the sales team can actively influence, to the broader market and competitor activity, over which the sales team has little influence.  Forecasts can and should constantly evolve, as frustrating as that can be for users of the forecast.
 
-Fundamentally, a forecast can be expressed as either point forecast or a prediction interval.  A forecast that product X will sell Y in a given period of time in a given market is an example of a point forecast, which is the most commonly used in Sales and Operations Planning.  A prediction interval forecast that product X will sell Y +/- 10% with an 80% level of confidence, for example, is far less common.
+Fundamentally, a forecast can be expressed as either a point forecast or a prediction interval.  A forecast that product X will sell Y in a given period of time in a given market is an example of a point forecast, which is the most commonly used in Sales and Operations Planning.  A prediction interval forecast that product X will sell Y +/- 10% with an 80% level of confidence, for example, is far less common.
 
-Businesses should use sales’ forecasts to plan other departments, usually supply planning and commercial planning.  
+Businesses normally use sales’ forecasts to help planning other departments, usually supply planning and commercial planning.  
 
 **Targets**  
-Targets are similar to forecasts though they differ in some fundamental ways:
-Targets should be more rigid.
-Targets can be used to motivate teams to exceed expected performance, or used to minimum requirement in order to achieve a required outcome.
+Targets are similar to forecasts though they differ in some fundamental ways:  
+* Targets should be more rigid;
+* Targets can be used to motivate teams to exceed expected performance;
+* Or targets are used to minimum requirement in order to achieve a required outcome.
 
 **Budgets**  
-Budgets are similar to forecasts though businesses should base them from a forecast at a particular time.  Since budgets are the basis of financial reports, the commercial team will apply more rigour to the forecast, which includes building alternative plans and forecasts to fully assess a range of possibilities.
+Budgets are similar to forecasts though businesses should base them from a forecast at a particular time.  Since budgets are the basis of financial reports, the commercial team will apply more rigour to the forecast, which includes building alternative plans and forecasts to fully assess a range of possible activity plans.
 
 Budgets are more rigid than sales forecasts due to the difference between the level of rigour applied as well as the resulting reporting requirements.
 
 **How to handle uncertainty**  
-Almost every forecast seen in FMCG environments are “point” forecasts, that is, the forecast is expressed as a single number for a given period for a forecasting unit.  Point forecasts, on their own, do not express any uncertainty in the forecast.
+Almost every forecast seen in FMCG environments are “point” forecasts; that is, the forecast is expressed as a single number for a given period for a forecasting unit.  Point forecasts, on their own, do not express any uncertainty in the forecast.
 
-An alternative to a point forecast is expressing the forecast as a prediction interval.  For example, the Bureau of Meteorology(BOM) forecast rainfall for a day as a range, say 5 to 15mm of rain.  (BOM define the first number as representing the 50th percentile, i.e. a 50% chance of exceeding 5mm of rain, and the second number as 75th percentile, i.e. a 25% chance of exceeding 15mm of rain.)
+An alternative to a point forecast is expressing the forecast as a prediction interval.  For example, the Bureau of Meteorology (BOM) forecast rainfall for a day as a range, say 5 to 15mm of rain.  (BOM define the first number as representing the 50th percentile, i.e. a 50% chance of exceeding 5mm of rain, and the second number as 75th percentile, i.e. a 25% chance of exceeding 15mm of rain.)
 
-The key advantage of prediction intervals is that it allows forecast users, supply planners and Commerical planning to plan for a “worst case scenario” based on the reasonably possible range of outcomes.
+The key advantage of prediction intervals is that it can allow forecast users, supply planners and Commerical planning, to plan for a “worst case scenario” based on the reasonably possible range of outcomes.
 
-On a final note, combining prediction interval forecasts requires special technique, and they definitely shouldn’t be summed together.  For example, the probability of all 10 products in a portfolio achieving their 75th percentile in a period is substantially lower than 25%, unless the products have a common and compounding dynamic.
+On a final note, combining prediction interval forecasts requires special techniques; they definitely shouldn’t be summed together.  For example, the probability of all 10 products in a portfolio achieving their 75th percentile in a period is substantially lower than 25%, unless the products have a common and compounding dynamic.  On the other hand, point forecasts should not be summed together either.
 
 **In Summary**  
-As a forecaster with statistical training, I shiver at the thought that “forecasts are deliberately wrong”.  As a realist, I understand that forecasts are subject to bias and that it is sometimes little resistance to mitigating the biases.
+As a forecaster with statistical training, I shiver at the thought that “forecasts are deliberately wrong”.  As a realist, I understand that forecasts are subject to bias and that there is sometimes little resistance to mitigating the biases.
 
-However, we can make forecasting more reliable by understanding the difference between forecasts, targets and budgets.  In addition, expressing forecast uncertainty through using prediction intervals rather than relying on point forecasts will help forecast users plan for “worst case scenarios” as well as understanding the forecaster’s level of confidence.
+However, we can make forecasting more reliable by understanding the difference between forecasts, targets and budgets.  In addition, expressing forecast uncertainty through using prediction intervals, rather than relying on point forecasts, will help forecast users plan for “worst case scenarios” as well as understanding the forecaster’s level of confidence.

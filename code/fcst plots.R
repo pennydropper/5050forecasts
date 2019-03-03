@@ -70,8 +70,8 @@ actfcst <-
 
 # Plot data ---------------------------------------------------------------
 
-
-actfcst %>%
+actfcst_p <- 
+  actfcst %>%
   ggplot(aes(x = month, y = qty, colour = type)) +
   geom_line(linetype = "dashed") +
   geom_line(data = actfcst %>% filter(type == "Actual")) +
@@ -82,5 +82,10 @@ actfcst %>%
   scale_colour_viridis_d("") +
   labs(title = "Forecast snapshots",
        y = "units", x = "")
-  
 
+actfcst_p  
+
+
+# Save plot ---------------------------------------------------------------
+
+ggsave("./static/img/fcst_snaps.jpg", actfcst_p, width = 31, height = 10.5, units = "cm")
