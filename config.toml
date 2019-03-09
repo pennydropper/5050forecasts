@@ -20,7 +20,7 @@ languageCode = "en-us"
 defaultContentLanguage = "en-us"
 title = "Making 50-50 Demand Forecasts"
 theme = "hugo-tranquilpeak-theme"
-disqusShortname = "pennydropper-blog"
+disqusShortname = "5050forecasting"
 # googleAnalytics = "UA-123-45"
 paginate = 7
 canonifyurls = true
@@ -35,7 +35,7 @@ canonifyurls = true
 
 [author]
   name = "James Northrop"
-  bio = "Experienced Demand Manager / Data Scientist, currently employed by Infosys Consulting."
+  bio = "Demand Manager / Data Scientist with 15+ years working in FMCG S&OP and 9+ years in sales forecasting and demand management.  Currently working in telecommunications with Infosys Consulting."
   job = "Data Scientist / Demand Manager"
   location = "Melbourne, Australia"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
@@ -82,23 +82,23 @@ canonifyurls = true
 
 [[menu.links]]
   weight = 1
-  identifier = "github"
-  name = "GitHub"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-github\"></i>"
-  url = "https://github.com/pennydropper"
-[[menu.links]]
-  weight = 2
-  identifier = "stackoverflow"
-  name = "Stack Overflow"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-stack-overflow\"></i>"
-  url = "https://stackoverflow.com/users/9719251/james-n"
+  identifier = "linkedin"
+  name = "LinkedIn"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-linkedin\"></i>"
+  url = "https://www.linkedin.com/in/james-northrop-63651119/"
+# [[menu.links]]
+#  weight = 2
+#  identifier = "stackoverflow"
+#  name = "Stack Overflow"
+#  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-stack-overflow\"></i>"
+#  url = "https://stackoverflow.com/users/9719251/james-n"
 
-[[menu.misc]]
-  weight = 1
-  identifier = "rss"
-  name = "RSS"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-rss\"></i>"
-  url = "/index.xml"
+#[[menu.misc]]
+#  weight = 1
+#  identifier = "rss"
+#  name = "RSS"
+#  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-rss\"></i>"
+#  url = "/index.xml"
 
 [params]
   # Customize date format use to render blog post date, categories and other
