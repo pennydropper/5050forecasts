@@ -15,7 +15,7 @@
 # Included this line based on a recommendation when installing
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
-baseURL = "/"
+baseURL = "https://5050forecasting.netlify.com/"
 languageCode = "en-us"
 defaultContentLanguage = "en-us"
 title = "Making 50-50 Demand Forecasts"
