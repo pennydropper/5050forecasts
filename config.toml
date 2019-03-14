@@ -20,8 +20,8 @@ languageCode = "en-us"
 defaultContentLanguage = "en-us"
 title = "Making 50-50 Demand Forecasts"
 theme = "hugo-tranquilpeak-theme"
-disqusShortname = "5050forecasting-netlify-com"
-# googleAnalytics = "UA-123-45"
+disqusShortname = "5050forecasting"
+googleAnalytics = "UA-113795291-1"
 paginate = 7
 canonifyurls = true
 
