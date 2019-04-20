@@ -10,7 +10,7 @@ tags:
   - Sales and operation planning
   - Stakeholder management
   
-draft: true
+draft: false
 
 thumbnailImagePosition: left
 thumbnailImage: /img/Trello board PoC.png # //d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city-750.jpg
