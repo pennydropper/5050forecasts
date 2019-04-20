@@ -3,8 +3,25 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/2019/04/the-agile-opportunity-for-demand-planning-improvements/</loc>
+    <lastmod>2019-04-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/2019/02/forecasts-are-deliberately-wrong/</loc>
     <lastmod>2019-02-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/agile/</loc>
+    <lastmod>2019-04-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/agile/</loc>
+    <lastmod>2019-04-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -20,12 +37,19 @@
   
   <url>
     <loc>/categories/</loc>
+    <lastmod>2019-04-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/continuous-improvement/</loc>
+    <lastmod>2019-04-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/demand-planning-and-forecasting/</loc>
-    <lastmod>2019-02-23T00:00:00+00:00</lastmod>
+    <lastmod>2019-04-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -37,31 +61,55 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-02-23T00:00:00+00:00</lastmod>
+    <lastmod>2019-04-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/management/</loc>
+    <lastmod>2019-04-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2019-02-23T00:00:00+00:00</lastmod>
+    <lastmod>2019-04-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/sales-and-operation-planning/</loc>
+    <lastmod>2019-04-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/sales-and-operations-planning/</loc>
-    <lastmod>2019-02-23T00:00:00+00:00</lastmod>
+    <lastmod>2019-04-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/stakeholder-management/</loc>
+    <lastmod>2019-04-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2019-02-23T00:00:00+00:00</lastmod>
+    <lastmod>2019-04-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/target/</loc>
     <lastmod>2019-02-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/team-management/</loc>
+    <lastmod>2019-04-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

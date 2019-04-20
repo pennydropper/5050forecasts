@@ -6,14 +6,24 @@
     <description>Recent content in Categories on Making 50-50 Demand Forecasts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Mon, 22 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Agile</title>
+      <link>/categories/agile/</link>
+      <pubDate>Mon, 22 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/agile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Demand Planning and Forecasting</title>
       <link>/categories/demand-planning-and-forecasting/</link>
-      <pubDate>Sat, 23 Feb 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 22 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/categories/demand-planning-and-forecasting/</guid>
       <description></description>
@@ -22,9 +32,18 @@
     <item>
       <title>Sales and Operations Planning</title>
       <link>/categories/sales-and-operations-planning/</link>
-      <pubDate>Sat, 23 Feb 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 22 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/categories/sales-and-operations-planning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Team Management</title>
+      <link>/categories/team-management/</link>
+      <pubDate>Mon, 22 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/team-management/</guid>
       <description></description>
     </item>
     

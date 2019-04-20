@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Making 50-50 Demand Forecasts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 23 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 22 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Agile</title>
+      <link>/tags/agile/</link>
+      <pubDate>Mon, 22 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/agile/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Budget</title>
@@ -21,11 +30,47 @@
     </item>
     
     <item>
+      <title>Continuous Improvement</title>
+      <link>/tags/continuous-improvement/</link>
+      <pubDate>Mon, 22 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/continuous-improvement/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Forecast</title>
       <link>/tags/forecast/</link>
       <pubDate>Sat, 23 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/forecast/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Management</title>
+      <link>/tags/management/</link>
+      <pubDate>Mon, 22 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/management/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sales and Operation Planning</title>
+      <link>/tags/sales-and-operation-planning/</link>
+      <pubDate>Mon, 22 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/sales-and-operation-planning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Stakeholder Management</title>
+      <link>/tags/stakeholder-management/</link>
+      <pubDate>Mon, 22 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/stakeholder-management/</guid>
       <description></description>
     </item>
     
