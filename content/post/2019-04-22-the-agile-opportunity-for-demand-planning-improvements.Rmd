@@ -29,14 +29,23 @@ comments: true
 favicon: "/img/favicon-32x32.png"
 ---
 
-**Demand planning team going OK / not going OK!**  
+**Demand planning team "going OK / not going OK"!**  
 A demand planner was recounting how her team was travelling OK but she felt that there was scope for significant improvement.
 
-For one thing, she felt that her team’s stakeholders didn’t really know what the team did “beneath the bonnet” and would struggle to explain what value that they added to the business.  There was certainly general satisfaction in the team’s output and people would say that that, from the outside, that they were working well together, but that also indicated that stakeholders were somewhat unaware of the internal machinations.
+For one thing, she felt that her team’s stakeholders didn’t really understand what the team did “beneath the bonnet” and would struggle to explain what value that they added to the business.  There was, certainly, general satisfaction in the team’s output and people would say that, from the outside, that they were working well together, but that also reflected that stakeholders were somewhat unaware of the internal machinations.
 
-Not only that, but she felt that the demand planning team did not work as well as a team as they could.  Each member of the team tended to work on mutually exclusive products or sales channels, and, over time, had developed their own methods for meeting their own internal-customers’ needs.
+Not only that, but she felt that the demand planning team did not work as a team as to their potential.  Each member of the team worked on mutually exclusive product groups or sales channels and, over time, had developed their own methods for meeting their own internal-customers’ needs.
 
-Due to the individualistic manner of how each demand planner worked, processes were not documented, which came home to roost when team members went on holiday or moved into roles outside of the team.
+Due to the individualistic manner of how each demand planner worked, processes were not documented or understood by others in the team.  This came home to roost when others backfilled or new members joined the team.
+
+This post covers the following areas:  
+
+* A basic introduction to Agile methodology.
+* Key elements of Agile.
+* How I advocate adopting Agile in a demand planning team.
+* The timing of key demand planning and Agile activities.
+* Documenting with video.
+* The benefits of adopting Agile
 
 **Agile Methodology**  
 Telstra is a new convert to the growing movement towards Agile methodology, which includes the Scrum and Kanban flavours.  An Agile approach strives for **4 key goals** compared with more traditional management approaches:  
@@ -44,62 +53,68 @@ Telstra is a new convert to the growing movement towards Agile methodology, whic
 * Individuals and Interactions over processes and tools
 * Working systems (software) over comprehensive documentation
 * Customer Collaboration over contract negotiation
-* Responding to Change over following a plan
+* Responding to Change over following a plan.
 
-While Agile was developed particularly with software development in mind, it would work well in a demand planning environment by substituting “working software” with “working systems, processes and methodologies”.
+While Agile was developed with software development in mind, it would work well in a demand planning environment by substituting “working software” with “working systems, processes and methodologies”.
 
-Key benefits of Agile are that it engages stakeholders in the improvement process and strips away “noise” to help the team to focus on what truly delivers value.
+Key benefits of Agile include engaging stakeholders in the improvement process and stripping away “noise” to help the team to focus on what truly delivers value.
 
-**Key Concepts in Agile.**  
+**Key Elements in Agile.**  
 
 1. Teams work in short sprints, resulting in frequent and visible improvements.  
 Often, teams works in 3-week long sprints, but a 4 or 5 week long IBP month would work almost as well while supporting BAU processes.
 
 2. Teams manage a “backlog” of improvement opportunities.  
-The effort required to deliver on the opportunities is estimated up front by the team, and stakeholders indicate the relative priorities of those opportunities.  Stakeholders have regular opportunities to revise the priorities for upcoming sprints as the business evolves.  Changing requirements are “welcomed” (rather than spurned) as the business needs and understanding evolves.
+The effort required to deliver on the opportunities is estimated up front by the team, and stakeholders indicate the relative priorities of those opportunities.  Stakeholders have regular input to revise the priorities for upcoming sprints as business needs evolve.  Changes to requirements are “welcomed” rather than spurned.
 
 3. Teams consist of a broad cross-section of skills.  
-Within demand planning, it makes sense to have members with as diverse a range backgrounds as feasible: for instance, finance, marketing, sales, IT, statistics and supply planning.
-This cross-section would allow the team to draw from a broad cross-section of skills to deliver projects effectively.  A truly highly functioning team will self-organise as individuals bring their strengths to a shared solution.  At the same time, a diverse team will upskill across the team.
+Within demand planning, it makes sense to have members with diverse skills, (e.g. finance, marketing, sales, IT, statistics and supply planning).
+A broad cross-section allows the team to draw from a range of skills to complete projects effectively.  In essence, a truly highly functioning team will self-organise as individuals bring their strengths to a shared solution as well as learning from each other.
 
-4. Transparency is key.
-Transparency allows team members to understand what others are working on, which facilitates collaboration on problem solving.  Transparency also facilitates a best-in-class solution as team members contribute to their strength.
+4. Transparency is key.  
+Transparency allows team members to understand what others are working on, which facilitates collaboration on problem solving.  Transparency also facilitates a best-in-class solution as team members contribute particular skills.
 Transparency is delivered through introducing the following:  
 
-a. *Kanban boards*, where projects and tasks are tracked from concept to completion.  
-b. *Stories*, which is the Agile term for mini-projects small enough to complete in a sprint cycle while big enough to deliver identifiable business value.  
-c. Daily *“stand-ups”*, which are short daily catch-ups with the whole team where each member briefly updates on what they’ve been working on, what they’re currently working on, what they’re planning next and whether they are facing blockers.  
-
+  a. *Kanban boards*, where projects and tasks are visible to all and tracked from concept to completion.  
+  b. *Stories*, which is the Agile term for mini-projects small enough to complete in a sprint cycle while big enough to deliver identifiable business value.  
+  c. Daily *“stand-ups”*, which are short daily catch-ups with the whole team where each member briefly updates on what they’ve been working on, what they’re currently working on, what they’re planning next and whether they are facing blockers.  
+  
+  
 5. Teams deliver a *“showcase”* at the end of each sprint to stakeholders to highlight their achievements and progress.  
-The showcase’s goal is to give the team a sense of accomplishment as well as raising the profile of progress and the team’s contribution.  One framework that works well is to present the what was done, what the significance is and recommendations for what’s next.  The showcase must fit into 30 minutes and preparation for the showcase must take less than 30 minutes per story, which should be ample time for a few dot-points and a screen shot or two.
+The showcase’s goal is to give the team a sense of accomplishment as well as demonstrating and celebrating the team’s progress.  The showcase must fit into 30 minutes and preparation for the showcase must take less than 30 minutes per story, ample time for a few dot-points and a screen shot or two.
 
 6. Each sprint is followed by a *sprint review*, with the team contributing joint improvement opportunities.
 
-**How I would apply it in a Demand Planning team**  
-Set up a kanban board to display the status of stories and tasks.  An [example of such a kanban is here:]( https://trello.com/b/DuDIZBBA/demand-planning-continuous-improvement-kanban-poc){target="_blank"}.
+**How I would apply Agile in a Demand Planning team**  
+
+1. Start by setting up a kanban board to display the status of stories and tasks.  An [example of such a kanban is here:]( https://trello.com/b/DuDIZBBA/demand-planning-continuous-improvement-kanban-poc){target="_blank"}.
 ![](/post/2019-04-22-the-agile-opportunity-for-demand-planning-improvements_files/Trello board PoC.png)
 
-1. The demand planning team leader becomes the “product owner”.  
-Product owners are the ones who liaise with key stakeholders and sign off on improvement initiatives.  Examples of potential key stakeholders are sales managers and directors, finance directors and supply planning managers.
+2. The demand planning team leader becomes the “*product owner*”.  
+Product owners liaise with key stakeholders and sign off on improvement initiatives.  Potential key stakeholders are sales managers and directors, finance directors and supply planning managers.
 
-2. Develop a “backlog” of “future” improvement opportunities (“stories”).  
+3. Develop a “backlog” of “future” improvement opportunities (“*stories*”).  
 Make each opportunity small enough to fit into a 4-5 week sprint given the team’s BAU commitments.  Opportunities larger than 4-5 weeks of effort become “epics”, which are a series of stories that evolve over the months.  Each story must have a deliverable or something presentable at the end of the month, even if it is only a proof-of-concept.
 
-3. Establish daily 15-minute standup meetings, which are designed to be short and punchy.  
-The agenda is for each person to recount what they worked on yesterday, what they’re currently working on and what they plan to work on the for the rest of the day.  The outline must be at a high level; further discussion, if required, must occur outside of the stand-up.  The objective of the standup meeting is transparency within the team, to identify opportunities for cross-discipline collaboration and to identify risks to the month’s deliverables.  While 15-minute meetings can feel imposing, well-run stand-ups help to focus on team commitments and build team spirit and cooperation.  
+4. Establish daily *15-minute standup meetings*, which are designed to be short and punchy.  
+The agenda is for each person to recount what they worked on yesterday, what they’re currently working on and what they plan to work on the for the rest of the day.  The outline must be at a high level; further discussion, if required, occurs outside of the stand-up.  The goal of the standup meeting is transparency within the team, to identify opportunities for cross-discipline collaboration and to identify risks to the month’s deliverables.  While 15-minute meetings can feel imposing, well-run stand-ups help to focus on team commitments and build team spirit and cooperation.
+
+5. Establish the following monthly meetings.  
+  + *Demand Planning Showcase*, which presents the findings and deliverables of the month’s sprints to stakeholders.
+  + *Backlog grooming*, which reviews the list of stories (future opportunities) in backlog, confirms their requirements and that they are still required, and reviews the priorities.  
+  + *Sprint planning*, which nominates stories for the next series of sprints.  
+  + *Sprint review*,  where the team share their reflections on how the team performed, what worked well and what could be improved.  
+
+**Timing of Key Agile Meetings and Demand Cycle Activities**  
+  
+![**Timing of key actvities**](/post/2019-04-22-the-agile-opportunity-for-demand-planning-improvements_files/Agile SOP Demand Cycle2.png)
 
 
-4. Establish the following monthly meetings.  
-  + Demand Planning Showcase, which presents the findings and deliverables of the month’s sprints to stakeholders.
-  + Backlog grooming, which reviews the list of stories (future opportunities) in backlog, confirms their requirements and that they are still required, and reviews the priorities.  
-  + Sprint planning, which nominates stories for the next series of sprints.  
-  + Sprint review.  The objective of this review is for the stakeholders to share their reflections on how the team performed, what worked well and what could be improved.  
-
-**Timing of Key Agile Meetings and Demand Cycle Events**  
 1. Month starts  
 Assuming that the S&OP cycle starts with the calendar month, the start of the month actual sales data from the previous month as well as the demand planning system enhancements from the previous month.  
+
 2. Forecast preparation and consensus meetings.
-As per the standard S&OP cycle, the first few days of the month are spent by demand planners in performing the following tasks:  
+As per the standard S&OP cycle, the first few days of the month are used by demand planners to perform the following tasks:  
 
   + Analysing the previous month’s actual sales versus forecasts.
   + Updating and tuning forecasting models.
@@ -108,15 +123,19 @@ As per the standard S&OP cycle, the first few days of the month are spent by dem
 
   
 3. Demand (Commercial) Review to sign off on the new, updated forecasts.  
+
 4. Publishing the updated forecast immediately after the Demand Review.  
+
 5. Sprint Review and Sprint Planning Meeting  
 While these are distinct in conventional Agile environments, these are combined in the Demand cycle due to compressed timeframes.  I recommend that this meeting occur within 2 days of the Demand Review.  
+
 6. Sprint execution with daily stand-up meetings.  
+   
+   
 7. Sprint Showcase at the end of the month.  
 The showcase has 2 objectives:  
 + Inform key stakeholders of improvements to expect in the next cycle.  
 + To raise the profile and acknowledge the progress made by the Demand Planning team.  
-![](/post/2019-04-22-the-agile-opportunity-for-demand-planning-improvements_files/Agile SOP Demand Cycle2.png)
 
 
 **Document new features with video**  
@@ -132,7 +151,19 @@ Agile offers many great opportunities for Demand Planning teams working in a sta
 
 1. Demand Planning is more in tune with stakeholders and visa versa.  
 2. Under Agile, Demand Planning engages with stakeholders more closely to understand stakeholders’ needs and desires, while stakeholders become more aware of regular and incremental improvement.  
-3. Demand Planning have a framework to work as a team, utilising each member’s strengths and learning from each other.  Not only that, but the team have shared ownership of new systems, reports and processes.  
-4. Using video documentation at the end of each enhancement enables easier inductions for new team members.  
+3. Demand Planning have a framework to work as a team, utilising each member’s strengths and learning from each other.  
+4. The team have shared ownership of new systems, reports and processes.  
+4. Using video documentation at the end of each enhancement enables easier inductions for new team members and backfill situations.  
 
+
+**Final word on Agile**  
+I strongly encourage Demand Planning teams to consider adopting an Agile approach to continuous improvement.  While the meetings can feel intrusive at first, I see them as bringing the team together for conceptualising, exploring and planning opportunities.  Well run meetings will never feel like a “waste of time”.
+
+Even if your team chooses not to adopt all or even any of these Agile terms and concepts, I still advocate for the following:  
+
+* Monthly reviews of what went well and opportunities to improve.  
+* Video documentation of procedures.
+
+
+Consider these to be the bare minimum of driving and reinforcing continuous improvement in Demand Planning.
 
