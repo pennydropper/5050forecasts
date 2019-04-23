@@ -50,10 +50,10 @@ This post covers the following areas:
 **Agile Methodology**  
 Telstra is a new convert to the growing movement towards Agile methodology, which includes the Scrum and Kanban flavours.  An Agile approach strives for **4 key goals** compared with more traditional management approaches:  
 
-* Individuals and Interactions over processes and tools
-* Working systems (software) over comprehensive documentation
-* Customer Collaboration over contract negotiation
-* Responding to Change over following a plan.
+* Individuals and Interactions preferred over processes and tools
+* Working systems (software) preferred over comprehensive documentation
+* Customer Collaboration preferred over contract negotiation
+* Responding to Change preferred over following a plan.
 
 While Agile was developed with software development in mind, it would work well in a demand planning environment by substituting “working software” with “working systems, processes and methodologies”.
 
