@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/2019/05/who-is-best-finance-supply-or-sales/</loc>
+    <lastmod>2019-05-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/2019/04/the-agile-opportunity-for-demand-planning-improvements/</loc>
     <lastmod>2019-04-22T00:00:00+00:00</lastmod>
   </url>
@@ -13,14 +18,14 @@
   </url>
   
   <url>
-    <loc>/categories/agile/</loc>
-    <lastmod>2019-04-22T00:00:00+00:00</lastmod>
+    <loc>/tags/agile/</loc>
+    <lastmod>2019-05-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/agile/</loc>
-    <lastmod>2019-04-22T00:00:00+00:00</lastmod>
+    <loc>/categories/agile/</loc>
+    <lastmod>2019-05-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -37,7 +42,7 @@
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2019-04-22T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -49,55 +54,73 @@
   
   <url>
     <loc>/categories/demand-planning-and-forecasting/</loc>
-    <lastmod>2019-04-22T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/finance/</loc>
+    <lastmod>2019-05-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/forecast/</loc>
-    <lastmod>2019-02-23T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-04-22T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/management/</loc>
-    <lastmod>2019-04-22T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2019-04-22T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/sales-planning/</loc>
+    <lastmod>2019-05-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/sales-and-operation-planning/</loc>
-    <lastmod>2019-04-22T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/sales-and-operations-planning/</loc>
-    <lastmod>2019-04-22T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/stakeholder-management/</loc>
-    <lastmod>2019-04-22T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/supply/</loc>
+    <lastmod>2019-05-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2019-04-22T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -109,7 +132,7 @@
   
   <url>
     <loc>/categories/team-management/</loc>
-    <lastmod>2019-04-22T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
