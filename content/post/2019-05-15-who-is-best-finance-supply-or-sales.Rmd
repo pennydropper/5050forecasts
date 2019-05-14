@@ -76,9 +76,9 @@ Unfortunately, the assembling and presenting role, along with supply liaison, wa
 “What about statistical forecast?”, you may ask.  Absolutely, my employer invested heavily in supply chain planning software that included statistical modelling features.  More on that shortly.
 
 *Analyse sales and domain data*  
->A well run Demand Planning team should analyse historical data and identify patterns, trends and likely sales drivers, and then present insights to the sales team
-
 A well run Demand Planning team should analyse historical data and identify patterns, trends and likely sales drivers, and then present insights to the sales team.  Such analysis should ultimately include individual products (both internal and competition), brands, categories, shipment and scan volumes, pricing, channel, geographic and market data.
+
+> A well run Demand Planning team should analyse historical data and identify patterns, trends and likely sales drivers, and then present insights to the sales team
 
 Obviously, the scope of this analytical task is huge, which lends itself well to [an Agile approach to prioritising demand planning work](https://5050forecasting.netlify.com/2019/04/the-agile-opportunity-for-demand-planning-improvements/).
 
