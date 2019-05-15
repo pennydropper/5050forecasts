@@ -31,7 +31,7 @@ comments: true
 favicon: "/img/favicon-32x32.png"
 ---
 
-Which is the best department to oversee Demand Planning: Sales, Supply or Finance? This question, often asked, lends itself to my experience of at least 2 years under each of these departments within a variety of FMCG businesses.
+Which is the best department to oversee Demand Planning: Sales, Supply or Finance? This question, often asked, lends itself to my experience of at least 2 years under each of these departments within FMCG businesses.
 
 * Finance from 2006 to 2008  
 * Supply from 2008 to 2011  
@@ -54,102 +54,100 @@ Answering the question on which department should oversee demand planning should
 * Analysing sales and market data.
 * Supporting sales planning.
 
-*Assemble and present the sales’ forecasts*  
+*Assembling and presenting the sales’ forecasts*  
 
 * Assembling the forecasts, in my experience, started with the sales team updating the previous edition of the forecasts with revisions driven by emerging trends in forecast errors or changes to promotional plans, pricing assumptions, new products or deletions, product distribution or store ranging.
 * The forecasted volumes were keyed into the supply chain planning system, which pushed the updated forecasts to reporting systems and supply planning.
 * Summary reports, both volumetric and qualitative, were prepared for senior management and the Sales and Operations Planning audience.
-  
 
 > A well run demand planning team will facilitate the forecast assembly and presentation efficiently and error free.
 
-A well run Demand Planning team will facilitate this process efficiently and error free.  The benefit for the business is that sales teams can spend less time filling in tables and more time nurturing customer relationships.  The benefit for forecast recipients (supply planning and commercial analysts) is confidence in the volumes and early delivery enables more time to complete downstream planning and processing.
+The benefit for the business is that sales teams can spend less time filling in tables and more time nurturing customer relationships. The benefit for forecast recipients (supply planning and commercial analysts) is confidence in the volumes and prompt delivery enables more time to complete downstream planning and processing.
 
 *Liaise between the sales and supply functions*  
-“The best laid plans of mice and men often go awry.”  Last minute changes to plans are inevitable, and a high-performing demand planning team liaises between sales and supply to resolve those last-minute hurdles.  Hurdles can come from the sales-side with last minute promotions from retailers or changes to product allocations, or from the supply-side with production or shipping delays.
+“The best laid plans of mice and men often go awry.” Last minute changes to plans are inevitable, and a high-performing demand planning team liaises between sales and supply to resolve those last-minute hiccups. Such hiccups can come from the sales-side with last minute promotions from retailers or changes to product allocations, or from the supply-side with production or shipping delays.
 
-The benefit of the demand planning team performing the liaison role well are stronger and more collaborative relationships between the sales and supply departments to handle unforeseen events, leading to better customer service and greater profitability.
+The benefit of the demand planning team performing the liaison role well are stronger and more collaborative relationships between the sales and supply to handle unforeseen events, leading to better customer service and greater profitability.
 
-Unfortunately, the assembling and presenting role, along with supply liaison, was mostly what was expected from the demand planning teams that I was involved with.  Other opportunities, outlined below, were simply not expected.  The potential benefits of a strongly performing demand planning team were not realised.
+Unfortunately, the assembling and presenting role, along with supply liaison, was mostly all that was expected from the demand planning teams that I was involved with. Other opportunities, outlined below, were simply not expected. The full benefits of a strongly performing demand planning team were not realised.
 
 *Build predictive models to compare with judgemental forecasts*  
-“What about statistical forecast?”, you may ask.  Absolutely, my employer invested heavily in supply chain planning software that included statistical modelling features.  More on that shortly.
+“What about statistical forecast?”, you may ask. Absolutely, my employer invested heavily in supply chain planning software that included statistical modelling features. More on that shortly.
 
 *Analyse sales and domain data*  
-A well run Demand Planning team should analyse historical data and identify patterns, trends and likely sales drivers, and then present insights to the sales team.  Such analysis should ultimately include individual products (both internal and competition), brands, categories, shipment and scan volumes, pricing, channel, geographic and market data.
+A well run Demand Planning team should analyse historical data and identify patterns, trends and likely sales drivers and then present insights to the sales team. Such analysis should ultimately cover individual products (both internal and competition), brands, categories, shipment and scan volumes, pricing, channel, geographic and market data.
 
-> A well run Demand Planning team should analyse historical data and identify patterns, trends and likely sales drivers, and then present insights to the sales team
+> A well run Demand Planning team should analyse historical data and identify patterns, trends and likely sales drivers and then present insights to the sales team
 
 Obviously, the scope of this analytical task is huge, which lends itself well to [an Agile approach to prioritising demand planning work](https://5050forecasting.netlify.com/2019/04/the-agile-opportunity-for-demand-planning-improvements/).
 
-A major objective of this analysis is to understand the nature of sales of individual products:  
+Major objectives of this analysis are to understand the nature of sales of individual products:  
 
 * Trends and seasonality.
 * Price elasticity.
-* Channel drivers (store distribution).
-* Statistical models to predict future sales based on these drivers.
+* Channel drivers.
+* Alternative statistical models to predict sales based on alternative scenarios.
 
-The benefit of such analysis of sales and domain data is a deeper understanding of the market, sales drivers and emerging trends.  Accurate statistical models provide sales and the broader business with a strong starting point to sales planning, supply planning and financial planning.
+The benefit of such analysis of sales and domain data is a deeper understanding of the sales drivers, emerging trends and the market in general. Accurate statistical models provide sales and the broader business with a strong starting point to sales planning, supply planning and financial planning.
 
 >Univariate time-series modelling was too simplistic and inevitably led to statistical forecasts with no credibility
 
-My employer invested heavily in supply chain planning software that did include statistical modelling.  Unfortunately, such modelling was limited to “univariate time-series modelling” (e.g. Holt-Winters, Lewandowski or Fourier series).  With the advantage of hindsight, I now realise that univariate time-series modelling was too simplistic and inevitably led to statistical forecasts with no credibility.  I’m literally struggling to remember a situation when anyone outside of demand planning team took statistical forecasts seriously.
+My employer invested heavily in supply chain planning software that did include statistical modelling. Unfortunately, such modelling was limited to “univariate time-series modelling” (e.g. Holt-Winters, Lewandowski or Fourier series). With the advantage of hindsight, I now realise that univariate time-series modelling was too simplistic and inevitably led to statistical forecasts with no credibility. I profoundly struggle to remember a situation when anyone outside of demand planning team took statistical forecasts seriously.
 
 *Support Sales Planning Activities*  
-An effective demand planning team, with deep understanding of the market through analysis, supports sales through the planning process.  Such support would assist in the following activities:  
+An effective demand planning team with deep understanding of the market through analysis can support sales through the sales planning process. Such support would assist in the following activities:  
 
 * New product volumes.
 * Pricing policy, including EDLP and Hi-Lo strategies.
 * Distribution drives.
 * Marketing activities, including above-the-line, below-the-line and through-the-line.
 
-The benefit of strong support for sales planning is that sales can assess more activity options more efficiently.  Additionally, sales can plan with confidence but also understand when forecasted outcomes are less certain.
+The benefit of strong support for sales planning is that sales can assess more activity options more efficiently. Additionally, sales can plan with confidence but also understand when forecasted outcomes are less certain.
 
 **Finance: 2006 to 2008**  
-Overall, Finance invested energy into Demand Planning and built the team from virtually the ground up and the Australian CFO provided strong leadership and backup.  However, the Demand Planning output was still well short of high-performance benchmarks at the end of the two years.
+Overall, Finance invested energy into Demand Planning, built the team from virtually the ground up and the Australian CFO provided strong leadership and backup. However, Demand Planning systems and processes were less developed and output was still well short of high-performance benchmarks after two years.
 
-Finance and demand planning are particularly numerate disciplines requiring high accuracy and often in a strict monthly cadence.  The major difference between the two disciplines is that effective demand planning applies predictive modelling.
+Finance and demand planning are particularly numerate disciplines requiring high accuracy and often in a strict monthly cadence. The major difference between the two disciplines is that effective demand planning applies predictive modelling.
 
 **Supply: 2008 to 2011**  
-Supply planning, generally, have the most to benefit from effective demand planning as supply chain costs grow exponentially with sales forecast errors.  The Supply department’s support for demand planning between 2008 and 2011 was generous though, to be honest, misplaced.  For instance, a hugely expensive global demand planning system upgrade (the GDP project) overreached, extensive reports built by consultants were unused and the resulting statistical models added no value.  And at the Australian level, the local Supply Director autocratically overrode a GDP design decision based, I presume, on his own intuition and with no consultation with demand planners.
+Supply planning, generally, have the most to benefit from effective demand planning as supply chain costs grow exponentially with sales forecast errors. The Supply department’s support for demand planning between 2008 and 2011 was generous though, to be honest, misplaced. For instance, a hugely expensive global demand planning system implementation (the GDP project) overreached, extensive reports built by consultants were unused and the resulting statistical models added no value. And at the Australian level, the local Supply Director autocratically overrode a GDP design decision based, I presume, on his own intuition and with no consultation with demand planners.
 
 **Sales: 2011 to 2015**  
 As the Treasury Wines’ portfolio includes some extremely prestigious and profitable products, allocation of constrained premium wine was crucial to the “success” or “failure” of key performance outcomes of global regions, states and sales channels.  
 
 * A key role of demand planning, along with Finance, was to allocate the premium wine to maximise profit.
-* This allocation process required busienss acuman and diplomacy.
+* This allocation process required business acuman and diplomacy.
 
-Under Sales, the focus on financial forecasts rather than volume forecasts aligned with the reduced investment, training and development in demand planning.  The “Demand Review” became the “Commercial Review” and Commercial Review actions were allocated at Sales Managers and Commercial Analysts rather than demand planners.  Interest in the statistical forecasts diminished to almost zero.
+Under Sales, a focus on financial forecasts rather than volume forecasts coincided with the reduced investment, training and development in demand planning. The “Demand Review” became the “Commercial Review” and Commercial Review actions were allocated at Sales Managers and commercial analysts rather than demand planners. The relevance of statistical forecasts diminished to almost zero.
 
-On the positive side, forecast accuracy was finally inserted into Sales Managers’ KPIs.
+On the positive side, forecast accuracy was finally added to Sales Managers’ KPOs during the sales era.
 
 **Which department should oversee demand planning?**  
-All 3 departments, Finance, Supply and Sales, had their strengths and limitations.
+All 3 departments' management of demand planning had their strengths and limitations.
 
-The Finance era was characterised by developing business processes and systems from a standing start.  Accordingly, Finance was prepared to invest in systems and training and the CFO provided strong support.
+The Finance era was characterised by developing business processes and systems from a standing start. Accordingly, Finance was prepared to invest in systems and training and the CFO provided strong support.
 
-The Supply department made the greatest investment in Demand Planning (the GDP project), though the investment was probably ill-directed, some senior management directions were ill-directed and, I have to say, Supply had less influence over Sales than Finance.
+The Supply department made the greatest investment in Demand Planning (the GDP project), though the investment over-reached, some senior management directions were ill-directed and, I have to say, Supply had less influence over Sales than Finance.
 
-The Sales era saw forecast accuracy finally added to sales managers’ KPIs.  On the other hand, compared to the other departments, there was little investment in Demand Planning systems, processes and training.
+The Sales era saw forecast accuracy finally added to sales managers’ KPOs. On the other hand, compared to the other departments, there was little investment in Demand Planning systems, processes and training and the focus shifted from volume to value forecasting.
 
 **Leading the Demand Planning Team - a key consideration**  
-One observation from all three eras is that the overseeing department appointed one of their own to lead the Demand Planning team (with one exception).  I’m left wondering what the significance of this is:  
+One observation from all three eras is that the overseeing department appointed one of their own to lead the Demand Planning team (with one exception). I’m left wondering what the significance of this is:  
 
-* Does it mean that the Demand Planning team needs someone from the outside to help them to interact with the broader business?  
-* In turn, does it mean that Finance thought that the relationship with the Finance department was most important, as with Supply and Sales? 
-* Or is it that Finance, Supply and Sales wanted to mould Demand Planning to suit their own agenda?
-* Alternatively, do these departments see Demand Planning as a opportunity for up and coming staff to broaden their experience before returning to a more typical role?
+* Did it reflect a belief that the Demand Planning team needed someone from the outside to help them to interact with the broader business?  
+* In turn, did it mean that Finance, for example, thought that the relationship with the Finance department was most important, as with Supply and Sales? 
+* Was it that Finance, Supply and Sales wanted to mould Demand Planning to suit their own agenda?
+* Alternatively, did these departments see Demand Planning as a career development opportunity for their own up-and-coming staff before returning to a more typical role?
 
->The unfortunate consequence of appointing one of their own to lead demand planning is that it jeopardises the opportunity to develop deep demand planning expertise  
+>The unfortunate consequence of appointing one of their own to lead demand planning is that it jeopardised the opportunity to develop deep demand planning expertise and benefit from that opportunity 
 
-The unfortunate consequence of appointing one of their own to lead demand planning is that it jeopardises the opportunity to develop deep demand planning expertise, deep expertise that enables a business to fully develop the demand planning opportunity.  Similarly, having each department appoint their own denies a career path to passionate demand planners unaligned to one of these departments. 
+Similarly, having each department appoint their own denied a career path to passionate demand planners unaligned to one of these departments. 
 
 **The final word on which department - Sales**  
-The demand planning role needs access to deep market knowledge to achieve its potential.  For instance, demand planning need insights on pricing plans and ranging in order to build forecasts and then explain the underlying assumptions.  Not only this, but demand planning sometimes delivers unpopular but important advice to Sales, advice best delivered by "family".  For these reasons and despite the Sales era being the least progressive overall, I advocate that demand planning accountability should sit with the Sales department.
+The demand planning role needs access to deep market knowledge to achieve its potential. For instance, demand planning need insights on pricing plans and ranging in order to build forecasts and then explain the underlying assumptions. Not only this, but demand planning sometimes deliver unpopular but important advice to Sales, advice best delivered by "family". For these reasons and despite the Sales era being the least progressive overall during my time, I advocate that demand planning accountability should sit with the Sales department.
 
-That said, the discipline of demand planning is particularly distinct from the Sales’ discipline.  For one thing, good forecasters and naturally analytical, reflective, grounded, skeptical and cautious, attributes that are possibly the polar opposite of the natural salesperson.  For this reason, I advocate that the Sales team keep the Demand Planning team semi-independent.
+That said, the discipline of demand planning is particularly distinct from the Sales’ discipline. For one thing, good forecasters tend naturally to be analytical, reflective, grounded, skeptical and cautious, attributes that are possibly the polar opposite of the natural salesperson. For this reason, I advocate that the Sales team keep the Demand Planning team semi-independent.
 
-As a final, final word, every business is different and my opinions are particularly shaped by my experience with Foster's Group and then Treasury Wine Estates (TWE).  TWE, for instance, have a product portfolio with highly skewed margins that makes optimising those margins an imperative.  Other businesses may have their own circumstances that tilt the rationale to favouring Finance or Supply or another department.
+As a final, final word, every business is different and my opinions are particularly shaped by my experience with Foster's Group and then Treasury Wine Estates (TWE). TWE, for instance, have a product portfolio with highly skewed margins that makes optimising those margins an imperative. Other businesses may have their own circumstances that tilt the rationale to favouring Finance or Supply or another department.
 
-In summary, sales should be accountable for the demand planning function in most businesses while recognising that the demand planning discipline is distinct from sales and hence, should be given space to run independently.
-
+In summary, sales should be accountable for the demand planning function in most businesses while recognising that the demand planning discipline is distinct from sales and hence should be semi-autonomous.
