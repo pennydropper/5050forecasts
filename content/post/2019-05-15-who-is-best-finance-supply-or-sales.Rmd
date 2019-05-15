@@ -16,8 +16,8 @@ tags:
 draft: false
 
 thumbnailImagePosition: left
-thumbnailImage: /img/Demand planning tug of war CR.png # //d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city-750.jpg
-coverImage: /img/Demand planning tug of war CR.png # //d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city.jpg
+thumbnailImage: /img/Demand planning tug of war grey.jpg # //d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city-750.jpg
+coverImage: /img/Demand planning tug of war grey.jpg # //d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city.jpg
 coverSize: partial
 metaAlignment: center
 coverMeta: out
