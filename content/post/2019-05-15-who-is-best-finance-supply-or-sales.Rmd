@@ -86,7 +86,7 @@ Major objectives of this analysis are to understand the nature of sales of indiv
 * Trends and seasonality.
 * Price elasticity.
 * Channel drivers.
-* Alternative statistical models to predict sales based on alternative scenarios.
+* Statistical modelling options to predict sales based on alternative scenarios.
 
 The benefit of such analysis of sales and domain data is a deeper understanding of the sales drivers, emerging trends and the market in general. Accurate statistical models provide sales and the broader business with a strong starting point to sales planning, supply planning and financial planning.
 
