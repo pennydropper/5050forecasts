@@ -1,0 +1,137 @@
+---
+title: New approach to new product forecasting
+author: James Northrop
+date: '2019-06-20'
+slug: new-approach-to-new-product-forecasting
+categories:
+  - demand planning and forecasting
+  - New product forecasting
+tags:
+  - forecast
+  - Finance
+  - supply planning
+  - Continuous Improvement
+  - uncertainty
+  
+draft: false
+
+thumbnailImagePosition: left
+thumbnailImage: /img/D1_3508_coldie_PM.jpg
+coverImage: /img/D1_3508_coldie_PM.jpg
+coverSize: partial
+metaAlignment: center
+coverMeta: out
+
+comments: true
+favicon: "/img/favicon-32x32.png"
+---
+Pure Blonde Lager was easily the most successful new product launch in my time at Foster’s Group.  The story goes that the concept was rushed through as senior management was concerned with the skim pickings in the new product pipeline.  Almost immediately from when this lo-carb beer was launched, sales exceeded forecasts, leaving almost everyone in the supply chain scrambling to keep up.  And it wasn’t just the warehouses that were screaming for more stock, it was the bottling lines, brewing facilities and packaging suppliers.
+
+Early sales of VB Midstrength Lager, launched in 2007 and re-branded as VB Gold in 2009, also significantly exceeded forecasts.  VB Midstrength’s sales were even stronger than Pure Blonde’s early sales as it leveraged the mighty VB brand equity contrasting with Pure Blonde’s standing start.  The strength of the VB brand led to retailers and distributors rushing to buy stock, which, in turn, created stockouts at CUB.
+
+On the other hand, for every new product launch like Pure Blonde and VB Midstrength, there must be 20 or more where sales are a small fraction of the pre-launch forecasts.  For example, who remembers Empire Lager or Cold Shot (advertised on the tram above)?  The outcome for CUB was costly slow moving and eventually obsolete stock of these products.
+
+**Problem**  
+While new products are essential to grow and even maintain business, they are notoriously difficult to forecast.  The traditional approach of point forecasting fails to communicate the uncertainty of a forecast, and fails to represent that the 20th new product that does succeed can cover for the 19 other new products that fail to generate net income.  Apart from failing to return the investments, the other 19 new products that fail lock up working capital, are at danger of selling after their best-before date and selling at lower or even negative margins.
+
+In contrast, prediction intervals allow teams who rely on the forecasts to understand the range of likely outcomes and plan for "adverse" scenarios.  For example, rather than forecasting sales of, say 1000 units, a prediction interval of 300 units to 2000 units with 90% confidence may mean that Finance plan contingencies for selling, say 800 units while supply can plan contingencies in case the volumes reach, say, 1500 units.
+
+Calculating reasonable prediction intervals can be tricky given different states (geographic regions) and sales channels (independent outlets versus supermarkets and retail chains).  As a simplified example, prediction intervals of 100 to 1000 in Victoria and 200 to 2000 in NSW almost never means that the combined prediction interval of 300 to 3000.  In other words, the chances of flipping 8 heads in 10 coin tosses (i.e. Victoria selling 1000 units) is around 5.5%.  For both Victoria and NSW to both sell at the upper limit of their prediction interval is like saying that both states each flipped 8 heads in 10 coin tosses, which has a likelihood of only 0.6%.
+
+**Solution**  
+Based on concepts presented in an article by Paul Goodwin from Bath University, I've built a powerful Excel tool to comfortably model new product volumes.
+
+Entered to the Excel tool are the forecast ranges for each channel, expressed in terms of the minimum, maximum and most likely outcome (MLO) volumes.  Strictly speaking, the minimum volume is expressed as the volume with which we have 95% confidence of the actual volumes exceeding, and visa versa for the maximum volume.
+
+For example, the Victorian Sales' team may estimate the sales of the new product to fall between 100 and 1000 with a most likely outcome (MLO) of 300.  The "density" plot of this looks like this:
+![Simple triangular distribution](/post/2019-06-20-new-approach-to-new-product-forecasting_files/Triangular distribution.png)
+
+If we were to "roll the dice" 1000 times and the estimates are reasonable, the frequency of the outcomes would roughly take this shape.
+![Histogram of a single channel](/post/2019-06-20-new-approach-to-new-product-forecasting_files/Histogram of single channel.png)
+
+Similarly, if we add the cumulative volumes, we end up with a shape like this.
+![Cumulative distribtion of single channel](/post/2019-06-20-new-approach-to-new-product-forecasting_files/Cum distribtion of single channel.png)
+
+There are a few interesting points to note about this chart.  
+
+1. The median of the volumes sold, around 430 units, is higher than the forecaster's most likely outcome (300 units).  This is due to the density of the forecasts being right skewed.  Note that the median is, by definition, the ["50/50" forecast](https://5050forecasting.netlify.com/2019/02/forecasts-are-deliberately-wrong/){target="_blank"}, i.e. the forecast with a 50% chance of overselling, and is the right point forecast to apply at this level.  
+2. Even though the MLO is 300 units and the median forecast is 410, there is a 5% chance of selling over 810 units, which is the Pure Blonde scenario where Supply is scrambling to produce unforecasted stock.  
+3. There is similarly at 5% chance (or less) of selling below 200 units.  This is the scenario where stock just doesn’t sell and is at risk of aging and getting written-down.  This is the Empire Lager scenario.  
+
+**Adding Sales Channels' Forecasts**  
+In some cases, forecasters can add each channel's median forecast together to arrive at a reasonable total forecast, but only if the channels are completely independent.
+
+On the other hand, the percentiles definitely cannot be simply added together.  Consider, for example the chances of throwing 8 heads in 10 coin tosses (5.5% probability) compared to 16 heads in 20 coin tosses (0.6%), which is analogous to Victoria achieving it's 95% upper target and Victoria and NSW simultaneously achieving their 95% upper targets.
+
+Based on Paul Goodwin's approach, we can reasonably assume that we can sum the forecasts for each simulation together, as shown in the screenshot below.
+
+![Excel data entry](/post/2019-06-20-new-approach-to-new-product-forecasting_files/Excel data entry image.png)
+
+Each row between rows 5 and 9 represent the simulated outcomes in Independent outlets in a state.  
+
+* The Month column (column B) indicates the month from launch for use in more advanced forecasting.
+* The Channel column (column C) indicates the sales channel.
+* Assumptions (column D) are required for retrospective reviews and continuous improvement.
+* The Minimum (column E), MLO (most likely outcome, column F) and Maximum (column G) provide space for entering the parameters for the probability density function, described above.
+* The Include column (column H) is a flag for whether to include the row's forecast volumes in the total forecast.
+* The Median column (column I) is derived from the outcomes of the 1000 simulations for that row.
+* Columns J onwards house the forecasts for each simulation; there are 1000 simulations in this worked example.  For each simulation, the workbook uses Excel's RAND function (or "rolls of the dice") to derive a forecast.  In the screenshot above, column J represents the first simulation, column K represents the second simulation.
+* Row 2 calculates the outcome across all channels, including the combined forecast for each simulation (column).  It is from the combined forecasts where we derive the percentiles.
+
+One interesting point with the results is that the median across all channels, 1093 units in this case, differs from the sum of the individual channels, which is 1014 units.  Upon reflection, this is reasonable but it counters the conventional approach of simply summing the forecasts for individual channels to derive the total forecast.
+
+**Dealing with Tiered Ranging**  
+Larger chains of outlets, particularly the supermarkets, range products in tiers.  For example, top-selling products are sold in all outlets on prime shelf space (placement), whereas supermarkets may range niche products only in a small number of stores in less prominent locations.  Forecasting new products in large chains has an added complexity; apart from having to estimate the most likely volume, forecasters need to predict the tier of ranging.
+
+![Excel data entry with tiered forecasts](/post/2019-06-20-new-approach-to-new-product-forecasting_files/Excel sheet with Coles.png)
+
+The spreadsheet glimpse above shows how we can extend Paul Goodwin's approach to making estimates of the level of ranging selected by the outlet chain.  Rows 10, 11 and 12 show the estimated volumes for the 3 tiers (nominally) that the chain could select (called T1, T2 or T3).  Row 13 calculated the predicted outcome for each simulation, based on the RAND calculation (on another sheet).  For example, in the simulation represented by column K, only tier 3 ranging was selected with a forecast of 63.1 units, but at least that was better than the column J simulation, where no ranging was selected at all.
+
+The interim calculations in rows 10, 11 and 12 lead to the final Coles forecast in row 13 so they are not directly included in the total forecast calculation in row 2.  This is why rows 10, 11 and 12 have a zero in the Include column (column H).
+
+**Resulting Forecast**  
+This outcome of the forecast entries above are shown in the chart below.
+
+![Combined forecast histogram](/post/2019-06-20-new-approach-to-new-product-forecasting_files/Comb fcst histogram.png)
+
+While it's difficult to accurately illustrate a probability curve using Excel; the chart below shows the "probability density" curve using R, an open-source statistical package.  It shows the specific step in the curve around 1400 units, which corresponds to the supermarket ranging.
+
+![Combined forecast density](/post/2019-06-20-new-approach-to-new-product-forecasting_files/Comb fcst density.png)
+
+The cumulative probabilities show that the 50/50 forecast (median) is around 1100 units, with a 90% confidence that the actual volumes will fall between 690 units and 1720 units.
+![Combined cumulative forecast](/post/2019-06-20-new-approach-to-new-product-forecasting_files/Comb fcst cum.png)
+
+**Benefits of this approach to New Product Forecasting**  
+*Transparent levels of confidence in the new product forecasts*  
+Forecast users, namely supply planning and commercial planning, have a better understanding of the confidence in the new product forecasts.  That is, if the prediction interval is narrow, the forecast users can plan with confidence.  If the prediction interval is broad, the forecast users can plan mitigation for "adverse" outcomes: underselling leading to reduced cash-flow and stock write-downs for commercial planning or overselling and stock-outs for supply planning.
+
+*Reduced Bias – more like a 50/50 forecast*  
+Deriving the 50/50 forecast, i.e. one with no bias, when the range of outcomes is skewed is difficult.  It is even more difficult when summing the outcomes of multiple sales channels.  This approach achieves a reasonable 50/50 forecast in a relatively easy fashion.
+
+*Underlying assumptions are more transparent*  
+Clearly, the underlying assumptions are more apparent with this approach; the qualifying comments are alongside the assumed volumes.  Not only this, but the forecaster has room to explain the underlying assumptions for the upper and lower estimates as well as the most likely outcome.
+
+*Assumptions easy to adjust with actual sales and new insights*  
+After the product is launched and as actual sales data and insights come in, it is easy for forecasters to update the assumptions  and forecast ranges.  Updates to the assumptions will have an immediate effect on the forecast volumes.
+
+*Easier to track performance and understand the drivers of forecast error*  
+Retrospective reviews of the forecasting process become easier and more transparent.  For instance, the review can track how well the forecasts for a number of new products track between the minimum, maximum and MLO; are these estimates reasonable or is a bias emerging.
+
+**In Summary and Next Steps**  
+Renowned forecasting academic, Paul Goodwin from Bath University, proposed a new approach to forecasting new products that can be implemented in Excel.
+
+The approach requires a minimum, maximum and most likely volume for each sales channel, then multiple simulations to convert the implied probability function into a total estimate for each simulation.
+
+The outcome of forecasting with this approach is a 50/50 forecast (i.e. the median outcome of the simulations) along with prediction intervals with the required level of confidence.  Interestingly, the 50/50 forecast for all channels is not necessarily the same as the sum of the 50/50 forecasts for individual channels.
+
+The benefits of this approach compared to traditional point forecasting methods are:  
+
+* Greater transparency in the levels of confidence in the new product forecasts.
+* Underlying assumptions become more transparent.
+* Reduced bias, i.e. more likely to achieve 50/50 forecasts.
+* Assumptions are easy to update with actual sales data and new insights.
+* Retrospective reviews become more meaningful, enabling continuous improvement.
+
+As a final point, I'm willing to share the Excel workbook with whomever asks - please contact me.  The formulae in the workbook are mildly complex - I certainly needed some advanced secondary school maths to work them out.  As a hint, even simple triangular distributions require the solving of quadratic equations.
+
+*Thanks to Paul McCabe for the wonderful photo of a Melbourne tram in Cold Shot Livery from the 2003 launch.*

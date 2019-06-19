@@ -89,3 +89,24 @@ actfcst_p
 # Save plot ---------------------------------------------------------------
 
 ggsave("./static/img/fcst_snaps.jpg", actfcst_p, width = 31, height = 10.5, units = "cm")
+
+
+# NPD density plot --------------------------------------------------------
+
+# library(readxl)
+# p <-
+readxl::read_xlsx(str_c(getwd(), 'NPD forecasting.xlsx', sep = "/"),
+                  range = 'Charts!A1:A1001') %>%
+                  # range = 'Doodle!M10:M1010') %>%
+  ggplot(aes(x = fcst_vols)) +
+  geom_density() +
+  # plotly::ggplotly(p)
+  # scale_x_continuous(limits = c(0, 1500), breaks = seq(0, 1500, 100)) 
+  geom_histogram(aes(y = ..density..), fill = NA, colour = "grey",
+                 breaks = seq(200, 2600, 200), na.rm = TRUE) +
+  scale_x_continuous(limits = c(0, 2500), breaks = seq(100, 2500, 200)) +
+  scale_y_continuous(labels = scales::number_format(accuracy = 0.0001)) +
+  theme_minimal() +
+  labs(title = "Probability density of NPD volumes",
+       x = "New product volumes",
+       y = "density")
