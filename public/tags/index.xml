@@ -39,11 +39,29 @@
     </item>
     
     <item>
+      <title>Excel</title>
+      <link>/tags/excel/</link>
+      <pubDate>Thu, 20 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/excel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Finance</title>
       <link>/tags/finance/</link>
       <pubDate>Thu, 20 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/finance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fmcg</title>
+      <link>/tags/fmcg/</link>
+      <pubDate>Thu, 20 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/fmcg/</guid>
       <description></description>
     </item>
     
@@ -62,6 +80,24 @@
       <pubDate>Tue, 14 May 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/management/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>New Product Forecasting</title>
+      <link>/tags/new-product-forecasting/</link>
+      <pubDate>Thu, 20 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/new-product-forecasting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Prediction Intervals</title>
+      <link>/tags/prediction-intervals/</link>
+      <pubDate>Thu, 20 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/prediction-intervals/</guid>
       <description></description>
     </item>
     
