@@ -6,10 +6,19 @@
     <description>Recent content in Sales and Operations Planning on Making 50-50 Demand Forecasts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Sep 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/sales-and-operations-planning/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Measuring Demand Planning Behaviours</title>
+      <link>/2019/09/measuring-demand-planning-behaviours/</link>
+      <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/09/measuring-demand-planning-behaviours/</guid>
+      <description>What’s better; making the wrong decision for the right reasons or making the right decision for the wrong reasons? If it’s one-off, then the right decision for the wrong reasons (also known as a fluke), is likely to receive plaudits. However, if it’s part of a decision making process recurring every month, such as sales forecasting, then I’ll back the wrong decision for the right reasons (also known as bad luck) every time.</description>
+    </item>
     
     <item>
       <title>Who is best: Finance, Supply or Sales?</title>
