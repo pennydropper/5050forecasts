@@ -16,7 +16,7 @@ tags:
   - supply planning
   - uncertainty
   
-draft: true
+draft: false
 
 thumbnailImagePosition: left
 thumbnailImage: /img/Business_process_s_97045361.jpg # //d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city-750.jpg
