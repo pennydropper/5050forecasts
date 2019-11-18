@@ -6,10 +6,19 @@
     <description>Recent content in Continuous Improvement on Making 50-50 Demand Forecasts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 08 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/continuous-improvement/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Making MAPE More Meaningful</title>
+      <link>/2019/11/making-mape-more-meaningful/</link>
+      <pubDate>Fri, 08 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/11/making-mape-more-meaningful/</guid>
+      <description>“You can’t manage what you can’t measure”, which is why it’s important for businesses to measure forecast accuracy. For those unaware, MAPE (Mean Absolute Percentage Error) is one of the three most common forecast accuracy measures along with bias and MSE. It is also a proxy for measuring the demand planning value-add in an FMCG businesses. That is, when the MAPE score is favourable (low), then demand planning’s value-add for a business must be high.</description>
+    </item>
     
     <item>
       <title>Measuring Demand Planning Behaviours</title>

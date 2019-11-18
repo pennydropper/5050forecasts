@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.32.3 with theme Tranquilpeak 0.4.3-SNAPSHOT">
+<meta name="author" content="James Northrop">
+<meta name="keywords" content="">
+<meta name="description" content="“You can’t manage what you can’t measure”, which is why it’s important for businesses to measure forecast accuracy. For those unaware, MAPE (Mean Absolute Percentage Error) is one of the three most common forecast accuracy measures along with bias and MSE. It is also a proxy for measuring the demand planning value-add in an FMCG businesses. That is, when the MAPE score is favourable (low), then demand planning’s value-add for a business must be high.">
+
+
+<meta property="og:description" content="“You can’t manage what you can’t measure”, which is why it’s important for businesses to measure forecast accuracy. For those unaware, MAPE (Mean Absolute Percentage Error) is one of the three most common forecast accuracy measures along with bias and MSE. It is also a proxy for measuring the demand planning value-add in an FMCG businesses. That is, when the MAPE score is favourable (low), then demand planning’s value-add for a business must be high.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Making MAPE More Meaningful">
+<meta name="twitter:title" content="Making MAPE More Meaningful">
+<meta property="og:url" content="/2019/11/making-mape-more-meaningful/">
+<meta property="twitter:url" content="/2019/11/making-mape-more-meaningful/">
+<meta property="og:site_name" content="Making 50-50 Demand Forecasts">
+<meta property="og:description" content="“You can’t manage what you can’t measure”, which is why it’s important for businesses to measure forecast accuracy. For those unaware, MAPE (Mean Absolute Percentage Error) is one of the three most common forecast accuracy measures along with bias and MSE. It is also a proxy for measuring the demand planning value-add in an FMCG businesses. That is, when the MAPE score is favourable (low), then demand planning’s value-add for a business must be high.">
+<meta name="twitter:description" content="“You can’t manage what you can’t measure”, which is why it’s important for businesses to measure forecast accuracy. For those unaware, MAPE (Mean Absolute Percentage Error) is one of the three most common forecast accuracy measures along with bias and MSE. It is also a proxy for measuring the demand planning value-add in an FMCG businesses. That is, when the MAPE score is favourable (low), then demand planning’s value-add for a business must be high.">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2019-11-08T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2019-11-08T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="Process Maturity">
+    
+      <meta property="article:section" content="demand planning and forecasting">
+    
+  
+  
+    
+      <meta property="article:tag" content="Agile">
+    
+      <meta property="article:tag" content="Continuous Improvement">
+    
+      <meta property="article:tag" content="Finance">
+    
+      <meta property="article:tag" content="forecast">
+    
+      <meta property="article:tag" content="Sales and operation planning">
+    
+      <meta property="article:tag" content="Stakeholder management">
+    
+      <meta property="article:tag" content="Supply">
+    
+      <meta property="article:tag" content="uncertainty">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="/img/businessman-blindfold-hitting-target-bow-arrow-illustration-47052508.jpg">
+  <meta property="twitter:image" content="/img/businessman-blindfold-hitting-target-bow-arrow-illustration-47052508.jpg">
+
+
+  <meta property="og:image" content="/img/businessman-blindfold-hitting-target-bow-arrow-illustration-47052508.jpg">
+  <meta property="twitter:image" content="/img/businessman-blindfold-hitting-target-bow-arrow-illustration-47052508.jpg">
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/64a0a01ebf522bf9e3d9212b5f2b17c2?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/64a0a01ebf522bf9e3d9212b5f2b17c2?s=640">
+
+
+    <title>Making MAPE More Meaningful</title>
+
+    <link rel="icon" href="favicon-32x32.png">
+    
+
+    
+
+    <link rel="canonical" href="/2019/11/making-mape-more-meaningful/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="/css/style-nnm2spxvve8onlujjlegkkytaehyadd4ksxc1hyzzq9a2wvtrgbljqyulomn.min.css" />
+    
+    
+
+    
+      
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-113795291-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="/">Making 50-50 Demand Forecasts</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/64a0a01ebf522bf9e3d9212b5f2b17c2?s=90" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="/#about">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/64a0a01ebf522bf9e3d9212b5f2b17c2?s=110" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">James Northrop</h4>
+        
+          <h5 class="sidebar-profile-bio">Demand Manager / Data Scientist with 15+ years working in FMCG S&amp;OP and 9+ years in sales forecasting and demand management.  Currently working in telecommunications with Infosys Consulting.</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.linkedin.com/in/james-northrop-63651119/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-linkedin"></i>
+      
+      <span class="sidebar-button-desc">LinkedIn</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+  <div class="post-header-cover
+              text-center
+              post-header-cover--partial"
+       style="background-image:url('/img/businessman-blindfold-hitting-target-bow-arrow-illustration-47052508.jpg')"
+       data-behavior="4">
+    
+  </div>
+
+
+      <div id="main" data-behavior="4"
+        class="hasCover
+               hasCoverMetaOut
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-center">
+  
+    <h1 class="post-title" itemprop="headline">
+      Making MAPE More Meaningful
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2019-11-08T00:00:00Z">
+        
+  
+  
+  
+  
+    8 November 2019
+  
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="/categories/process-maturity">Process Maturity</a>, 
+    
+      <a class="category-link" href="/categories/demand-planning-and-forecasting">demand planning and forecasting</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>“You can’t manage what you can’t measure”, which is why it’s important for businesses to measure forecast accuracy. For those unaware, MAPE (Mean Absolute Percentage Error) is one of the three most common forecast accuracy measures along with bias and MSE. It is also a proxy for measuring the demand planning value-add in an FMCG businesses. That is, when the MAPE score is favourable (low), then demand planning’s value-add for a business must be high.</p>
+<p><img src="/post/2019-11-08-making-mape-more-meaningful_files/figure-html/Ideal%20MAPE%20vs%20value-add-1.png" width="672" /></p>
+<p>MAPE measures the forecast accuracy at a product or SKU level; it highlights forecasting issues where forecasts for individual products vary considerably from actual quantities, even if the bias for the total forecast is close to the ideal zero score. For example, a MAPE score of 30% indicates that the forecast sales for individual products was either 30% above or below the actual sales (or visa versa if you divide actual by forecast).</p>
+<p>Apart from bias, the other frequently used family of forecast scores is MSE, Mean Squared Error, which is more statistically pure though less meaningful to a wider audience than MAPE. Compared to MAPE, MSE significantly penalises larger forecast errors.</p>
+<p>I recommend my blog on <a href="https://5050forecasting.netlify.com/2019/02/forecasts-are-deliberately-wrong/" target="_blank">Forecasts are Deliberately Wrong</a> for my take on the vital importance of the bias measure of forecast accuracy.</p>
+<p>MAPE (and MSE) are simple measures for forecast accuracy and definitely play a useful role. In fact, the simplicity is its key strength and why it is used so widely. However, MAPE is a blunt instrument in a demand planning environment and holds 4 major weaknesses in how it is often applied. In fact, these weaknesses mean that MAPE is a surprisingly poor measure of demand planning’s value-add. In this piece, I’ll go onto describe each of these weaknesses and progress to suggesting an alternative.</p>
+<p><img src="/post/2019-11-08-making-mape-more-meaningful_files/figure-html/Alternative%20MAPE%20vs%20value-add-1.png" width="672" /></p>
+<p>By the way, I’m classing forecast accuracy measures like WMAPE, SMAPE and r-squared as close cousins of either MAPE or MSE and subject to the same 4 weaknesses listed below.</p>
+<p><strong>Strength 1: MAPE is simple and easy to calculate</strong><br />
+By far the biggest strength of the MAPE statistic is that it is easy to calculate so long as you have stored the forecast at a SKU level and have accurate actual sales figures. Excel is capable of calculating the MAPE statistic in less than a minute, even if a pivot table is required to sum some components.</p>
+<p><strong>Weakness 1: Most MAPE measures only focus on 1 lag period</strong><br />
+Most MAPE measures I’ve seen were based either on a 1-month or a 3-month lag, i.e. comparing the forecast 1 month or 3 months in advance of the forecast period. The problem is that it disregards the importance of the forecasts with other lag periods. If the other lag periods are disregarded, how can an organisation know how well the forecasting role is functioning?</p>
+<p><img src="/post/2019-11-08-making-mape-more-meaningful_files/figure-html/fcst%20sparklines-1.png" width="672" /></p>
+<p><img src="/post/2019-11-08-making-mape-more-meaningful_files/figure-html/jan19%20fcst%20bar-1.png" width="672" />
+Even if a month’s forecast is accurate, the MAPE score disregards potentially critical weekly splits. For instance, there is a significant difference if the entire month’s requirement is taken in the first week of the month as opposed to the last week of the month. One example from my career occurred when a supermarket chain planned a promotion for a product imported from New Zealand, i.e. with extended lead times. In this example, the promotion (just) met the required 1-month lead time but it resulted in an out-of-stock as it was required entirely in the first week of the month.</p>
+<p><strong>Weakness 2: The delay between the forecasting activity and measuring the outcome of the activity</strong><br />
+Since MAPE requires a lag, often 1 or 3 months, there is a delay between the activity that leads to a forecast and measuring the accuracy of that forecast, i.e. 1 or 3 months depending on the lag. If MAPE is the primary measure for measuring the performance of the demand planning team, this delay or feedback lag hinders process improvement. This delay is particularly difficult if MAPE is included in staff performance assessments and key performance outcomes.</p>
+<p><img src="/img/Delay%20to%20measuring%20MAPE.png" /></p>
+<p><strong>Weakness 3: A MAPE score is relatively meaningless to the wider audience</strong><br />
+Credit goes to a former Sales Director (DC) for raising this issue. When the monthly Demand Review presented the MAPE score achieved for the previous month, he asserted that it didn’t mean anything to him. Quite reasonably, he asked what impact the MAPE score would have on the business bottom line. The “bottom line” question is almost impossible to answer based purely on the MAPE score.</p>
+<p><strong>Weakness 4: An individual MAPE score is an unreliable indicator of forecasting methods</strong><br />
+Consider a situation where I forecast 50 cars to go past a marker in 30 minutes on a country road and 50 cars actually go past. Does that mean that I have forecasted well? Let’s say that 65 cars go past in the next 30 minutes compared to my forecast of 50, i.e. an error of 30%; has my forecasting method failed or am I just unlucky?</p>
+<p>A robust method for forecasting the number of cars on a country road may consider the following:</p>
+<ul>
+<li>Historical data on the number of cars that pass.</li>
+<li>Time of day.</li>
+<li>Extenuating circumstances, such as school holidays or whether there is a local football match down the road.</li>
+<li>The weather forecast.</li>
+</ul>
+<p>FMCG environments will see fluctuating MAPE result; for example, they may fluctuate between 25% and 35%. Does a one-off MAPE result of, say, 35%, indicate that forecasting performed particularly poorly in that month (the wrong forecast for the wrong reasons) or was it the result of dumb, bad luck (the wrong forecast for the right reasons)? My point is that a forecast accuracy measure that focuses only on the quantities and not methods or behaviours then fails to factor the random aspect of an outcome.</p>
+<p><img src="/post/2019-11-08-making-mape-more-meaningful_files/figure-html/distn%20of%20MAPE%20scores-1.png" width="672" /></p>
+<p><strong>Weakness 4a: It takes a number of cycles of MAPE to confidently judge forecasting methods</strong><br />
+Even with robust forecasting, some forecast error is likely. I would take a number of forecast cycles to appreciate if the method was effective or whether the method included hidden flaws.</p>
+<p>In a commercial terms, one month’s MAPE score is not a good indicator of the integrity of the forecasting method - it may just be that the system was particularly lucky or unlucky. Even 2 consecutive months of a particularly good or bad MAPE score shouldn’t lead to a confident inference that the forecasting method is performing well.</p>
+<p><strong>I recommend reporting 3 forecasting performance measures</strong><br />
+I recommend that demand planning reports these 3 forecasting performance measures at the end of each forecast cycle in the following order of importance.</p>
+<ol style="list-style-type: decimal">
+<li><em>The forecast bias</em>, i.e. the fundamental forecast accuracy measure to underpin the total forecast’s credibility.</li>
+<li><em>The demand planning behaviours score</em> that measures how well people follow and support the forecasting process. This is discussed in my blog on <a href="https://5050forecasting.netlify.com/2019/09/measuring-demand-planning-behaviours/" target="_blank">measuring demand planning behaviours</a>.</li>
+<li>A <strong>business specific forecast accuracy measure</strong>, designed to measure the impact of the forecasting method on business performance. This meaningful forecast accuracy measure ultimately should replace the MAPE score. Suggested considerations such a measure are outlined in the next section, but it essentially reports the value that forecast accuracy is returning to the business.</li>
+</ol>
+<p><strong>A business specific forecast accuracy should measure the impact on 4 areas of business impacts</strong><br />
+There are 4 major impacts on an FMCG business with forecast accuracy:</p>
+<ol style="list-style-type: decimal">
+<li>Better planning and allocation of sales and marketing investments.</li>
+<li>Improved customer service and customer satisfaction through having the right stock in the right place at the right time.</li>
+<li>Reduction in safety stock / working capital.</li>
+<li>Reduction in logistical costs from warehousing and expediting.</li>
+</ol>
+<p>The ideal forecast accuracy measure is customised to factor the benefit or cost implication of forecast accuracy on each of these 4 aspects. Ideally, the forecast accuracy measure also factors a range of horizons, weighted according to the importance of the forecast horizons to the size of the opportunity in these 4 aspects.</p>
+<p>Building such a forecast accuracy measure would be a significant undertaking, possibly involving cost accounting and almost certainly requiring broad assumptions and simplifications. If such this progressive strategy was pursued, I recommend an iterative approach broadly outlined in <a href="https://5050forecasting.netlify.com/2019/04/the-agile-opportunity-for-demand-planning-improvements/" target="_blank">The Agile opportunity for Demand Planning Improvements</a>.</p>
+<p><strong>When to apply the forecast accuracy measure</strong><br />
+Demand planning should report on the forecast accuracy measure at the end of each cycle in the same way as MAPE is traditionally reported. As stated, this is demand planning’s opportunity to report on the value of the forecast accuracy supplied to the business.</p>
+<p>The other main application for the forecast accuracy measure is in process design and method selection. For instance, if the demand planning department is selecting or refining the forecasting method, I recommend a process the compares the customised forecast accuracy measure achieves over multiple forecast cycles. With this approach, we can predict the expected outcome of adopting a new method with the added benefit that it reflects a range of forecast horizons.</p>
+<p>An example application from my career comes from when a major milk processor was evaluating alternative methods to forecast the milk volumes produced by dairy farmers. In this evaluation, data scientists applied a MAPE measure to determine which method added most value to the business. At least in this instance, the MAPE was calculated over a range of forecast cycles, reducing the risk of dumb luck adversely affecting the outcome one way or the other. However, given the huge capital investment for milk processing, a customised forecast accuracy measure could have enabled a better decision had it factored a range of lags along with the subsequent and substantial business costs of forecast errors over those lags.</p>
+<p><strong>Business Benefits of a customised forecast accuracy measure</strong></p>
+<ol style="list-style-type: decimal">
+<li>More meaningful score of the forecast accuracy.</li>
+<li>A forecast accuracy score that relates specifically to the business bottom line.</li>
+<li>Better insights to enable better business decisions around sales and marketing investments and even capital expenditure.</li>
+</ol>
+<p>To manage expectations, a the customised forecast accuracy measure won’t <em>immediately</em> deliver better forecast accuracy compared to the simple MAPE measure. However, it will indirectly lead to more accurate forecasts by:</p>
+<ul>
+<li>Adding drive to improve forecasting behaviours by showing the true value of forecast accuracy.</li>
+<li>Enabling better and more meaningful refinement of forecasting methods and processes but equipping demand planners to estimate the true benefit of different approaches.</li>
+</ul>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="/tags/agile/">Agile</a>
+
+  <a class="tag tag--primary tag--small" href="/tags/continuous-improvement/">Continuous Improvement</a>
+
+  <a class="tag tag--primary tag--small" href="/tags/finance/">Finance</a>
+
+  <a class="tag tag--primary tag--small" href="/tags/forecast/">forecast</a>
+
+  <a class="tag tag--primary tag--small" href="/tags/sales-and-operation-planning/">Sales and operation planning</a>
+
+  <a class="tag tag--primary tag--small" href="/tags/stakeholder-management/">Stakeholder management</a>
+
+  <a class="tag tag--primary tag--small" href="/tags/supply/">Supply</a>
+
+  <a class="tag tag--primary tag--small" href="/tags/uncertainty/">uncertainty</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/09/measuring-demand-planning-behaviours/" data-tooltip="Measuring Demand Planning Behaviours">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2019/11/making-mape-more-meaningful/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2019/11/making-mape-more-meaningful/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=/2019/11/making-mape-more-meaningful/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2019 James Northrop. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/09/measuring-demand-planning-behaviours/" data-tooltip="Measuring Demand Planning Behaviours">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2019/11/making-mape-more-meaningful/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2019/11/making-mape-more-meaningful/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=/2019/11/making-mape-more-meaningful/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=%2F2019%2F11%2Fmaking-mape-more-meaningful%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=%2F2019%2F11%2Fmaking-mape-more-meaningful%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=%2F2019%2F11%2Fmaking-mape-more-meaningful%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/64a0a01ebf522bf9e3d9212b5f2b17c2?s=110" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">James Northrop</h4>
+    
+      <div id="about-card-bio">Demand Manager / Data Scientist with 15+ years working in FMCG S&amp;OP and 9+ years in sales forecasting and demand management.  Currently working in telecommunications with Infosys Consulting.</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Data Scientist / Demand Manager
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Melbourne, Australia
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="Search" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center">no post found</div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="/2019/11/making-mape-more-meaningful/">
+                <h3 class="media-heading">Making MAPE More Meaningful</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Nov 11, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">“You can’t manage what you can’t measure”, which is why it’s important for businesses to measure forecast accuracy. For those unaware, MAPE (Mean Absolute Percentage Error) is one of the three most common forecast accuracy measures along with bias and MSE. It is also a proxy for measuring the demand planning value-add in an FMCG businesses. That is, when the MAPE score is favourable (low), then demand planning’s value-add for a business must be high.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="/2019/09/measuring-demand-planning-behaviours/">
+                <h3 class="media-heading">Measuring Demand Planning Behaviours</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Sep 9, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">What’s better; making the wrong decision for the right reasons or making the right decision for the wrong reasons? If it’s one-off, then the right decision for the wrong reasons (also known as a fluke), is likely to receive plaudits. However, if it’s part of a decision making process recurring every month, such as sales forecasting, then I’ll back the wrong decision for the right reasons (also known as bad luck) every time.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="/2019/06/new-approach-to-new-product-forecasting/">
+                <h3 class="media-heading">A New Approach to New Product Forecasting</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jun 6, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">Pure Blonde Lager was easily the most successful new product launch in my time at Foster’s Group. The story goes that the concept was rushed through as senior management was concerned with the slim pickings in the new product pipeline. Almost immediately from when this lo-carb beer was launched, sales exceeded forecasts, leaving almost everyone in the supply chain scrambling to keep up. And it wasn’t just the warehouses that were screaming for more stock, it was the bottling lines, brewing facilities and packaging suppliers.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="/2019/05/who-is-best-finance-supply-or-sales/">
+                <h3 class="media-heading">Who is best: Finance, Supply or Sales?</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  May 5, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">Which is the best department to oversee Demand Planning: Sales, Supply or Finance? This question, often asked, lends itself to my experience of at least 2 years under each of these departments within FMCG businesses.
+ Finance from 2006 to 2008
+ Supply from 2008 to 2011
+ Sales from 2011 to 2015  This blog post, mixing my own observations with my own opinions, covers the following areas:
+The role of demand planning Impressions while under Finance, Supply and Sales Which department should oversee demand planning A key consideration to appointing a demand manager The final word - Sales  Demand Planning’s role</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="/2019/04/the-agile-opportunity-for-demand-planning-improvements/">
+                <h3 class="media-heading">The Agile opportunity for Demand Planning Improvements</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Apr 4, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">Demand planning team “going OK / not going OK”!
+A demand planner was recounting how her team was travelling OK but she felt that there was scope for significant improvement.
+For one thing, she felt that her team’s stakeholders didn’t really understand what the team did “beneath the bonnet” and would struggle to explain what value that they added to the business. There was, certainly, general satisfaction in the team’s output and people would say that, from the outside, that they were working well together, but that also reflected that stakeholders were somewhat unaware of the internal machinations.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="/2019/02/forecasts-are-deliberately-wrong/">
+                <h3 class="media-heading">&#34;Forecasts are deliberately wrong&#34;</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Feb 2, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">“Forecasts are deliberately wrong”
+Whoa! This confronting remark shot back at me when telling a data science colleague that I am an experienced Demand Manager. A part of my shock came from knowing deep down that I could see where he was coming from despite always striving towards achieving a “50/50” forecast; i.e. a forecast with a 50% chance of sitting too high balanced by a 50% chance of sitting too low.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero="no post found"
+         data-message-one="1 post found"
+         data-message-other="{n} posts found">
+         6 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('/images/Sagrada%20JN.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = '\/2019\/11\/making-mape-more-meaningful\/';
+          
+            this.page.identifier = '\/2019\/11\/making-mape-more-meaningful\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = '5050forecasting';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

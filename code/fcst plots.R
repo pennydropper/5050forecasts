@@ -3,6 +3,7 @@
 
 library(tidyverse)
 library(lubridate)
+library(ggthemes)
 
 
 # Ambitious forecasting plots ---------------------------------------------

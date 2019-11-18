@@ -1,0 +1,99 @@
+---
+title: Making MAPE More Meaningful
+author: James Northrop
+date: '2019-11-08'
+slug: making-mape-more-meaningful
+categories:
+  - Process Maturity
+  - demand planning and forecasting
+tags:
+  - Agile
+  - Continuous Improvement
+  - Finance
+  - forecast
+  - Sales and operation planning
+  - Stakeholder management
+  - Supply
+  - uncertainty
+
+draft: false
+  
+thumbnailImagePosition: left
+thumbnailImage: /img/businessman-blindfold-hitting-target-bow-arrow-illustration-47052508.jpg # //d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city-750.jpg
+coverImage: /img/businessman-blindfold-hitting-target-bow-arrow-illustration-47052508.jpg # //d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city.jpg
+coverSize: partial
+metaAlignment: center
+coverMeta: out
+
+comments: true
+favicon: "/img/favicon-32x32.png"
+---
+
+
+
+<p>“You can’t manage what you can’t measure”, which is why it’s important for businesses to measure forecast accuracy. For those unaware, MAPE (Mean Absolute Percentage Error) is one of the three most common forecast accuracy measures along with bias and MSE. It is also a proxy for measuring the demand planning value-add in an FMCG businesses. That is, when the MAPE score is favourable (low), then demand planning’s value-add for a business must be high.</p>
+<p><img src="/post/2019-11-08-making-mape-more-meaningful_files/figure-html/Ideal%20MAPE%20vs%20value-add-1.png" width="672" /></p>
+<p>MAPE measures the forecast accuracy at a product or SKU level; it highlights forecasting issues where forecasts for individual products vary considerably from actual quantities, even if the bias for the total forecast is close to the ideal zero score. For example, a MAPE score of 30% indicates that the forecast sales for individual products was either 30% above or below the actual sales (or visa versa if you divide actual by forecast).</p>
+<p>Apart from bias, the other frequently used family of forecast scores is MSE, Mean Squared Error, which is more statistically pure though less meaningful to a wider audience than MAPE. Compared to MAPE, MSE significantly penalises larger forecast errors.</p>
+<p>I recommend my blog on <a href="https://5050forecasting.netlify.com/2019/02/forecasts-are-deliberately-wrong/" target="_blank">Forecasts are Deliberately Wrong</a> for my take on the vital importance of the bias measure of forecast accuracy.</p>
+<p>MAPE (and MSE) are simple measures for forecast accuracy and definitely play a useful role. In fact, the simplicity is its key strength and why it is used so widely. However, MAPE is a blunt instrument in a demand planning environment and holds 4 major weaknesses in how it is often applied. In fact, these weaknesses mean that MAPE is a surprisingly poor measure of demand planning’s value-add. In this piece, I’ll go onto describe each of these weaknesses and progress to suggesting an alternative.</p>
+<p><img src="/post/2019-11-08-making-mape-more-meaningful_files/figure-html/Alternative%20MAPE%20vs%20value-add-1.png" width="672" /></p>
+<p>By the way, I’m classing forecast accuracy measures like WMAPE, SMAPE and r-squared as close cousins of either MAPE or MSE and subject to the same 4 weaknesses listed below.</p>
+<p><strong>Strength 1: MAPE is simple and easy to calculate</strong><br />
+By far the biggest strength of the MAPE statistic is that it is easy to calculate so long as you have stored the forecast at a SKU level and have accurate actual sales figures. Excel is capable of calculating the MAPE statistic in less than a minute, even if a pivot table is required to sum some components.</p>
+<p><strong>Weakness 1: Most MAPE measures only focus on 1 lag period</strong><br />
+Most MAPE measures I’ve seen were based either on a 1-month or a 3-month lag, i.e. comparing the forecast 1 month or 3 months in advance of the forecast period. The problem is that it disregards the importance of the forecasts with other lag periods. If the other lag periods are disregarded, how can an organisation know how well the forecasting role is functioning?</p>
+<p><img src="/post/2019-11-08-making-mape-more-meaningful_files/figure-html/fcst%20sparklines-1.png" width="672" /></p>
+<p><img src="/post/2019-11-08-making-mape-more-meaningful_files/figure-html/jan19%20fcst%20bar-1.png" width="672" />
+Even if a month’s forecast is accurate, the MAPE score disregards potentially critical weekly splits. For instance, there is a significant difference if the entire month’s requirement is taken in the first week of the month as opposed to the last week of the month. One example from my career occurred when a supermarket chain planned a promotion for a product imported from New Zealand, i.e. with extended lead times. In this example, the promotion (just) met the required 1-month lead time but it resulted in an out-of-stock as it was required entirely in the first week of the month.</p>
+<p><strong>Weakness 2: The delay between the forecasting activity and measuring the outcome of the activity</strong><br />
+Since MAPE requires a lag, often 1 or 3 months, there is a delay between the activity that leads to a forecast and measuring the accuracy of that forecast, i.e. 1 or 3 months depending on the lag. If MAPE is the primary measure for measuring the performance of the demand planning team, this delay or feedback lag hinders process improvement. This delay is particularly difficult if MAPE is included in staff performance assessments and key performance outcomes.</p>
+<p><img src="/img/Delay%20to%20measuring%20MAPE.png" /></p>
+<p><strong>Weakness 3: A MAPE score is relatively meaningless to the wider audience</strong><br />
+Credit goes to a former Sales Director (DC) for raising this issue. When the monthly Demand Review presented the MAPE score achieved for the previous month, he asserted that it didn’t mean anything to him. Quite reasonably, he asked what impact the MAPE score would have on the business bottom line. The “bottom line” question is almost impossible to answer based purely on the MAPE score.</p>
+<p><strong>Weakness 4: An individual MAPE score is an unreliable indicator of forecasting methods</strong><br />
+Consider a situation where I forecast 50 cars to go past a marker in 30 minutes on a country road and 50 cars actually go past. Does that mean that I have forecasted well? Let’s say that 65 cars go past in the next 30 minutes compared to my forecast of 50, i.e. an error of 30%; has my forecasting method failed or am I just unlucky?</p>
+<p>A robust method for forecasting the number of cars on a country road may consider the following:</p>
+<ul>
+<li>Historical data on the number of cars that pass.</li>
+<li>Time of day.</li>
+<li>Extenuating circumstances, such as school holidays or whether there is a local football match down the road.</li>
+<li>The weather forecast.</li>
+</ul>
+<p>FMCG environments will see fluctuating MAPE result; for example, they may fluctuate between 25% and 35%. Does a one-off MAPE result of, say, 35%, indicate that forecasting performed particularly poorly in that month (the wrong forecast for the wrong reasons) or was it the result of dumb, bad luck (the wrong forecast for the right reasons)? My point is that a forecast accuracy measure that focuses only on the quantities and not methods or behaviours then fails to factor the random aspect of an outcome.</p>
+<p><img src="/post/2019-11-08-making-mape-more-meaningful_files/figure-html/distn%20of%20MAPE%20scores-1.png" width="672" /></p>
+<p><strong>Weakness 4a: It takes a number of cycles of MAPE to confidently judge forecasting methods</strong><br />
+Even with robust forecasting, some forecast error is likely. I would take a number of forecast cycles to appreciate if the method was effective or whether the method included hidden flaws.</p>
+<p>In a commercial terms, one month’s MAPE score is not a good indicator of the integrity of the forecasting method - it may just be that the system was particularly lucky or unlucky. Even 2 consecutive months of a particularly good or bad MAPE score shouldn’t lead to a confident inference that the forecasting method is performing well.</p>
+<p><strong>I recommend reporting 3 forecasting performance measures</strong><br />
+I recommend that demand planning reports these 3 forecasting performance measures at the end of each forecast cycle in the following order of importance.</p>
+<ol style="list-style-type: decimal">
+<li><em>The forecast bias</em>, i.e. the fundamental forecast accuracy measure to underpin the total forecast’s credibility.</li>
+<li><em>The demand planning behaviours score</em> that measures how well people follow and support the forecasting process. This is discussed in my blog on <a href="https://5050forecasting.netlify.com/2019/09/measuring-demand-planning-behaviours/" target="_blank">measuring demand planning behaviours</a>.</li>
+<li>A <strong>business specific forecast accuracy measure</strong>, designed to measure the impact of the forecasting method on business performance. This meaningful forecast accuracy measure ultimately should replace the MAPE score. Suggested considerations such a measure are outlined in the next section, but it essentially reports the value that forecast accuracy is returning to the business.</li>
+</ol>
+<p><strong>A business specific forecast accuracy should measure the impact on 4 areas of business impacts</strong><br />
+There are 4 major impacts on an FMCG business with forecast accuracy:</p>
+<ol style="list-style-type: decimal">
+<li>Better planning and allocation of sales and marketing investments.</li>
+<li>Improved customer service and customer satisfaction through having the right stock in the right place at the right time.</li>
+<li>Reduction in safety stock / working capital.</li>
+<li>Reduction in logistical costs from warehousing and expediting.</li>
+</ol>
+<p>The ideal forecast accuracy measure is customised to factor the benefit or cost implication of forecast accuracy on each of these 4 aspects. Ideally, the forecast accuracy measure also factors a range of horizons, weighted according to the importance of the forecast horizons to the size of the opportunity in these 4 aspects.</p>
+<p>Building such a forecast accuracy measure would be a significant undertaking, possibly involving cost accounting and almost certainly requiring broad assumptions and simplifications. If such this progressive strategy was pursued, I recommend an iterative approach broadly outlined in <a href="https://5050forecasting.netlify.com/2019/04/the-agile-opportunity-for-demand-planning-improvements/" target="_blank">The Agile opportunity for Demand Planning Improvements</a>.</p>
+<p><strong>When to apply the forecast accuracy measure</strong><br />
+Demand planning should report on the forecast accuracy measure at the end of each cycle in the same way as MAPE is traditionally reported. As stated, this is demand planning’s opportunity to report on the value of the forecast accuracy supplied to the business.</p>
+<p>The other main application for the forecast accuracy measure is in process design and method selection. For instance, if the demand planning department is selecting or refining the forecasting method, I recommend a process the compares the customised forecast accuracy measure achieves over multiple forecast cycles. With this approach, we can predict the expected outcome of adopting a new method with the added benefit that it reflects a range of forecast horizons.</p>
+<p>An example application from my career comes from when a major milk processor was evaluating alternative methods to forecast the milk volumes produced by dairy farmers. In this evaluation, data scientists applied a MAPE measure to determine which method added most value to the business. At least in this instance, the MAPE was calculated over a range of forecast cycles, reducing the risk of dumb luck adversely affecting the outcome one way or the other. However, given the huge capital investment for milk processing, a customised forecast accuracy measure could have enabled a better decision had it factored a range of lags along with the subsequent and substantial business costs of forecast errors over those lags.</p>
+<p><strong>Business Benefits of a customised forecast accuracy measure</strong></p>
+<ol style="list-style-type: decimal">
+<li>More meaningful score of the forecast accuracy.</li>
+<li>A forecast accuracy score that relates specifically to the business bottom line.</li>
+<li>Better insights to enable better business decisions around sales and marketing investments and even capital expenditure.</li>
+</ol>
+<p>To manage expectations, a the customised forecast accuracy measure won’t <em>immediately</em> deliver better forecast accuracy compared to the simple MAPE measure. However, it will indirectly lead to more accurate forecasts by:</p>
+<ul>
+<li>Adding drive to improve forecasting behaviours by showing the true value of forecast accuracy.</li>
+<li>Enabling better and more meaningful refinement of forecasting methods and processes but equipping demand planners to estimate the true benefit of different approaches.</li>
+</ul>
