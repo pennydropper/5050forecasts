@@ -28,7 +28,7 @@ coverMeta: out
 comments: true
 favicon: "/img/favicon-32x32.png"
 ---
-“You can’t manage what you can’t measure”, which is why it’s important for businesses to measure forecast accuracy.  For those unaware, MAPE (Mean Absolute Percentage Error) is one of the three most common forecast accuracy measures along with bias and MSE.  It is also a proxy for measuring the demand planning value-add in an FMCG businesses. That is, when the MAPE score is favourable (low), then demand planning’s value-add for a business must be high.
+“You can’t manage what you can’t measure”, which is why it’s important for businesses to measure forecast accuracy.  For those unaware, MAPE (Mean Absolute Percentage Error) is one of the three most common forecast accuracy measures along with bias and MSE.  It is also used as a proxy for measuring the demand planning value-add in an FMCG businesses. That is, when the MAPE score is favourable (low), then it is assumed that demand planning’s value-add for a business must be high.
 
 ```{r setup, echo=FALSE, eval=FALSE, message=FALSE}
 # require(tidyverse)
@@ -57,10 +57,13 @@ library(magrittr)
 
 plot_mape_val_add <- function(p_title = "",  a = -2 * 1e3, b = 2 * 1e5, rand_f = 0.1) {
   # Builds a plot of relationship between MAPE scores and business value-add
-  set.seed(1234)
+  set.seed(1)
   
   mape_val_add <-
-    tibble(mape = runif(24, 25, 36)) %>% 
+    # tibble(mape = runif(24, 25, 36)) %>% 
+    tibble(mape = rweibull(24, 4, 1) %>%
+             scales::rescale() %>% 
+             map_dbl(~ 24 + . * 12)) %>%   # i.e. force MAPE to spread between 24 and 36
     mutate(val_add = b + a * mape - rand_f * a * rnorm(length(mape)))
   
   mape_val_rsq <- cor(mape_val_add$mape, mape_val_add$val_add) ^ 2
@@ -74,7 +77,7 @@ plot_mape_val_add <- function(p_title = "",  a = -2 * 1e3, b = 2 * 1e5, rand_f =
     scale_y_continuous(labels = NULL) +
     labs(title = p_title,
          subtitle = str_c("R-squared: ", format(mape_val_rsq, digits = 2)),
-         x = "MAPE score", y = "Business Value")
+         x = "MAPE score", y = "Demand Planning Value-Add")
 }
 
 plot_mape_val_add("Presumed MAPE score and Business Value Relationship",
@@ -88,22 +91,23 @@ MAPE measures the forecast accuracy at a product or SKU level; it highlights for
 
 Apart from bias, the other frequently used family of forecast scores is MSE, Mean Squared Error, which is more statistically pure though less meaningful to a wider audience than MAPE.  Compared to MAPE, MSE significantly penalises larger forecast errors.
 
-I recommend my blog on [Forecasts are Deliberately Wrong](https://5050forecasting.netlify.com/2019/02/forecasts-are-deliberately-wrong/){target="_blank"} for my take on the vital importance of the bias measure of forecast accuracy.
+I recommend my blog on [Forecasts are Deliberately Wrong](https://5050forecasting.netlify.com/2019/02/forecasts-are-deliberately-wrong/){target="_blank"} for the vital importance of measuring forecast accuracy bias.
 
-MAPE (and MSE) are simple measures for forecast accuracy and definitely play a useful role. In fact, the simplicity is its key strength and why it is used so widely.  However, MAPE is a blunt instrument in a demand planning environment and holds 4 major weaknesses in how it is often applied.  In fact, these weaknesses mean that MAPE is a surprisingly poor measure of demand planning’s value-add.  In this piece, I’ll go onto describe each of these weaknesses and progress to suggesting an alternative.
+## The Challenge  
+MAPE (and MSE) are simple measures for forecast accuracy and definitely play a useful role. In fact, the simplicity is its key strength and why it is used so widely.  However, MAPE is a blunt instrument in a demand planning environment and holds 5 major weaknesses in how it is often applied.  In fact, these weaknesses mean that MAPE is a surprisingly poor measure of demand planning’s value-add.  In this piece, I’ll go onto describe each of these weaknesses and progress to suggesting an alternative.
 
 ```{r Alternative MAPE vs value-add, echo=FALSE, warning=FALSE}
 
 plot_mape_val_add("More likely MAPE score and Business Value Relationship",
-                  -2000, 20000, 7.5)
+                  -2000, 20000, 10)
 
 ```
 
 
-By the way, I’m classing forecast accuracy measures like WMAPE, SMAPE and r-squared as close cousins of either MAPE or MSE and subject to the same 4 weaknesses listed below.
+Incidentally, I’m classing forecast accuracy measures like WMAPE, SMAPE and r-squared as close cousins of either MAPE or MSE and subject to the same 4 weaknesses listed below.
 
 **Strength 1: MAPE is simple and easy to calculate**  
-By far the biggest strength of the MAPE statistic is that it is easy to calculate so long as you have stored the forecast at a SKU level and have accurate actual sales figures. Excel is capable of calculating the MAPE statistic in less than a minute, even if a pivot table is required to sum some components.
+By far the biggest strength of the MAPE statistic is that it is easy to calculate so long as you have stored the forecast at a SKU level and have accurate actual sales figures. Excel is capable of calculating the MAPE statistic in less than a minute, even when a pivot table is required to sum components.
  
 **Weakness 1: Most MAPE measures only focus on 1 lag period**  
 Most MAPE measures I’ve seen were based either on a 1-month or a 3-month lag, i.e. comparing the forecast 1 month or 3 months in advance of the forecast period.  The problem is that it disregards the importance of the forecasts with other lag periods.  If the other lag periods are disregarded, how can an organisation know how well the forecasting role is functioning?
@@ -164,12 +168,15 @@ fcst_sparklines <- function(p_data) {
     scale_x_date(breaks = dmy(month_start) + months(seq(0, 36, 12)), date_labels = "%b-%y") +
     scale_y_continuous(expand = c(0.1, 0)) +
     theme_tufte(base_size = 15, base_family = "Helvetica") +
-    theme(axis.title=element_blank(), axis.text.y = element_blank(), axis.text.x = element_text(size = 8),
+    theme(axis.title=element_text(size = 8), axis.text.y = element_blank(), axis.text.x = element_text(size = 8),
           axis.ticks = element_blank(), strip.text.y = element_text(angle = 180, size = 8),
+          # axis.title.y = element_text(size = 8),
+          # axis.title = element_text(size = 8),
           plot.title = element_text(size = 10)) +
     
     geom_text(data = jan, aes(label = fcst), nudge_x = 50, size = 3) +
-    labs(title = "Evolving Jan-19 forecast with each S&OP cycle")
+    labs(title = "Evolving Jan-19 forecast with each Demand Planning cycle",
+         x = "Forecasted month", y = "Forecast cycle")
   
 }
 
@@ -188,7 +195,7 @@ fcst_snap_ggp <-
   mutate(mape_mnth = if_else(fcst_lag == 1, "MAPE", "not MAPE")) %>% 
   ggplot(aes(x = fcst_mnth, y = fcst)) +
   geom_bar(aes(fill = mape_mnth), stat = "identity") +
-  labs(title = "Which S&OP cycles contribute to Jan-19's MAPE?",
+  labs(title = "Which forecast cycles contribute to Jan-19's MAPE result?",
        x = "Forecast month", y = "forecast quantity") +
   scale_fill_discrete("") +
   geom_text(data = fcst_snaps %>% filter(fcst_lag == 1, mnth == dmy("1/1/2019")), aes(label = fcst %>% scales::comma()), 
@@ -246,6 +253,35 @@ Even with robust forecasting, some forecast error is likely.  It would take a nu
 
 In a commercial terms, one month’s MAPE score is not a good indicator of the integrity of the forecasting method - it may just be that the system was particularly lucky or unlucky.  Even 2 consecutive months of a particularly good or bad MAPE score shouldn’t lead to a confident inference that the forecasting method is performing well.
 
+**Weakness 5: MAPE scores depend heavily on their domain**  
+One of my least favourite questions is "What was your MAPE score?". It is implicitly asking how well is demand planning run, but it overlooks the huge role that the demand planning domain has on the MAPE score.  Not only does MAPE depend on the industry, it depends on the geographic domain, the sales channel and even the retail model.  
+
+One extreme contrast from my career is the MAPE score from kegged beer sales to the MAPE score from selling wine to wine distributors in East Asia.  Kegged beer sales in Australia around 2008 were incredibly consistent as there were few promotions and it was difficult for outlets to chop and change between products.  A MAPE score of 5% was normal.  In contrast, forecasting wine shipments to wholesalers in East Asia was remarkably challenging with many large but sporadic shipments.  MAPE scores were around 60% but in extreme months could even top 100%.  This was not a reflection of demand planning rigour - it was driven by the different domains.
+
+Even when forecasting shipments to supermarket retailers, there were periods when a retailer were operating under "everyday low price" (EDLP) and shipments were more predictable.  At other times, the same retailers switched to "high-low pricing" (HiLo) when shipments became lumpier and pricing promotions were more opportunistic and harder to predict.
+```{r Aust beer vs Asian wine, echo=FALSE, warning=FALSE, fig.height=4, fig.width=7}
+tibble(mnth = 0:36) %>% 
+  mutate(act_keg = 1000 + 30 * sin(mnth / 12 * 2 * pi) + 5 * rnorm(length(mnth)),
+         act_asia = 50 + 20 * sin(mnth / 12 * 2 * pi) + 15 * rnorm(length(mnth)) + rnorm(length(mnth), 400, 200) * rbinom(length(mnth), 1, 0.3),
+         act_asia = pmax(act_asia, 0),
+         mnth = dmy("1/1/2008") + months(mnth)) %>% 
+  pivot_longer(cols = c(act_keg, act_asia), names_to = "market", values_to = "act_sales") %>% 
+  mutate(market = fct_rev(market)) %>% 
+  # pivot_longer()
+  # print
+  ggplot(aes(x = mnth)) +
+  geom_line(aes(y = act_sales, colour = market)) +
+  theme_economist() +
+  scale_color_discrete("", labels = c("act_keg" = "Aust keg beer", "act_asia" = "Asian wine shipments")) +
+  labs(title = "Vastly different sales profiles",
+       subtitle = "Indicative Australian keg sales to outlets vs Asian wine shipments to wholesalers",
+       x = "", y = "Units shipped") +
+  theme(legend.text = element_text(size = 10))
+
+```
+
+
+## A Solution
 **I recommend reporting 3 forecasting performance measures**  
 I recommend that demand planning reports these 3 forecasting performance measures at the end of each forecast cycle in the following order of importance.  
 
@@ -261,7 +297,7 @@ There are 4 major areas of an FMCG business impacted of forecast accuracy:
 3. Reduced safety stock / working capital.
 4. Reduced logistical costs from warehousing and expediting.
 
-The ideal FAIM is customised to factor the benefit or cost implication of forecast accuracy on each of these 4 aspects.  Ideally, the FAIM also factors a range of horizons, weighted according to the importance of the forecast horizons to the size of the opportunity in these 4 areas.
+The ideal FAIM is customised to factor the benefit or cost implication of forecast accuracy on each of these 4 areas  Ideally, the FAIM also factors a range of horizons, weighted according to the importance of the forecast horizons to the size of the opportunity in these 4 areas.
 
 Building such a forecast accuracy measure would be a significant undertaking, possibly involving cost accounting and almost certainly requiring broad assumptions and simplifications.  If this progressive strategy was pursued, I recommend an iterative approach broadly outlined in [The Agile opportunity for Demand Planning Improvements](https://5050forecasting.netlify.com/2019/04/the-agile-opportunity-for-demand-planning-improvements/){target="_blank"}. The key to sensibly developing this value-adding measure is building it in bite-sized chunks with regular feedback and review. 
 
@@ -270,7 +306,7 @@ Demand planning should report on the FAIM at the end of each cycle in the same w
 
 The other main application for the FAIM is in process design and method selection.  For instance, if the demand planning department is selecting or refining the forecasting method, I recommend a process the compares the FAIM achieved over multiple forecast cycles.  With this approach, we can predict the expected outcome of adopting a new method with the added benefit that it reflects a range of forecast horizons.
 
-An example application from my career comes from when a major milk processor was evaluating alternative methods to forecast the milk volumes produced by dairy farmers.  In this evaluation, the data scientists applied a MAPE measure to determine which method added most value to the business.  At least in this instance, the MAPE was calculated over a range of forecast cycles, reducing the risk of dumb luck adversely affecting the outcome one way or the other.  However, given the huge capital investment for milk processing, a customised FAIM could have enabled a better decision had it factored a range of lags along with the subsequent and substantial business costs of forecast errors over those lags.
+An example application from my career comes from when a major milk processor was evaluating alternative methods to forecast the milk volumes produced by farms.  In this evaluation, the data scientists applied a MAPE measure to determine which method added most value to the business.  At least in this instance, the MAPE was calculated over a range of forecast cycles, reducing the risk of dumb luck adversely affecting the outcome one way or the other.  However, given the huge capital investment for milk processing, a customised FAIM could have enabled a better decision had it factored a range of lags along with the subsequent and substantial business costs of forecast errors over those lags.
 
 **In short**  
 MAPE is easily the most frequently used measure of forecast accuracy in my direct experience, and it is often implicitly used to measure the performance of demand planning activities.  It's greatest strength is its simplicity, though it is a "blunt instrument" that comes with 4 major weaknesses.
