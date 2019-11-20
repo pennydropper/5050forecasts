@@ -260,23 +260,36 @@ One extreme contrast from my career is the MAPE score from kegged beer sales to 
 
 Even when forecasting shipments to supermarket retailers, there were periods when a retailer were operating under "everyday low price" (EDLP) and shipments were more predictable.  At other times, the same retailers switched to "high-low pricing" (HiLo) when shipments became lumpier and pricing promotions were more opportunistic and harder to predict.
 ```{r Aust beer vs Asian wine, echo=FALSE, warning=FALSE, fig.height=4, fig.width=7}
-tibble(mnth = 0:36) %>% 
+sales_comp <-
+  tibble(mnth = 0:36) %>% 
   mutate(act_keg = 1000 + 30 * sin(mnth / 12 * 2 * pi) + 5 * rnorm(length(mnth)),
          act_asia = 50 + 20 * sin(mnth / 12 * 2 * pi) + 15 * rnorm(length(mnth)) + rnorm(length(mnth), 400, 200) * rbinom(length(mnth), 1, 0.3),
          act_asia = pmax(act_asia, 0),
          mnth = dmy("1/1/2008") + months(mnth)) %>% 
   pivot_longer(cols = c(act_keg, act_asia), names_to = "market", values_to = "act_sales") %>% 
-  mutate(market = fct_rev(market)) %>% 
-  # pivot_longer()
-  # print
+  mutate(market = fct_rev(market))
+
+market_cv <-
+  sales_comp %>% 
+  group_by(market) %>% 
+  summarise(sales_avg = mean(act_sales),
+            sales_stddev = var(act_sales) ^ 0.5) %>% 
+  mutate(coeff_var = sales_stddev / sales_avg) %>% 
+  select(market, coeff_var) %>% 
+  deframe()
+
+sales_comp %>% 
   ggplot(aes(x = mnth)) +
   geom_line(aes(y = act_sales, colour = market)) +
   theme_economist() +
   scale_color_discrete("", labels = c("act_keg" = "Aust keg beer", "act_asia" = "Asian wine shipments")) +
   labs(title = "Vastly different sales profiles",
-       subtitle = "Indicative Australian keg sales to outlets vs Asian wine shipments to wholesalers",
+       subtitle = str_c("Indicative Australian keg sales to outlets vs Asian wine shipments to wholesalers",
+                        "\nKeg Sales Coefficient of Variation: ", scales::percent(market_cv["act_keg"]),
+                        "\nAsian Wine Shipments Coefficient of Variation: ", scales::percent(market_cv["act_asia"])),
        x = "", y = "Units shipped") +
   theme(legend.text = element_text(size = 10))
+
 
 ```
 
@@ -308,8 +321,8 @@ The other main application for the FAIM is in process design and method selectio
 
 An example application from my career comes from when a major milk processor was evaluating alternative methods to forecast the milk volumes produced by farms.  In this evaluation, the data scientists applied a MAPE measure to determine which method added most value to the business.  At least in this instance, the MAPE was calculated over a range of forecast cycles, reducing the risk of dumb luck adversely affecting the outcome one way or the other.  However, given the huge capital investment for milk processing, a customised FAIM could have enabled a better decision had it factored a range of lags along with the subsequent and substantial business costs of forecast errors over those lags.
 
-**In short**  
-MAPE is easily the most frequently used measure of forecast accuracy in my direct experience, and it is often implicitly used to measure the performance of demand planning activities.  It's greatest strength is its simplicity, though it is a "blunt instrument" that comes with 4 major weaknesses.
+## In short  
+MAPE is easily the most frequently used measure of forecast accuracy in my direct experience, and it is often implicitly used to measure the performance of demand planning activities.  It's greatest strength is its simplicity, though it is a "blunt instrument" that comes with 5 major weaknesses.
 
 I propose 2 measures to replace MAPE:  
 
