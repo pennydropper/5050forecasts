@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.32.3 with theme Tranquilpeak 0.4.3-SNAPSHOT">
+<meta name="author" content="James Northrop">
+<meta name="keywords" content="">
+<meta name="description" content="Introduction Boutique brewery numbers have exploded in Australia in the past 2 decades. In fact, the growth in demand for boutique brews had led to corporate brewing companies, CUB, Lion, Asahi and Coca Cola Amatil, to acquire and establish their own boutique beer brands. Data taken from http://craftbeerreviewer.com/the-brewery-list/ shows that 701 boutique brewing brands operate around Australia.
+Almost all of these breweries would have multiple beer styles (e.g. pale ale, lager, etc) and the majority would package beer into cans.">
+
+
+<meta property="og:description" content="Introduction Boutique brewery numbers have exploded in Australia in the past 2 decades. In fact, the growth in demand for boutique brews had led to corporate brewing companies, CUB, Lion, Asahi and Coca Cola Amatil, to acquire and establish their own boutique beer brands. Data taken from http://craftbeerreviewer.com/the-brewery-list/ shows that 701 boutique brewing brands operate around Australia.
+Almost all of these breweries would have multiple beer styles (e.g. pale ale, lager, etc) and the majority would package beer into cans.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Boutique forecasting for boutique beer">
+<meta name="twitter:title" content="Boutique forecasting for boutique beer">
+<meta property="og:url" content="/2020/01/boutique-forecasting-for-boutique-beer/">
+<meta property="twitter:url" content="/2020/01/boutique-forecasting-for-boutique-beer/">
+<meta property="og:site_name" content="Making 50-50 Demand Forecasts">
+<meta property="og:description" content="Introduction Boutique brewery numbers have exploded in Australia in the past 2 decades. In fact, the growth in demand for boutique brews had led to corporate brewing companies, CUB, Lion, Asahi and Coca Cola Amatil, to acquire and establish their own boutique beer brands. Data taken from http://craftbeerreviewer.com/the-brewery-list/ shows that 701 boutique brewing brands operate around Australia.
+Almost all of these breweries would have multiple beer styles (e.g. pale ale, lager, etc) and the majority would package beer into cans.">
+<meta name="twitter:description" content="Introduction Boutique brewery numbers have exploded in Australia in the past 2 decades. In fact, the growth in demand for boutique brews had led to corporate brewing companies, CUB, Lion, Asahi and Coca Cola Amatil, to acquire and establish their own boutique beer brands. Data taken from http://craftbeerreviewer.com/the-brewery-list/ shows that 701 boutique brewing brands operate around Australia.
+Almost all of these breweries would have multiple beer styles (e.g. pale ale, lager, etc) and the majority would package beer into cans.">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2020-01-20T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2020-01-20T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="demand planning and forecasting">
+    
+      <meta property="article:section" content="New product forecasting">
+    
+      <meta property="article:section" content="Sales and Operations Planning">
+    
+  
+  
+    
+      <meta property="article:tag" content="Agile">
+    
+      <meta property="article:tag" content="Excel">
+    
+      <meta property="article:tag" content="forecast">
+    
+      <meta property="article:tag" content="New product forecasting">
+    
+      <meta property="article:tag" content="Prediction intervals">
+    
+      <meta property="article:tag" content="Sales and operation planning">
+    
+      <meta property="article:tag" content="Sales planning">
+    
+      <meta property="article:tag" content="supply planning">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="/img/portrait-pensive-tattooed-hipster-male-stylish-beard-hair-shirt-indie-brewery-portrait-pensive-tattooed-128968370.jpg">
+  <meta property="twitter:image" content="/img/portrait-pensive-tattooed-hipster-male-stylish-beard-hair-shirt-indie-brewery-portrait-pensive-tattooed-128968370.jpg">
+
+
+  <meta property="og:image" content="/img/portrait-pensive-tattooed-hipster-male-stylish-beard-hair-shirt-indie-brewery-portrait-pensive-tattooed-128968370.jpg">
+  <meta property="twitter:image" content="/img/portrait-pensive-tattooed-hipster-male-stylish-beard-hair-shirt-indie-brewery-portrait-pensive-tattooed-128968370.jpg">
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/64a0a01ebf522bf9e3d9212b5f2b17c2?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/64a0a01ebf522bf9e3d9212b5f2b17c2?s=640">
+
+
+    <title>Boutique forecasting for boutique beer</title>
+
+    <link rel="icon" href="favicon-32x32.png">
+    
+
+    
+
+    <link rel="canonical" href="/2020/01/boutique-forecasting-for-boutique-beer/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="/css/style-nnm2spxvve8onlujjlegkkytaehyadd4ksxc1hyzzq9a2wvtrgbljqyulomn.min.css" />
+    
+    
+
+    
+      
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-113795291-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="/">Making 50-50 Demand Forecasts</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/64a0a01ebf522bf9e3d9212b5f2b17c2?s=90" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="/#about">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/64a0a01ebf522bf9e3d9212b5f2b17c2?s=110" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">James Northrop</h4>
+        
+          <h5 class="sidebar-profile-bio">Demand Manager / Data Scientist with 15+ years working in FMCG S&amp;OP and 9+ years in sales forecasting and demand management.  Currently working in telecommunications with Infosys Consulting.</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.linkedin.com/in/james-northrop-63651119/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-linkedin"></i>
+      
+      <span class="sidebar-button-desc">LinkedIn</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+  <div class="post-header-cover
+              text-center
+              post-header-cover--partial"
+       style="background-image:url('/img/portrait-pensive-tattooed-hipster-male-stylish-beard-hair-shirt-indie-brewery-portrait-pensive-tattooed-128968370.jpg')"
+       data-behavior="4">
+    
+  </div>
+
+
+      <div id="main" data-behavior="4"
+        class="hasCover
+               hasCoverMetaOut
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-center">
+  
+    <h1 class="post-title" itemprop="headline">
+      Boutique forecasting for boutique beer
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2020-01-20T00:00:00Z">
+        
+  
+  
+  
+  
+    20 January 2020
+  
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="/categories/demand-planning-and-forecasting">demand planning and forecasting</a>, 
+    
+      <a class="category-link" href="/categories/new-product-forecasting">New product forecasting</a>, 
+    
+      <a class="category-link" href="/categories/sales-and-operations-planning">Sales and Operations Planning</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>Boutique brewery numbers have exploded in Australia in the past 2 decades. In fact, the growth in demand for boutique brews had led to corporate brewing companies, CUB, Lion, Asahi and Coca Cola Amatil, to acquire and establish their own boutique beer brands. Data taken from <a href="http://craftbeerreviewer.com/the-brewery-list/" class="uri">http://craftbeerreviewer.com/the-brewery-list/</a> shows that 701 boutique brewing brands operate around Australia.</p>
+<p><img src="/post/2020-01-20-boutique-forecasting-for-boutique-beer_files/figure-html/brews_state-1.png" width="672" /></p>
+<p>Almost all of these breweries would have multiple beer styles (e.g. pale ale, lager, etc) and the majority would package beer into cans.<br />
+Packaging beer into cans offer a range of advantages:</p>
+<ul>
+<li>Consumers can consume the beer off-premise.<br />
+</li>
+<li>Restaurants and bars can offer a broader range of beer products to their customers without having to set up additional keg fonts.</li>
+<li>Beer in cans lasts longer than kegged beer.<br />
+</li>
+<li>Unlike bottles, cans protect beer from ultraviolet light.<br />
+</li>
+<li>Cans have environmental benefits over bottles as they are lighter, more space-efficient, more robust and more easily recycled.</li>
+</ul>
+<p>Given my passion for forecasting, the growth in boutique breweries got me wondering about how I would proceed with forecasting beer production.</p>
+</div>
+<div id="contributors-to-a-good-forecast" class="section level2">
+<h2>Contributors to a good forecast</h2>
+<p>One of the world’s leading experts on forecasting, Rob Hyndman, made this profound statement about statistical forecasting:</p>
+<blockquote>
+<p><em>&quot;I’ve identified five things that are important for something to be easy to forecast, or for forecasts to be good.</em></p>
+<ul>
+<li><em>The first is you need to have a very good understanding of the factors that contribute to that variable that you’re trying to forecast. </em><br />
+</li>
+<li><em>Secondly, there should be lots of data available. </em><br />
+</li>
+<li><em>Thirdly, the forecast shouldn’t affect the thing you’re trying to forecast. </em><br />
+</li>
+<li><em>Four, they should be a relatively low natural, unexplainable random variation. </em><br />
+</li>
+<li><em>And fifth, the future should be somehow similar to the past.&quot;</em> <sup>1</sup></li>
+</ul>
+</blockquote>
+<p>The more of these characteristics present when forecasting, the greater the value of statistical forecasting. If fewer are available, forecasters should revert to “judgemental” forecasting, i.e. forecasting by intuition and pragmatism rather than through statistical modelling.</p>
+<p>Interestingly, a new boutique brewery presents challenges for Rob Hyndman’s criteria:</p>
+<table>
+<colgroup>
+<col width="3%" />
+<col width="48%" />
+<col width="48%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>ID</th>
+<th>Criteria</th>
+<th>Boutique Brewery Context</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Understanding of contributing factors</td>
+<td>Moderate. We’re likely to know many but not all</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Lots of data</td>
+<td>Usually no but, in some cases, yes</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Forecast does not drive outcome</td>
+<td>Correct, so long as the forecast is not constraining raw materials supply.</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Low natural, unexplainable random variation</td>
+<td>Probably not though this is insignificant compared to the limited available data</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Future is similar to the past</td>
+<td>Probably though this is insignificant compared to the limited available data</td>
+</tr>
+</tbody>
+</table>
+<p>Based on a review of Hyndman’s criteria, we’re likely to have to introduce a reasonable level of judgement in generating forecast for our boutique brewer. Funnily enough, two quite valid approaches to forecasting a boutique brewery are also starkly contrasting: bottom-up and meta-data driven.</p>
+</div>
+<div id="bottom-up-method" class="section level2">
+<h2>Bottom-Up Method</h2>
+<p>Bottom-up forecasting involves forecasting the drivers of the forecasted variable (beer sales). For a boutique brewery, the factors driving beer sales would include the following.</p>
+<p><strong>Brewing capacity</strong><br />
+What are the capacities of the fermentation tanks and maturation vessels and what is the planned maturation time for the different products? What is a realistic brewing schedule?</p>
+<p><strong>Packaging capacity</strong><br />
+What is the packaging capacity of the boutique brewer? How many cans per hour can it operate and how many hours per week can it operate? Are there meaningful plans to alter the capacity?</p>
+<p><strong>Logistics capacity</strong><br />
+How is the product distributed to market? Are there warehouse capacity constraints given the brewing and replenishment cycles? Are there limits to transporting the product to outlets?</p>
+<p><strong>Outlet capacity</strong><br />
+How many outlets are the products currently sold (i.e. the product distribution)? What is the volume per outlet? What are the trends in the market and what is the seasonal profile?</p>
+<p><strong>Marketing plans</strong><br />
+What is the sales pipeline? How many prospects exist? What is the threat to existing outlets from competitor products?</p>
+<p><strong>Cash-flow constraints</strong><br />
+Many businesses with outstanding products are constrained by cash flow, i.e. the limited flow of cash from customers and consumers in turn limits the ability to procure raw materials, employ staff and develop the sales pipe-line. If the cash-flow has potential to constrain beer sales, estimate the planned cash-flow and potential vulnerabilities.</p>
+<p>To forecast using a bottom-up method, start with this process:</p>
+<ol style="list-style-type: decimal">
+<li>Collaborate with the boutique brewery and discuss high-level capacity estimates for each of these potential constraints. Identify the potential bottlenecks in the value-chain.<br />
+</li>
+<li>For the potential bottlenecks, develop more detailed capacity estimates along with a reasonable range of capacities. For instance, a reasonable estimate for the brewing capacity may be a throughput of between 1500L and 3000L per week, with a most likely throughput of 2000L.<br />
+</li>
+<li>For the potential bottlenecks, develop relationships between these bottlenecks. For example, what is the expected throughput of beer at on-premise outlets in scenarios where the local supermarket either does or does not range the beer.<br />
+</li>
+<li>Develop a network of nodes representing the value-chain where each node of the network represents a potential bottleneck. The inputs for each node represent the outcome of upstream bottlenecks, which in-turn drives the outcome of that node, as per step 3.<br />
+</li>
+<li>Model this in Excel, similar to the <a href="../../../2019/06/new-approach-to-new-product-forecasting/" target="_blank">NPD method</a> suggested in my earlier post.<br />
+</li>
+<li>As events unfold, stay close to the boutique brewer, review the consensus achieved in steps 1-3 and update the model with the updated insights and new assumptions.</li>
+</ol>
+<p>Note that this method is a simplified Markov Chain Monte Carlo (MCMC) approach. The beauty of this approach is that even Excel is capable of handling this model in simple cases, as shown by the earlier post.</p>
+<p><strong>Strengths</strong></p>
+<ul>
+<li>It encourages a close relationship with the boutique brewer, both at the start of the relationship and ongoing.<br />
+</li>
+<li>The workings of the model are easy to understand.<br />
+</li>
+<li>Assumptions are documented and transparent.<br />
+</li>
+<li>This method simultaneously generates prediction intervals and point forecast.<br />
+</li>
+<li>This method supports scenario and hypothesis testing.</li>
+</ul>
+<p><strong>Limitations</strong></p>
+<ul>
+<li>The effort required to build this model can become considerable, particularly as the number of bottlenecks grow.<br />
+</li>
+<li>More complex models will become increasingly difficult to model in Excel. Such models will increasingly require data science skills and either specialised software or free, open-source software such as R or Python.</li>
+</ul>
+</div>
+<div id="meta-data-approach" class="section level2">
+<h2>Meta-Data Approach</h2>
+<p>The meta-data approach involves comparing a boutique brewer with the complete set of known boutique brewers. This is similar to how banks approach loan applications or insurance companies may approach insurance ratings and premiums.</p>
+<p><strong>Process</strong></p>
+<ol style="list-style-type: decimal">
+<li>Identify key meta-data relevant to boutique brewery sales. For example:
+<ul>
+<li>The brewing set-up, i.e. the number and size of the tanks.<br />
+</li>
+<li>The route to market, i.e. brewhouse door, off-premise and on-premise outlets.<br />
+</li>
+<li>Number of outlets for boutique beer in the geographic area.<br />
+</li>
+<li>The population in the target geographic area.<br />
+</li>
+<li>The brewery owner’s experience with beer production.<br />
+</li>
+<li>The brewery’s experience in developing markets.</li>
+</ul></li>
+<li>Compare the new brewery’s meta-data with the meta-data of existing breweries and base a forecast of the new brewery based on the output of those existing breweries.<br />
+</li>
+<li>Collaborate closely with the brewery as beer starts to flow. Capture new insights and update the forecast accordingly.</li>
+</ol>
+<p>Note that this is a form of a regression model, possibly with decision trees driven by categorical variables.</p>
+<p><strong>Strengths</strong></p>
+<ul>
+<li>The inputs are significantly less data-intense compared to the bottom-up approach.<br />
+</li>
+<li>The forecast factors in correlating variables even when the causation is less apparent. By doing this, the accuracy of meta-data based forecasts is likely to be as high as the bottom-up approach.</li>
+</ul>
+<p><strong>Limitations</strong></p>
+<ul>
+<li>This method would require a reasonable amount of “training” data, i.e. established boutique brewers with comparable data, before generating reasonable forecasts. Insufficient training data would make this method invalid.<br />
+</li>
+<li>This method would require a considerable amount of training data before the model could generate reasonable confidence intervals. With minimal amounts of training data, the model would struggle to distinguish between natural variability between breweries and standard errors in the model parameters.</li>
+</ul>
+</div>
+<div id="relationships-count" class="section level2">
+<h2>Relationships count</h2>
+<p>Relationships count in almost every area of business, just as they do with life. Forecasting for a boutique brewery is not just a set and forget exercise. Collaborate closely with the brewery not only at the outset when building assumptions, but on a regular basis as more insights become known. Consequently, forecasts will attain greater certainty and even more value.</p>
+</div>
+<div id="summary" class="section level2">
+<h2>Summary</h2>
+<p>For passionate forecasters such as myself, a boutique brewery offers an opportunity to indulge two of my passions: forecasting and the sensory indulgence of a boutique beer. Forecasting a boutique brewery offers a number of challenges above and beyond the 5 circumstances conducive to reliable statistical forecasting:</p>
+<ul>
+<li>There is limited data available, resulting in difficulty in inferring the effect of factors on the forecasting volume.</li>
+<li>There is likely to be moderate random variation, meaning that similar boutique breweries may enjoy quite different outcomes.</li>
+</ul>
+<p>This article suggests 2 approaches to forecasting a boutique brewery and addressing the challenges listed above:</p>
+<ol style="list-style-type: decimal">
+<li>A bottom-up approach, similar to my suggested method for new product forecasting.<br />
+</li>
+<li>A meta-data approach, which is an application of a regression model.</li>
+</ol>
+<p>Which method works best depends entirely on the circumstances. Above all else, there is no substitute for developing a close, collaborative relationship with the brewery, both at the start of the business and then ongoing. Collaborative relationships will not only result in better assumptions and better forecasts, but better risk mitigation and better outcomes.</p>
+<hr />
+<p><sup>1</sup> Quote from Rob Hyndman taken from<br />
+<a href="https://www2.monash.edu/impact/podcasts/thought-capital/forecasts-are-always-wrong-but-we-need-them-anyway/" class="uri">https://www2.monash.edu/impact/podcasts/thought-capital/forecasts-are-always-wrong-but-we-need-them-anyway/</a></p>
+</div>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="/tags/agile/">Agile</a>
+
+  <a class="tag tag--primary tag--small" href="/tags/excel/">Excel</a>
+
+  <a class="tag tag--primary tag--small" href="/tags/forecast/">forecast</a>
+
+  <a class="tag tag--primary tag--small" href="/tags/new-product-forecasting/">New product forecasting</a>
+
+  <a class="tag tag--primary tag--small" href="/tags/prediction-intervals/">Prediction intervals</a>
+
+  <a class="tag tag--primary tag--small" href="/tags/sales-and-operation-planning/">Sales and operation planning</a>
+
+  <a class="tag tag--primary tag--small" href="/tags/sales-planning/">Sales planning</a>
+
+  <a class="tag tag--primary tag--small" href="/tags/supply-planning/">supply planning</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/11/making-mape-more-meaningful/" data-tooltip="Making MAPE More Meaningful">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2020/01/boutique-forecasting-for-boutique-beer/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2020/01/boutique-forecasting-for-boutique-beer/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=/2020/01/boutique-forecasting-for-boutique-beer/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2020 James Northrop. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="/2019/11/making-mape-more-meaningful/" data-tooltip="Making MAPE More Meaningful">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/2020/01/boutique-forecasting-for-boutique-beer/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/2020/01/boutique-forecasting-for-boutique-beer/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=/2020/01/boutique-forecasting-for-boutique-beer/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=%2F2020%2F01%2Fboutique-forecasting-for-boutique-beer%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=%2F2020%2F01%2Fboutique-forecasting-for-boutique-beer%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=%2F2020%2F01%2Fboutique-forecasting-for-boutique-beer%2F">
+          <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/64a0a01ebf522bf9e3d9212b5f2b17c2?s=110" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">James Northrop</h4>
+    
+      <div id="about-card-bio">Demand Manager / Data Scientist with 15+ years working in FMCG S&amp;OP and 9+ years in sales forecasting and demand management.  Currently working in telecommunications with Infosys Consulting.</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Data Scientist / Demand Manager
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Melbourne, Australia
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="Search" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center">no post found</div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="/2020/01/boutique-forecasting-for-boutique-beer/">
+                <h3 class="media-heading">Boutique forecasting for boutique beer</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jan 1, 2020
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">Introduction Boutique brewery numbers have exploded in Australia in the past 2 decades. In fact, the growth in demand for boutique brews had led to corporate brewing companies, CUB, Lion, Asahi and Coca Cola Amatil, to acquire and establish their own boutique beer brands. Data taken from http://craftbeerreviewer.com/the-brewery-list/ shows that 701 boutique brewing brands operate around Australia.
+Almost all of these breweries would have multiple beer styles (e.g. pale ale, lager, etc) and the majority would package beer into cans.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="/2019/11/making-mape-more-meaningful/">
+                <h3 class="media-heading">Making MAPE More Meaningful</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Nov 11, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">“You can’t manage what you can’t measure”, which is why it’s important for businesses to measure forecast accuracy. For those unaware, MAPE (Mean Absolute Percentage Error) is one of the three most common forecast accuracy measures along with bias and MSE. It is also used as a proxy for measuring the demand planning value-add in an FMCG businesses. That is, when the MAPE score is favourable (low), then it is assumed that demand planning’s value-add for a business must be high.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="/2019/09/measuring-demand-planning-behaviours/">
+                <h3 class="media-heading">Measuring Demand Planning Behaviours</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Sep 9, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">What’s better; making the wrong decision for the right reasons or making the right decision for the wrong reasons? If it’s one-off, then the right decision for the wrong reasons (also known as a fluke), is likely to receive plaudits. However, if it’s part of a decision making process recurring every month, such as sales forecasting, then I’ll back the wrong decision for the right reasons (also known as bad luck) every time.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="/2019/06/new-approach-to-new-product-forecasting/">
+                <h3 class="media-heading">A New Approach to New Product Forecasting</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jun 6, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">Pure Blonde Lager was easily the most successful new product launch in my time at Foster’s Group. The story goes that the concept was rushed through as senior management was concerned with the slim pickings in the new product pipeline. Almost immediately from when this lo-carb beer was launched, sales exceeded forecasts, leaving almost everyone in the supply chain scrambling to keep up. And it wasn’t just the warehouses that were screaming for more stock, it was the bottling lines, brewing facilities and packaging suppliers.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="/2019/05/who-is-best-finance-supply-or-sales/">
+                <h3 class="media-heading">Who is best: Finance, Supply or Sales?</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  May 5, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">Which is the best department to oversee Demand Planning: Sales, Supply or Finance? This question, often asked, lends itself to my experience of at least 2 years under each of these departments within FMCG businesses.
+ Finance from 2006 to 2008
+ Supply from 2008 to 2011
+ Sales from 2011 to 2015  This blog post, mixing my own observations with my own opinions, covers the following areas:
+The role of demand planning Impressions while under Finance, Supply and Sales Which department should oversee demand planning A key consideration to appointing a demand manager The final word - Sales  Demand Planning’s role</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="/2019/04/the-agile-opportunity-for-demand-planning-improvements/">
+                <h3 class="media-heading">The Agile opportunity for Demand Planning Improvements</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Apr 4, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">Demand planning team “going OK / not going OK”!
+A demand planner was recounting how her team was travelling OK but she felt that there was scope for significant improvement.
+For one thing, she felt that her team’s stakeholders didn’t really understand what the team did “beneath the bonnet” and would struggle to explain what value that they added to the business. There was, certainly, general satisfaction in the team’s output and people would say that, from the outside, that they were working well together, but that also reflected that stakeholders were somewhat unaware of the internal machinations.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="/2019/02/forecasts-are-deliberately-wrong/">
+                <h3 class="media-heading">&#34;Forecasts are deliberately wrong&#34;</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Feb 2, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">“Forecasts are deliberately wrong”
+Whoa! This confronting remark shot back at me when telling a data science colleague that I am an experienced Demand Manager. A part of my shock came from knowing deep down that I could see where he was coming from despite always striving towards achieving a “50/50” forecast; i.e. a forecast with a 50% chance of sitting too high balanced by a 50% chance of sitting too low.</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero="no post found"
+         data-message-one="1 post found"
+         data-message-other="{n} posts found">
+         7 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('/images/Sagrada%20JN.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = '\/2020\/01\/boutique-forecasting-for-boutique-beer\/';
+          
+            this.page.identifier = '\/2020\/01\/boutique-forecasting-for-boutique-beer\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = '5050forecasting';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

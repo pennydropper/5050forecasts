@@ -1,0 +1,222 @@
+---
+title: Boutique forecasting for boutique beer
+author: James Northrop
+date: '2020-01-20'
+slug: boutique-forecasting-for-boutique-beer
+categories:
+  - demand planning and forecasting
+  - New product forecasting
+  - Sales and Operations Planning
+tags:
+  - Agile
+  - Excel
+  - forecast
+  - New product forecasting
+  - Prediction intervals
+  - Sales and operation planning
+  - Sales planning
+  - supply planning
+
+draft: true
+  
+thumbnailImagePosition: left
+thumbnailImage: /img/portrait-pensive-tattooed-hipster-male-stylish-beard-hair-shirt-indie-brewery-portrait-pensive-tattooed-128968370.jpg # //d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city-750.jpg
+coverImage: /img/portrait-pensive-tattooed-hipster-male-stylish-beard-hair-shirt-indie-brewery-portrait-pensive-tattooed-128968370.jpg # //d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city.jpg
+coverSize: partial
+metaAlignment: center
+coverMeta: out
+
+comments: true
+favicon: "/img/favicon-32x32.png"
+---
+
+
+
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>Boutique brewery numbers have exploded in Australia in the past 2 decades. In fact, the growth in demand for boutique brews had led to corporate brewing companies, CUB, Lion, Asahi and Coca Cola Amatil, to acquire and establish their own boutique beer brands. Data taken from <a href="http://craftbeerreviewer.com/the-brewery-list/" class="uri">http://craftbeerreviewer.com/the-brewery-list/</a> shows that 701 boutique brewing brands operate around Australia.</p>
+<p><img src="/post/2020-01-20-boutique-forecasting-for-boutique-beer_files/figure-html/brews_state-1.png" width="672" /></p>
+<p>Almost all of these breweries would have multiple beer styles (e.g. pale ale, lager, etc) and the majority would package beer into cans.<br />
+Packaging beer into cans offer a range of advantages:</p>
+<ul>
+<li>Consumers can consume the beer off-premise.<br />
+</li>
+<li>Restaurants and bars can offer a broader range of beer products to their customers without having to set up additional keg fonts.</li>
+<li>Beer in cans lasts longer than kegged beer.<br />
+</li>
+<li>Unlike bottles, cans protect beer from ultraviolet light.<br />
+</li>
+<li>Cans have environmental benefits over bottles as they are lighter, more space-efficient, more robust and more easily recycled.</li>
+</ul>
+<p>Given my passion for forecasting, the growth in boutique breweries got me wondering about how I would proceed with forecasting beer production.</p>
+</div>
+<div id="contributors-to-a-good-forecast" class="section level2">
+<h2>Contributors to a good forecast</h2>
+<p>One of the world’s leading experts on forecasting, Rob Hyndman, made this profound statement about statistical forecasting:</p>
+<blockquote>
+<p><em>&quot;I’ve identified five things that are important for something to be easy to forecast, or for forecasts to be good.</em></p>
+<ul>
+<li><em>The first is you need to have a very good understanding of the factors that contribute to that variable that you’re trying to forecast. </em><br />
+</li>
+<li><em>Secondly, there should be lots of data available. </em><br />
+</li>
+<li><em>Thirdly, the forecast shouldn’t affect the thing you’re trying to forecast. </em><br />
+</li>
+<li><em>Four, they should be a relatively low natural, unexplainable random variation. </em><br />
+</li>
+<li><em>And fifth, the future should be somehow similar to the past.&quot;</em> <sup>1</sup></li>
+</ul>
+</blockquote>
+<p>The more of these characteristics present when forecasting, the greater the value of statistical forecasting. If fewer are available, forecasters should revert to “judgemental” forecasting, i.e. forecasting by intuition and pragmatism rather than through statistical modelling.</p>
+<p>Interestingly, a new boutique brewery presents challenges for Rob Hyndman’s criteria:</p>
+<table>
+<colgroup>
+<col width="3%" />
+<col width="48%" />
+<col width="48%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>ID</th>
+<th>Criteria</th>
+<th>Boutique Brewery Context</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Understanding of contributing factors</td>
+<td>Moderate. We’re likely to know many but not all</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Lots of data</td>
+<td>Usually no but, in some cases, yes</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Forecast does not drive outcome</td>
+<td>Correct, so long as the forecast is not constraining raw materials supply.</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Low natural, unexplainable random variation</td>
+<td>Probably not though this is insignificant compared to the limited available data</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Future is similar to the past</td>
+<td>Probably though this is insignificant compared to the limited available data</td>
+</tr>
+</tbody>
+</table>
+<p>Based on a review of Hyndman’s criteria, we’re likely to have to introduce a reasonable level of judgement in generating forecast for our boutique brewer. Funnily enough, two quite valid approaches to forecasting a boutique brewery are also starkly contrasting: bottom-up and meta-data driven.</p>
+</div>
+<div id="bottom-up-method" class="section level2">
+<h2>Bottom-Up Method</h2>
+<p>Bottom-up forecasting involves forecasting the drivers of the forecasted variable (beer sales). For a boutique brewery, the factors driving beer sales would include the following.</p>
+<p><strong>Brewing capacity</strong><br />
+What are the capacities of the fermentation tanks and maturation vessels and what is the planned maturation time for the different products? What is a realistic brewing schedule?</p>
+<p><strong>Packaging capacity</strong><br />
+What is the packaging capacity of the boutique brewer? How many cans per hour can it operate and how many hours per week can it operate? Are there meaningful plans to alter the capacity?</p>
+<p><strong>Logistics capacity</strong><br />
+How is the product distributed to market? Are there warehouse capacity constraints given the brewing and replenishment cycles? Are there limits to transporting the product to outlets?</p>
+<p><strong>Outlet capacity</strong><br />
+How many outlets are the products currently sold (i.e. the product distribution)? What is the volume per outlet? What are the trends in the market and what is the seasonal profile?</p>
+<p><strong>Marketing plans</strong><br />
+What is the sales pipeline? How many prospects exist? What is the threat to existing outlets from competitor products?</p>
+<p><strong>Cash-flow constraints</strong><br />
+Many businesses with outstanding products are constrained by cash flow, i.e. the limited flow of cash from customers and consumers in turn limits the ability to procure raw materials, employ staff and develop the sales pipe-line. If the cash-flow has potential to constrain beer sales, estimate the planned cash-flow and potential vulnerabilities.</p>
+<p>To forecast using a bottom-up method, start with this process:</p>
+<ol style="list-style-type: decimal">
+<li>Collaborate with the boutique brewery and discuss high-level capacity estimates for each of these potential constraints. Identify the potential bottlenecks in the value-chain.<br />
+</li>
+<li>For the potential bottlenecks, develop more detailed capacity estimates along with a reasonable range of capacities. For instance, a reasonable estimate for the brewing capacity may be a throughput of between 1500L and 3000L per week, with a most likely throughput of 2000L.<br />
+</li>
+<li>For the potential bottlenecks, develop relationships between these bottlenecks. For example, what is the expected throughput of beer at on-premise outlets in scenarios where the local supermarket either does or does not range the beer.<br />
+</li>
+<li>Develop a network of nodes representing the value-chain where each node of the network represents a potential bottleneck. The inputs for each node represent the outcome of upstream bottlenecks, which in-turn drives the outcome of that node, as per step 3.<br />
+</li>
+<li>Model this in Excel, similar to the <a href="../../../2019/06/new-approach-to-new-product-forecasting/" target="_blank">NPD method</a> suggested in my earlier post.<br />
+</li>
+<li>As events unfold, stay close to the boutique brewer, review the consensus achieved in steps 1-3 and update the model with the updated insights and new assumptions.</li>
+</ol>
+<p>Note that this method is a simplified Markov Chain Monte Carlo (MCMC) approach. The beauty of this approach is that even Excel is capable of handling this model in simple cases, as shown by the earlier post.</p>
+<p><strong>Strengths</strong></p>
+<ul>
+<li>It encourages a close relationship with the boutique brewer, both at the start of the relationship and ongoing.<br />
+</li>
+<li>The workings of the model are easy to understand.<br />
+</li>
+<li>Assumptions are documented and transparent.<br />
+</li>
+<li>This method simultaneously generates prediction intervals and point forecast.<br />
+</li>
+<li>This method supports scenario and hypothesis testing.</li>
+</ul>
+<p><strong>Limitations</strong></p>
+<ul>
+<li>The effort required to build this model can become considerable, particularly as the number of bottlenecks grow.<br />
+</li>
+<li>More complex models will become increasingly difficult to model in Excel. Such models will increasingly require data science skills and either specialised software or free, open-source software such as R or Python.</li>
+</ul>
+</div>
+<div id="meta-data-approach" class="section level2">
+<h2>Meta-Data Approach</h2>
+<p>The meta-data approach involves comparing a boutique brewer with the complete set of known boutique brewers. This is similar to how banks approach loan applications or insurance companies may approach insurance ratings and premiums.</p>
+<p><strong>Process</strong></p>
+<ol style="list-style-type: decimal">
+<li>Identify key meta-data relevant to boutique brewery sales. For example:
+<ul>
+<li>The brewing set-up, i.e. the number and size of the tanks.<br />
+</li>
+<li>The route to market, i.e. brewhouse door, off-premise and on-premise outlets.<br />
+</li>
+<li>Number of outlets for boutique beer in the geographic area.<br />
+</li>
+<li>The population in the target geographic area.<br />
+</li>
+<li>The brewery owner’s experience with beer production.<br />
+</li>
+<li>The brewery’s experience in developing markets.</li>
+</ul></li>
+<li>Compare the new brewery’s meta-data with the meta-data of existing breweries and base a forecast of the new brewery based on the output of those existing breweries.<br />
+</li>
+<li>Collaborate closely with the brewery as beer starts to flow. Capture new insights and update the forecast accordingly.</li>
+</ol>
+<p>Note that this is a form of a regression model, possibly with decision trees driven by categorical variables.</p>
+<p><strong>Strengths</strong></p>
+<ul>
+<li>The inputs are significantly less data-intense compared to the bottom-up approach.<br />
+</li>
+<li>The forecast factors in correlating variables even when the causation is less apparent. By doing this, the accuracy of meta-data based forecasts is likely to be as high as the bottom-up approach.</li>
+</ul>
+<p><strong>Limitations</strong></p>
+<ul>
+<li>This method would require a reasonable amount of “training” data, i.e. established boutique brewers with comparable data, before generating reasonable forecasts. Insufficient training data would make this method invalid.<br />
+</li>
+<li>This method would require a considerable amount of training data before the model could generate reasonable confidence intervals. With minimal amounts of training data, the model would struggle to distinguish between natural variability between breweries and standard errors in the model parameters.</li>
+</ul>
+</div>
+<div id="relationships-count" class="section level2">
+<h2>Relationships count</h2>
+<p>Relationships count in almost every area of business, just as they do with life. Forecasting for a boutique brewery is not just a set and forget exercise. Collaborate closely with the brewery not only at the outset when building assumptions, but on a regular basis as more insights become known. Consequently, forecasts will attain greater certainty and even more value.</p>
+</div>
+<div id="summary" class="section level2">
+<h2>Summary</h2>
+<p>For passionate forecasters such as myself, a boutique brewery offers an opportunity to indulge two of my passions: forecasting and the sensory indulgence of a boutique beer. Forecasting a boutique brewery offers a number of challenges above and beyond the 5 circumstances conducive to reliable statistical forecasting:</p>
+<ul>
+<li>There is limited data available, resulting in difficulty in inferring the effect of factors on the forecasting volume.</li>
+<li>There is likely to be moderate random variation, meaning that similar boutique breweries may enjoy quite different outcomes.</li>
+</ul>
+<p>This article suggests 2 approaches to forecasting a boutique brewery and addressing the challenges listed above:</p>
+<ol style="list-style-type: decimal">
+<li>A bottom-up approach, similar to my suggested method for new product forecasting.<br />
+</li>
+<li>A meta-data approach, which is an application of a regression model.</li>
+</ol>
+<p>Which method works best depends entirely on the circumstances. Above all else, there is no substitute for developing a close, collaborative relationship with the brewery, both at the start of the business and then ongoing. Collaborative relationships will not only result in better assumptions and better forecasts, but better risk mitigation and better outcomes.</p>
+<hr />
+<p><sup>1</sup> Quote from Rob Hyndman taken from<br />
+<a href="https://www2.monash.edu/impact/podcasts/thought-capital/forecasts-are-always-wrong-but-we-need-them-anyway/" class="uri">https://www2.monash.edu/impact/podcasts/thought-capital/forecasts-are-always-wrong-but-we-need-them-anyway/</a></p>
+</div>
