@@ -34,7 +34,7 @@ favicon: "/img/favicon-32x32.png"
 
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
-<p>Boutique brewery numbers have exploded in Australia in the past 2 decades. In fact, the growth in demand for boutique brews had led to corporate brewing companies, CUB, Lion, Asahi and Coca Cola Amatil, to acquire and establish their own boutique beer brands. Data taken from <a href="http://craftbeerreviewer.com/the-brewery-list/" class="uri">http://craftbeerreviewer.com/the-brewery-list/</a> shows that 701 boutique brewing brands operate around Australia.</p>
+<p>Boutique brewery numbers have exploded in Australia in the past 2 decades. So much so that the growth in demand for boutique brews has led to corporate brewing companies, CUB, Lion, Asahi and Coca Cola Amatil, to acquire and establish their own boutique beer brands. Data taken from <a href="http://craftbeerreviewer.com/the-brewery-list/" class="uri">http://craftbeerreviewer.com/the-brewery-list/</a> shows that 701 boutique brewing brands now operate around Australia.</p>
 <p><img src="/post/2020-01-20-boutique-forecasting-for-boutique-beer_files/figure-html/brews_state-1.png" width="672" /></p>
 <p>Almost all of these breweries would have multiple beer styles (e.g. pale ale, lager, etc) and the majority would package beer into cans.<br />
 Packaging beer into cans offer a range of advantages:</p>
@@ -48,7 +48,7 @@ Packaging beer into cans offer a range of advantages:</p>
 </li>
 <li>Cans have environmental benefits over bottles as they are lighter, more space-efficient, more robust and more easily recycled.</li>
 </ul>
-<p>Given my passion for forecasting, the growth in boutique breweries got me wondering about how I would proceed with forecasting beer production.</p>
+<p>Given my passion for forecasting, the growth in boutique breweries led me wondering about how I would proceed with forecasting beer production for a new brewery.</p>
 </div>
 <div id="contributors-to-a-good-forecast" class="section level2">
 <h2>Contributors to a good forecast</h2>
@@ -64,49 +64,45 @@ Packaging beer into cans offer a range of advantages:</p>
 </li>
 <li><em>Four, they should be a relatively low natural, unexplainable random variation. </em><br />
 </li>
-<li><em>And fifth, the future should be somehow similar to the past.&quot;</em> <sup>1</sup></li>
+<li><em>And fifth, the future should be somehow similar to the past.&quot;</em><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></li>
 </ul>
 </blockquote>
 <p>The more of these characteristics present when forecasting, the greater the value of statistical forecasting. If fewer are available, forecasters should revert to “judgemental” forecasting, i.e. forecasting by intuition and pragmatism rather than through statistical modelling.</p>
 <p>Interestingly, a new boutique brewery presents challenges for Rob Hyndman’s criteria:</p>
 <table>
-<colgroup>
-<col width="3%" />
-<col width="48%" />
-<col width="48%" />
-</colgroup>
+<caption><span id="tab:table2">Table 1: </span>Applying Hyndman’s criteria to boutique beer forecasting</caption>
 <thead>
 <tr class="header">
-<th>ID</th>
-<th>Criteria</th>
-<th>Boutique Brewery Context</th>
+<th align="left">ID</th>
+<th align="left">Criteria</th>
+<th align="left">Boutique Brewery Context</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>1</td>
-<td>Understanding of contributing factors</td>
-<td>Moderate. We’re likely to know many but not all</td>
+<td align="left">1</td>
+<td align="left">Understanding of contributing factors</td>
+<td align="left">Moderate. We’re likely to know many but not all</td>
 </tr>
 <tr class="even">
-<td>2</td>
-<td>Lots of data</td>
-<td>Usually no but, in some cases, yes</td>
+<td align="left">2</td>
+<td align="left">Lots of data</td>
+<td align="left">Usually no, but, in some cases, yes</td>
 </tr>
 <tr class="odd">
-<td>3</td>
-<td>Forecast does not drive outcome</td>
-<td>Correct, so long as the forecast is not constraining raw materials supply.</td>
+<td align="left">3</td>
+<td align="left">Forecast does not drive outcome</td>
+<td align="left">Correct, so long as the forecast is not constraining raw materials supply.</td>
 </tr>
 <tr class="even">
-<td>4</td>
-<td>Low natural, unexplainable random variation</td>
-<td>Probably not though this is insignificant compared to the limited available data</td>
+<td align="left">4</td>
+<td align="left">Low natural, unexplainable random variation</td>
+<td align="left">Probably not though this is insignificant compared to the limited available data</td>
 </tr>
 <tr class="odd">
-<td>5</td>
-<td>Future is similar to the past</td>
-<td>Probably though this is insignificant compared to the limited available data</td>
+<td align="left">5</td>
+<td align="left">Future is similar to the past</td>
+<td align="left">Probably though this is insignificant compared to the limited available data</td>
 </tr>
 </tbody>
 </table>
@@ -125,9 +121,14 @@ How is the product distributed to market? Are there warehouse capacity constrain
 How many outlets are the products currently sold (i.e. the product distribution)? What is the volume per outlet? What are the trends in the market and what is the seasonal profile?</p>
 <p><strong>Marketing plans</strong><br />
 What is the sales pipeline? How many prospects exist? What is the threat to existing outlets from competitor products?</p>
-<p><strong>Cash-flow constraints</strong><br />
+<p><strong>Cash-flow</strong><br />
 Many businesses with outstanding products are constrained by cash flow, i.e. the limited flow of cash from customers and consumers in turn limits the ability to procure raw materials, employ staff and develop the sales pipe-line. If the cash-flow has potential to constrain beer sales, estimate the planned cash-flow and potential vulnerabilities.</p>
 <p>To forecast using a bottom-up method, start with this process:</p>
+<hr />
+<div class="figure">
+<img src="/post/2020-01-20-boutique-forecasting-for-boutique-beer_files/Bottom-up%20forecasting%20flow.png" alt="Process for bottom up forecasting method" />
+<p class="caption">Process for bottom up forecasting method</p>
+</div>
 <ol style="list-style-type: decimal">
 <li>Collaborate with the boutique brewery and discuss high-level capacity estimates for each of these potential constraints. Identify the potential bottlenecks in the value-chain.<br />
 </li>
@@ -141,6 +142,12 @@ Many businesses with outstanding products are constrained by cash flow, i.e. th
 </li>
 <li>As events unfold, stay close to the boutique brewer, review the consensus achieved in steps 1-3 and update the model with the updated insights and new assumptions.</li>
 </ol>
+<hr />
+<div class="figure">
+<img src="/post/2020-01-20-boutique-forecasting-for-boutique-beer_files/Beer%20forecast%20scenarios%20v2.png" alt="Example network of potential bottlenecks in beer value chain" />
+<p class="caption">Example network of potential bottlenecks in beer value chain</p>
+</div>
+<hr />
 <p>Note that this method is a simplified Markov Chain Monte Carlo (MCMC) approach. The beauty of this approach is that even Excel is capable of handling this model in simple cases, as shown by the earlier post.</p>
 <p><strong>Strengths</strong></p>
 <ul>
@@ -216,7 +223,13 @@ Many businesses with outstanding products are constrained by cash flow, i.e. th
 <li>A meta-data approach, which is an application of a regression model.</li>
 </ol>
 <p>Which method works best depends entirely on the circumstances. Above all else, there is no substitute for developing a close, collaborative relationship with the brewery, both at the start of the business and then ongoing. Collaborative relationships will not only result in better assumptions and better forecasts, but better risk mitigation and better outcomes.</p>
+<p><a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
+</div>
+<div class="footnotes">
 <hr />
-<p><sup>1</sup> Quote from Rob Hyndman taken from<br />
-<a href="https://www2.monash.edu/impact/podcasts/thought-capital/forecasts-are-always-wrong-but-we-need-them-anyway/" class="uri">https://www2.monash.edu/impact/podcasts/thought-capital/forecasts-are-always-wrong-but-we-need-them-anyway/</a></p>
+<ol>
+<li id="fn1"><p>Quote from Rob Hyndman taken from
+<a href="https://www2.monash.edu/impact/podcasts/thought-capital/forecasts-are-always-wrong-but-we-need-them-anyway/" class="uri">https://www2.monash.edu/impact/podcasts/thought-capital/forecasts-are-always-wrong-but-we-need-them-anyway/</a><a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p>Top image: ID 128968370 © Vladimirs Poplavskis | Dreamstime.com<a href="#fnref2" class="footnote-back">↩</a></p></li>
+</ol>
 </div>
