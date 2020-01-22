@@ -17,7 +17,7 @@ tags:
   - Sales planning
   - supply planning
 
-draft: true
+draft: false
   
 thumbnailImagePosition: left
 thumbnailImage: /img/portrait-pensive-tattooed-hipster-male-stylish-beard-hair-shirt-indie-brewery-portrait-pensive-tattooed-128968370.jpg # //d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city-750.jpg
