@@ -227,6 +227,6 @@ This article suggests 2 approaches to forecasting a boutique brewery and address
 1. A bottom-up approach, similar to my suggested method for new product forecasting.  
 2. A meta-data approach, which is an application of a regression model.  
 
-Which method works best depends entirely on the circumstances.  Above all else, there is no substitute for developing a close, collaborative relationship with the brewery, both at the start of the business and then ongoing.  Collaborative relationships will not only result in better assumptions and better forecasts, but better risk mitigation and better outcomes.
+Which method works best depends entirely on the circumstances.  Above all else, there is no substitute for developing a close, collaborative relationship with the brewery, both at the start of the business and then ongoing. Collaborative relationships will not only result in better assumptions and better forecasts, but better risk mitigation and better business outcomes.
 
 ^[Top image: ID 128968370 © Vladimirs Poplavskis | Dreamstime.com]
