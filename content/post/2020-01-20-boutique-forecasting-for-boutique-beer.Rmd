@@ -75,15 +75,16 @@ brews_state %>%
 
 
 Almost all of these breweries would have multiple beer styles (e.g. pale ale, lager, etc) and the majority would package beer into cans.  
-Packaging beer into cans offer a range of advantages:  
+  
+Packaging beer into cans offers a range of advantages:  
 
-* Consumers can consume the beer off-premise.  
+* Consumers can consume the product off-premise.  
 * Restaurants and bars can offer a broader range of beer products to their customers without having to set up additional keg fonts. 
 * Beer in cans lasts longer than kegged beer.  
 * Unlike bottles, cans protect beer from ultraviolet light.  
-* Cans have environmental benefits over bottles as they are lighter, more space-efficient, more robust and more easily recycled.  
+* Cans have environmental benefits over bottles as they are lighter (reducing transporting energy), more space-efficient, more robust (fewer breakages) and more easily recycled.  
 
-Given my passion for forecasting, the growth in boutique breweries led me wondering about how I would proceed with forecasting beer production for a new brewery.
+Given my passion for forecasting, the growth in boutique breweries led me wondering about how I would proceed with forecasting beer production / sales for a new brewery.
 
 ## Contributors to a good forecast
 One of the world’s leading experts on forecasting, Rob Hyndman, made this profound statement about statistical forecasting:
@@ -100,14 +101,15 @@ https://www2.monash.edu/impact/podcasts/thought-capital/forecasts-are-always-wro
 The more of these characteristics present when forecasting, the greater the value of statistical forecasting.  If fewer are available, forecasters should revert to “judgemental” forecasting, i.e. forecasting by intuition and pragmatism rather than through statistical modelling.
 
 Interestingly, a new boutique brewery presents challenges for Rob Hyndman’s criteria:
-  
+
+---
 
 ```{r table2, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
 hyndman_crit_eval <- 
   tribble(
     ~ID, ~Criteria, ~`Boutique Brewery Context`,
-    "1", "Understanding of contributing factors", "Moderate. We’re likely to know many but not all",
-    "2", "Lots of data", "Usually no, but, in some cases, yes",
+    "1", "Understanding of contributing factors", "Moderate. We’re likely to know many (listed below as suggestions) but not all",
+    "2", "Lots of data", "Usually no, though we may have data from other start-up breweries",
     "3", "Forecast does not drive outcome", "Correct, so long as the forecast is not constraining raw materials supply.",
     "4", "Low natural, unexplainable random variation", "Probably not though this is insignificant compared to the limited available data",
     "5", "Future is similar to the past", "Probably though this is insignificant compared to the limited available data"
@@ -115,20 +117,11 @@ hyndman_crit_eval <-
 
 hyndman_crit_eval %>% 
   knitr::kable(., caption = "Applying Hyndman's criteria to boutique beer forecasting")
-# "
-# |ID |Criteria |Boutique Brewery Context|
-# |-|-------------|-------------|
-# |1|Understanding of contributing factors|Moderate. We’re likely to know many but not all|
-# |2|Lots of data|Usually no, but, in some cases, yes|
-# |3|Forecast does not drive outcome|Correct, so long as the forecast is not constraining raw materials supply.|
-# |4|Low natural, unexplainable random variation|Probably not though this is insignificant compared to the limited available data|
-# |5|Future is similar to the past|Probably though this is insignificant compared to the limited available data|
-# 
-# "
-# cat(hyndman_crit_eval) # output the table in a format good for HTML/PDF/docx conversion
+
+
 ```
 
-Based on a review of Hyndman’s criteria, we’re likely to have to introduce a reasonable level of judgement in generating forecast for our boutique brewer. Funnily enough, two quite valid approaches to forecasting a boutique brewery are also starkly contrasting: bottom-up and meta-data driven.
+Based on a review of Hyndman’s criteria, we’re likely to have to introduce a reasonable level of judgement in generating forecast for our boutique brewer. Two quite valid approaches to forecasting a boutique brewery are also starkly contrasting: bottom-up and meta-data driven.
 
 ## Bottom-Up Method
 Bottom-up forecasting involves forecasting the drivers of the forecasted variable (beer sales).  For a boutique brewery, the factors driving beer sales would include the following.
@@ -137,13 +130,13 @@ Bottom-up forecasting involves forecasting the drivers of the forecasted variabl
 What are the capacities of the fermentation tanks and maturation vessels and what is the planned maturation time for the different products?  What is a realistic brewing schedule?
 
 **Packaging capacity**  
-What is the packaging capacity of the boutique brewer?  How many cans per hour can it operate and how many hours per week can it operate?  Are there meaningful plans to alter the capacity?
+What is the packaging capacity of the boutique brewer?  How many cans per hour can it operate at and how many hours per week can it operate?  Are there meaningful plans to alter the capacity?
 
 **Logistics capacity**  
 How is the product distributed to market?  Are there warehouse capacity constraints given the brewing and replenishment cycles?  Are there limits to transporting the product to outlets?
 
 **Outlet capacity**  
-How many outlets are the products currently sold (i.e. the product distribution)?  What is the volume per outlet?  What are the trends in the market and what is the seasonal profile?
+How many outlets are the products currently range the product (i.e. the product distribution)?  What is the volume per outlet?  What are the trends in the market and what is the seasonal profile?
 
 **Marketing plans**  
 What is the sales pipeline?  How many prospects exist?  What is the threat to existing outlets from competitor products?
@@ -158,7 +151,7 @@ To forecast using a bottom-up method, start with this process:
 ![Process for bottom up forecasting method](/post/2020-01-20-boutique-forecasting-for-boutique-beer_files/Bottom-up forecasting flow.png)
 
 1. Collaborate with the boutique brewery and discuss high-level capacity estimates for each of these potential constraints.  Identify the potential bottlenecks in the value-chain.  
-2. For the potential bottlenecks, develop more detailed capacity estimates along with a reasonable range of capacities.  For instance, a reasonable estimate for the brewing capacity may be a throughput of between 1500L and 3000L per week, with a most likely throughput of 2000L.  
+2. For the potential bottlenecks, develop more robust estimates of the capacity and with a reasonable range of possible capacities.  For instance, a reasonable estimate for the brewing capacity may be a throughput of between 1500L and 3000L per week, with a most likely throughput of 2000L.  
 3. For the potential bottlenecks, develop relationships between these bottlenecks.  For example, what is the expected throughput of beer at on-premise outlets in scenarios where the local supermarket either does or does not range the beer.  
 4. Develop a network of nodes representing the value-chain where each node of the network represents a potential bottleneck.  The inputs for each node represent the outcome of upstream bottlenecks, which in-turn drives the outcome of that node, as per step 3.  
 5. Model this in Excel, similar to the [NPD method](../../../2019/06/new-approach-to-new-product-forecasting/){target="_blank"} suggested in my earlier post.  
@@ -170,7 +163,7 @@ To forecast using a bottom-up method, start with this process:
 
 ---
 
-Note that this method is a simplified Markov Chain Monte Carlo (MCMC) approach.  The beauty of this approach is that even Excel is capable of handling this model in simple cases, as shown by the earlier post.
+Data scientists would recognise this method is a simplified Markov Chain Monte Carlo (MCMC) approach.  One attraction of this approach is that even Excel is capable of handling this model in simple cases, as shown by the [earlier post](../../../2019/06/new-approach-to-new-product-forecasting/){target="_blank"}.
 
 **Strengths**  
 

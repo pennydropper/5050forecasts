@@ -290,19 +290,19 @@ ga('send', 'pageview');
 <h2>Introduction</h2>
 <p>Boutique brewery numbers have exploded in Australia in the past 2 decades. So much so that the growth in demand for boutique brews has led to corporate brewing companies, CUB, Lion, Asahi and Coca Cola Amatil, to acquire and establish their own boutique beer brands. Data taken from <a href="http://craftbeerreviewer.com/the-brewery-list/" class="uri">http://craftbeerreviewer.com/the-brewery-list/</a> shows that 701 boutique brewing brands now operate around Australia.</p>
 <p><img src="/post/2020-01-20-boutique-forecasting-for-boutique-beer_files/figure-html/brews_state-1.png" width="672" /></p>
-<p>Almost all of these breweries would have multiple beer styles (e.g. pale ale, lager, etc) and the majority would package beer into cans.<br />
-Packaging beer into cans offer a range of advantages:</p>
+<p>Almost all of these breweries would have multiple beer styles (e.g. pale ale, lager, etc) and the majority would package beer into cans.</p>
+<p>Packaging beer into cans offers a range of advantages:</p>
 <ul>
-<li>Consumers can consume the beer off-premise.<br />
+<li>Consumers can consume the product off-premise.<br />
 </li>
 <li>Restaurants and bars can offer a broader range of beer products to their customers without having to set up additional keg fonts.</li>
 <li>Beer in cans lasts longer than kegged beer.<br />
 </li>
 <li>Unlike bottles, cans protect beer from ultraviolet light.<br />
 </li>
-<li>Cans have environmental benefits over bottles as they are lighter, more space-efficient, more robust and more easily recycled.</li>
+<li>Cans have environmental benefits over bottles as they are lighter (reducing transporting energy), more space-efficient, more robust (fewer breakages) and more easily recycled.</li>
 </ul>
-<p>Given my passion for forecasting, the growth in boutique breweries led me wondering about how I would proceed with forecasting beer production for a new brewery.</p>
+<p>Given my passion for forecasting, the growth in boutique breweries led me wondering about how I would proceed with forecasting beer production / sales for a new brewery.</p>
 </div>
 <div id="contributors-to-a-good-forecast" class="section level2">
 <h2>Contributors to a good forecast</h2>
@@ -323,6 +323,7 @@ Packaging beer into cans offer a range of advantages:</p>
 </blockquote>
 <p>The more of these characteristics present when forecasting, the greater the value of statistical forecasting. If fewer are available, forecasters should revert to “judgemental” forecasting, i.e. forecasting by intuition and pragmatism rather than through statistical modelling.</p>
 <p>Interestingly, a new boutique brewery presents challenges for Rob Hyndman’s criteria:</p>
+<hr />
 <table>
 <caption><span id="tab:table2">Table 1: </span>Applying Hyndman’s criteria to boutique beer forecasting</caption>
 <thead>
@@ -336,12 +337,12 @@ Packaging beer into cans offer a range of advantages:</p>
 <tr class="odd">
 <td align="left">1</td>
 <td align="left">Understanding of contributing factors</td>
-<td align="left">Moderate. We’re likely to know many but not all</td>
+<td align="left">Moderate. We’re likely to know many (listed below as suggestions) but not all</td>
 </tr>
 <tr class="even">
 <td align="left">2</td>
 <td align="left">Lots of data</td>
-<td align="left">Usually no, but, in some cases, yes</td>
+<td align="left">Usually no, though we may have data from other start-up breweries</td>
 </tr>
 <tr class="odd">
 <td align="left">3</td>
@@ -360,7 +361,7 @@ Packaging beer into cans offer a range of advantages:</p>
 </tr>
 </tbody>
 </table>
-<p>Based on a review of Hyndman’s criteria, we’re likely to have to introduce a reasonable level of judgement in generating forecast for our boutique brewer. Funnily enough, two quite valid approaches to forecasting a boutique brewery are also starkly contrasting: bottom-up and meta-data driven.</p>
+<p>Based on a review of Hyndman’s criteria, we’re likely to have to introduce a reasonable level of judgement in generating forecast for our boutique brewer. Two quite valid approaches to forecasting a boutique brewery are also starkly contrasting: bottom-up and meta-data driven.</p>
 </div>
 <div id="bottom-up-method" class="section level2">
 <h2>Bottom-Up Method</h2>
@@ -368,11 +369,11 @@ Packaging beer into cans offer a range of advantages:</p>
 <p><strong>Brewing capacity</strong><br />
 What are the capacities of the fermentation tanks and maturation vessels and what is the planned maturation time for the different products? What is a realistic brewing schedule?</p>
 <p><strong>Packaging capacity</strong><br />
-What is the packaging capacity of the boutique brewer? How many cans per hour can it operate and how many hours per week can it operate? Are there meaningful plans to alter the capacity?</p>
+What is the packaging capacity of the boutique brewer? How many cans per hour can it operate at and how many hours per week can it operate? Are there meaningful plans to alter the capacity?</p>
 <p><strong>Logistics capacity</strong><br />
 How is the product distributed to market? Are there warehouse capacity constraints given the brewing and replenishment cycles? Are there limits to transporting the product to outlets?</p>
 <p><strong>Outlet capacity</strong><br />
-How many outlets are the products currently sold (i.e. the product distribution)? What is the volume per outlet? What are the trends in the market and what is the seasonal profile?</p>
+How many outlets are the products currently range the product (i.e. the product distribution)? What is the volume per outlet? What are the trends in the market and what is the seasonal profile?</p>
 <p><strong>Marketing plans</strong><br />
 What is the sales pipeline? How many prospects exist? What is the threat to existing outlets from competitor products?</p>
 <p><strong>Cash-flow</strong><br />
@@ -386,7 +387,7 @@ Many businesses with outstanding products are constrained by cash flow, i.e. th
 <ol style="list-style-type: decimal">
 <li>Collaborate with the boutique brewery and discuss high-level capacity estimates for each of these potential constraints. Identify the potential bottlenecks in the value-chain.<br />
 </li>
-<li>For the potential bottlenecks, develop more detailed capacity estimates along with a reasonable range of capacities. For instance, a reasonable estimate for the brewing capacity may be a throughput of between 1500L and 3000L per week, with a most likely throughput of 2000L.<br />
+<li>For the potential bottlenecks, develop more robust estimates of the capacity and with a reasonable range of possible capacities. For instance, a reasonable estimate for the brewing capacity may be a throughput of between 1500L and 3000L per week, with a most likely throughput of 2000L.<br />
 </li>
 <li>For the potential bottlenecks, develop relationships between these bottlenecks. For example, what is the expected throughput of beer at on-premise outlets in scenarios where the local supermarket either does or does not range the beer.<br />
 </li>
@@ -402,7 +403,7 @@ Many businesses with outstanding products are constrained by cash flow, i.e. th
 <p class="caption">Example network of potential bottlenecks in beer value chain</p>
 </div>
 <hr />
-<p>Note that this method is a simplified Markov Chain Monte Carlo (MCMC) approach. The beauty of this approach is that even Excel is capable of handling this model in simple cases, as shown by the earlier post.</p>
+<p>Data scientists would recognise this method is a simplified Markov Chain Monte Carlo (MCMC) approach. One attraction of this approach is that even Excel is capable of handling this model in simple cases, as shown by the <a href="../../../2019/06/new-approach-to-new-product-forecasting/" target="_blank">earlier post</a>.</p>
 <p><strong>Strengths</strong></p>
 <ul>
 <li>It encourages a close relationship with the boutique brewer, both at the start of the relationship and ongoing.<br />
