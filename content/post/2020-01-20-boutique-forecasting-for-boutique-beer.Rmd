@@ -41,7 +41,7 @@ library(magrittr)
 
 ```
 ## Introduction
-Boutique brewery numbers have exploded in Australia in the past 2 decades.  So much so that the growth in demand for boutique brews has led to corporate brewing companies, CUB, Lion, Asahi and Coca Cola Amatil, to acquire and establish their own boutique beer brands.  Data taken from http://craftbeerreviewer.com/the-brewery-list/ shows that 701 boutique brewing brands now operate around Australia.
+Boutique brewery numbers have exploded in Australia in the past 2 decades.  So much so that the growth in demand for boutique brews has led  corporate brewing companies, CUB, Lion, Asahi and Coca Cola Amatil, to acquire and establish their own boutique beer brands.  Data taken from http://craftbeerreviewer.com/the-brewery-list/ shows that 701 boutique brewing brands now operate around Australia.
 
 ```{r brews_state, echo=FALSE}
 brews_state <-
@@ -84,7 +84,7 @@ Packaging beer into cans offers a range of advantages:
 * Unlike bottles, cans protect beer from ultraviolet light.  
 * Cans have environmental benefits over bottles as they are lighter (reducing transporting energy), more space-efficient, more robust (fewer breakages) and more easily recycled.  
 
-Given my passion for forecasting, the growth in boutique breweries led me wondering about how I would proceed with forecasting beer production / sales for a new brewery.
+Given my passion for forecasting, the growth in boutique breweries led me to wondering about how I would proceed with forecasting beer production / sales for a new brewery.
 
 ## Contributors to a good forecast
 One of the world’s leading experts on forecasting, Rob Hyndman, made this profound statement about statistical forecasting:
@@ -94,8 +94,8 @@ One of the world’s leading experts on forecasting, Rob Hyndman, made this prof
 > * *The first is you need to have a very good understanding of the factors that contribute to that variable that you’re trying to forecast. *  
 > * *Secondly, there should be lots of data available. *  
 > * *Thirdly, the forecast shouldn’t affect the thing you’re trying to forecast. *  
-> * *Four, they should be a relatively low natural, unexplainable random variation. *  
-> * *And fifth, the future should be somehow similar to the past."*^[Quote from Rob Hyndman taken from\n
+> * *Fourthly, there should be a relatively low natural, unexplainable random variation. *  
+> * *And fifthly, the future should be somehow similar to the past."*^[Quote from Rob Hyndman taken from\n
 https://www2.monash.edu/impact/podcasts/thought-capital/forecasts-are-always-wrong-but-we-need-them-anyway/]
 
 The more of these characteristics present when forecasting, the greater the value of statistical forecasting.  If fewer are available, forecasters should revert to “judgemental” forecasting, i.e. forecasting by intuition and pragmatism rather than through statistical modelling.
@@ -130,7 +130,7 @@ Bottom-up forecasting involves forecasting the drivers of the forecasted variabl
 What are the capacities of the fermentation tanks and maturation vessels and what is the planned maturation time for the different products?  What is a realistic brewing schedule?
 
 **Packaging capacity**  
-What is the packaging capacity of the boutique brewer?  How many cans per hour can it operate at and how many hours per week can it operate?  Are there meaningful plans to alter the capacity?
+What is the packaging capacity of the boutique brewer?  How many cans per hour can it operate at and how many hours per week can it operate?  Are there realistic plans to upgrade the packaging capacity?
 
 **Logistics capacity**  
 How is the product distributed to market?  Are there warehouse capacity constraints given the brewing and replenishment cycles?  Are there limits to transporting the product to outlets?
@@ -152,7 +152,7 @@ To forecast using a bottom-up method, start with this process:
 
 1. Collaborate with the boutique brewery and discuss high-level capacity estimates for each of these potential constraints.  Identify the potential bottlenecks in the value-chain.  
 2. For the potential bottlenecks, develop more robust estimates of the capacity and with a reasonable range of possible capacities.  For instance, a reasonable estimate for the brewing capacity may be a throughput of between 1500L and 3000L per week, with a most likely throughput of 2000L.  
-3. For the potential bottlenecks, develop relationships between these bottlenecks.  For example, what is the expected throughput of beer at on-premise outlets in scenarios where the local supermarket either does or does not range the beer.  
+3. For the potential bottlenecks, identify relationships connecting the bottlenecks at different stages of the value chain.  For example, what is the expected throughput of beer at on-premise outlets in scenarios where the local supermarket either does or does not range the beer.  
 4. Develop a network of nodes representing the value-chain where each node of the network represents a potential bottleneck.  The inputs for each node represent the outcome of upstream bottlenecks, which in-turn drives the outcome of that node, as per step 3.  
 5. Model this in Excel, similar to the [NPD method](../../../2019/06/new-approach-to-new-product-forecasting/){target="_blank"} suggested in my earlier post.  
 6. As events unfold, stay close to the boutique brewer, review the consensus achieved in steps 1-3 and update the model with the updated insights and new assumptions.  
@@ -163,7 +163,7 @@ To forecast using a bottom-up method, start with this process:
 
 ---
 
-Data scientists would recognise this method is a simplified Markov Chain Monte Carlo (MCMC) approach.  One attraction of this approach is that even Excel is capable of handling this model in simple cases, as shown by the [earlier post](../../../2019/06/new-approach-to-new-product-forecasting/){target="_blank"}.
+Data scientists would recognise this method is a simplified Markov Chain Monte Carlo (MCMC) approach.  One attraction of this approach is that even Excel is capable of handling this model in simple cases, as shown by the [earlier post on NPD forecasting](../../../2019/06/new-approach-to-new-product-forecasting/){target="_blank"}.
 
 **Strengths**  
 
@@ -179,7 +179,7 @@ Data scientists would recognise this method is a simplified Markov Chain Monte C
 * More complex models will become increasingly difficult to model in Excel.  Such models will increasingly require data science skills and either specialised software or free, open-source software such as R or Python.  
 
 ## Meta-Data Approach
-The meta-data approach involves comparing a boutique brewer with the complete set of known boutique brewers.  This is similar to how banks approach loan applications or insurance companies may approach insurance ratings and premiums.
+The meta-data approach involves comparing a boutique brewer with the complete set of known boutique brewers.  This is a similar approach to how banks approach loan applications or insurance companies may approach insurance ratings and premiums.
 
 **Process**  
 
