@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>Beer Forecasting</title>
+      <link>/tags/beer-forecasting/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/beer-forecasting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Budget</title>
       <link>/tags/budget/</link>
       <pubDate>Sat, 23 Feb 2019 00:00:00 +0000</pubDate>
@@ -59,7 +68,7 @@
     <item>
       <title>Fmcg</title>
       <link>/tags/fmcg/</link>
-      <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/fmcg/</guid>
       <description></description>
@@ -84,6 +93,24 @@
     </item>
     
     <item>
+      <title>Mcmc</title>
+      <link>/tags/mcmc/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/mcmc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Meta Data</title>
+      <link>/tags/meta-data/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/meta-data/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>New Product Forecasting</title>
       <link>/tags/new-product-forecasting/</link>
       <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
@@ -98,6 +125,15 @@
       <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/prediction-intervals/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Regression Modelling</title>
+      <link>/tags/regression-modelling/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/regression-modelling/</guid>
       <description></description>
     </item>
     
@@ -161,6 +197,15 @@
       <pubDate>Fri, 08 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/uncertainty/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Value Chain</title>
+      <link>/tags/value-chain/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/value-chain/</guid>
       <description></description>
     </item>
     

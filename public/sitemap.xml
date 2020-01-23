@@ -38,19 +38,25 @@
   </url>
   
   <url>
-    <loc>/tags/agile/</loc>
-    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/categories/agile/</loc>
     <lastmod>2019-05-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>/tags/agile/</loc>
+    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/archives/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/beer-forecasting/</loc>
+    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -92,7 +98,7 @@
   
   <url>
     <loc>/tags/fmcg/</loc>
-    <lastmod>2019-09-15T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -115,13 +121,25 @@
   </url>
   
   <url>
-    <loc>/tags/new-product-forecasting/</loc>
+    <loc>/tags/mcmc/</loc>
+    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/meta-data/</loc>
     <lastmod>2020-01-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/new-product-forecasting/</loc>
+    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/new-product-forecasting/</loc>
     <lastmod>2020-01-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -141,6 +159,12 @@
   <url>
     <loc>/categories/process-maturity/</loc>
     <lastmod>2019-11-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/regression-modelling/</loc>
+    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -201,6 +225,12 @@
   <url>
     <loc>/tags/uncertainty/</loc>
     <lastmod>2019-11-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/value-chain/</loc>
+    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

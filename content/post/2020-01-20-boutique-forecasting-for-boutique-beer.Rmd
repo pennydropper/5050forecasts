@@ -16,6 +16,13 @@ tags:
   - Sales and operation planning
   - Sales planning
   - supply planning
+  - FMCG
+  - Beer forecasting
+  - Value Chain
+  - MCMC
+  - New Product Forecasting
+  - Regression Modelling
+  - Meta-data
 
 draft: false
   

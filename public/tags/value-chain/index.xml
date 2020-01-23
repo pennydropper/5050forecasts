@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Value Chain on Making 50-50 Demand Forecasts</title>
+    <link>/tags/value-chain/</link>
+    <description>Recent content in Value Chain on Making 50-50 Demand Forecasts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 20 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/value-chain/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Boutique forecasting for boutique beer</title>
+      <link>/2020/01/boutique-forecasting-for-boutique-beer/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/01/boutique-forecasting-for-boutique-beer/</guid>
+      <description>Introduction Boutique brewery numbers have exploded in Australia in the past 2 decades. So much so that the growth in demand for boutique brews has led corporate brewing companies, CUB, Lion, Asahi and Coca Cola Amatil, to acquire and establish their own boutique beer brands. Data taken from http://craftbeerreviewer.com/the-brewery-list/ shows that 701 boutique brewing brands now operate around Australia.
+Almost all of these breweries would have multiple beer styles (e.g. pale ale, lager, etc) and the majority would package beer into cans.</description>
+    </item>
+    
+  </channel>
+</rss>
