@@ -96,8 +96,8 @@ Cans are unsung beverage heroes as packaging beer into cans offers a range of ad
 
 Based on the 2019 Australian Craft Beer Survey by Beer Cartel, cans are now more popular than bottles, with *38%* of craft beer drinkers preferring can packaging compared to just 27% of drinkers who prefer bottles.^[https://www.beercartel.com.au/blog/2019-australian-craft-beer-survey-results/]  
 
-## Artisan Industry Challenges  
-Boutique breweries are a great example of an industry with volatile demand. Much demand is off a relatively low base, possibly only at the brewery's own bar.  However, sales for individual products can balloon rapidly with word of mouth and ranging in local off-premise and on-premise outlets.  For this reason, brewers and their suppliers need systems and processes to rapidly adjust for potential "rainmakers".
+## Artisan Industry Challenges with a Low Base  
+Boutique breweries are a great example of an industry with volatile demand with a low base. Often demand starts on a low base, particularly if sales are only at the brewery's own bar.  However, sales for individual products can balloon rapidly with special events, word of mouth and wider ranging in off-premise and on-premise outlets.  For this reason, brewers and their suppliers need systems and processes to rapidly adjust for potential "rainmakers".
 
 ## Contributors to a good forecast
 One of the world’s leading experts on forecasting, Rob Hyndman, made this profound statement about statistical forecasting:
@@ -247,7 +247,7 @@ This article suggests 2 approaches to forecasting a boutique brewery and address
 Which method works best depends entirely on the circumstances.  Above all else, there is no substitute for developing a close, collaborative relationship with the brewery, both at the start of the business and then ongoing. Collaborative relationships will not only result in better assumptions and better forecasts, but better risk mitigation and better business outcomes.
 
 ## And also... 7 trends 
-These 7 Australian microbrewery trends in 2019 identified in [Mark Dingley's blog](https://blog.matthews.com.au/top-7-australian-microbrewery-trends-brewing-for-2019/){target="_blank"}, read while researching this blog, were interesting enough to list in the appendix.  
+These 7 Australian microbrewery trends in 2019, identified in [Mark Dingley's blog](https://blog.matthews.com.au/top-7-australian-microbrewery-trends-brewing-for-2019/){target="_blank"}, outline recent, interesting insights into Australian craft beers.  
 
 1. Local ingredients.  
 2. The power of the local story.  
