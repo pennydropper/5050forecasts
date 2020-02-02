@@ -2,39 +2,36 @@
 title: Boutique forecasting for boutique beer
 author: James Northrop
 date: '2020-01-20'
-slug: boutique-forecasting-for-boutique-beer
 categories:
   - demand planning and forecasting
   - New product forecasting
   - Sales and Operations Planning
 tags:
   - Agile
+  - Beer forecasting
   - Excel
+  - FMCG
   - forecast
+  - MCMC
+  - Meta-data
   - New product forecasting
+  - New Product Forecasting
   - Prediction intervals
+  - Regression Modelling
   - Sales and operation planning
   - Sales planning
   - supply planning
-  - FMCG
-  - Beer forecasting
   - Value Chain
-  - MCMC
-  - New Product Forecasting
-  - Regression Modelling
-  - Meta-data
-
-draft: false
-  
+slug: boutique-forecasting-for-boutique-beer
+draft: no
 thumbnailImagePosition: left
-thumbnailImage: /img/portrait-pensive-tattooed-hipster-male-stylish-beard-hair-shirt-indie-brewery-portrait-pensive-tattooed-128968370.jpg # //d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city-750.jpg
-coverImage: /img/portrait-pensive-tattooed-hipster-male-stylish-beard-hair-shirt-indie-brewery-portrait-pensive-tattooed-128968370.jpg # //d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city.jpg
+thumbnailImage: /img/portrait-pensive-tattooed-hipster-male-stylish-beard-hair-shirt-indie-brewery-portrait-pensive-tattooed-128968370.jpg
+coverImage: /img/portrait-pensive-tattooed-hipster-male-stylish-beard-hair-shirt-indie-brewery-portrait-pensive-tattooed-128968370.jpg
 coverSize: partial
 metaAlignment: center
 coverMeta: out
-
-comments: true
-favicon: "/img/favicon-32x32.png"
+comments: yes
+favicon: /img/favicon-32x32.png
 ---
 ```{r setup, echo=FALSE, eval=TRUE, message=FALSE}
 
@@ -80,18 +77,27 @@ brews_state %>%
   theme(legend.position = "none")
 ```
 
+While I'm yet to find data on the historical growth of craft beers in Australia, Goldstein Research forecasts the Australian market to reach $345 million by 2025 with CAGR of over 5%.^[Australian market forecast from https://www.goldsteinresearch.com/report/australia-craft-beer-market]
 
-Almost all of these breweries would have multiple beer styles (e.g. pale ale, lager, etc) and the majority would package beer into cans.  
+Given my passion for forecasting, the growth in boutique breweries led me to wondering about how I would proceed with forecasting beer production / sales for a new brewery.
+
+
+## Cans are beautiful  
+Almost all breweries would have multiple beer styles (e.g. pale ale, lager, etc) and the majority would package beer into cans.  
   
-Packaging beer into cans offers a range of advantages:  
+Cans are unsung beverage heroes as packaging beer into cans offers a range of advantages:  
 
 * Consumers can consume the product off-premise.  
 * Restaurants and bars can offer a broader range of beer products to their customers without having to set up additional keg fonts. 
 * Beer in cans lasts longer than kegged beer.  
 * Unlike bottles, cans protect beer from ultraviolet light.  
 * Cans have environmental benefits over bottles as they are lighter (reducing transporting energy), more space-efficient, more robust (fewer breakages) and more easily recycled.  
+* Cans are safer than glass when taken outdoors (parks, picnic grounds, beer gardens, festivals) for obvious reasons.  And I'm not just saying this as a cyclist.  
 
-Given my passion for forecasting, the growth in boutique breweries led me to wondering about how I would proceed with forecasting beer production / sales for a new brewery.
+Based on the 2019 Australian Craft Beer Survey by Beer Cartel, cans are now more popular than bottles, with *38%* of craft beer drinkers preferring can packaging compared to just 27% of drinkers who prefer bottles.^[https://www.beercartel.com.au/blog/2019-australian-craft-beer-survey-results/]  
+
+## Artisan Industry Challenges  
+Boutique breweries are a great example of an industry with volatile demand. Much demand is off a relatively low base, possibly only at the brewery's own bar.  However, sales for individual products can balloon rapidly with word of mouth and ranging in local off-premise and on-premise outlets.  For this reason, brewers and their suppliers need systems and processes to rapidly adjust for potential "rainmakers".
 
 ## Contributors to a good forecast
 One of the world’s leading experts on forecasting, Rob Hyndman, made this profound statement about statistical forecasting:
@@ -188,6 +194,11 @@ Data scientists would recognise this method is a simplified Markov Chain Monte C
 ## Meta-Data Approach
 The meta-data approach involves comparing a boutique brewer with the complete set of known boutique brewers.  This is a similar approach to how banks approach loan applications or insurance companies may approach insurance ratings and premiums.
 
+
+---
+
+![Process for Meta-Data method of forecasting](/post/2020-01-20-boutique-forecasting-for-boutique-beer_files/Meta data forecasting flow.png)
+
 **Process**  
 
 1. Identify key meta-data relevant to boutique brewery sales. For example:  
@@ -201,7 +212,13 @@ The meta-data approach involves comparing a boutique brewer with the complete se
 2. Compare the new brewery’s meta-data with the meta-data of existing breweries and base a forecast of the new brewery based on the output of those existing breweries.  
 3. Collaborate closely with the brewery as beer starts to flow. Capture new insights and update the forecast accordingly.  
 
-Note that this is a form of a regression model, possibly with decision trees driven by categorical variables.
+
+---
+
+![Data flow for Meta-Data method of forecasting](/post/2020-01-20-boutique-forecasting-for-boutique-beer_files/Meta data forecasting logic.png)
+
+
+Note that this would apply a form of a regression model, possibly with decision trees driven by categorical variables.
 
 **Strengths**
 
@@ -228,5 +245,17 @@ This article suggests 2 approaches to forecasting a boutique brewery and address
 2. A meta-data approach, which is an application of a regression model.  
 
 Which method works best depends entirely on the circumstances.  Above all else, there is no substitute for developing a close, collaborative relationship with the brewery, both at the start of the business and then ongoing. Collaborative relationships will not only result in better assumptions and better forecasts, but better risk mitigation and better business outcomes.
+
+## And also... 7 trends 
+These 7 Australian microbrewery trends in 2019 identified in [Mark Dingley's blog](https://blog.matthews.com.au/top-7-australian-microbrewery-trends-brewing-for-2019/){target="_blank"}, read while researching this blog, were interesting enough to list in the appendix.  
+
+1. Local ingredients.  
+2. The power of the local story.  
+3. Sustainable packaging and processes.  
+4. Kombucha.  
+5. The brew-pub experience.  
+6. Continuing to push flavour boundaries, including mussels, oysters, lollies and red creaming soda!  
+7. Microbrewers collaborating.^[Top 7 Australian microbrewery trends brewing for 2019 \n https://blog.matthews.com.au/top-7-australian-microbrewery-trends-brewing-for-2019/]  
+
 
 ^[Top image: ID 128968370 © Vladimirs Poplavskis | Dreamstime.com]

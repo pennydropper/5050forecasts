@@ -2,39 +2,36 @@
 title: Boutique forecasting for boutique beer
 author: James Northrop
 date: '2020-01-20'
-slug: boutique-forecasting-for-boutique-beer
 categories:
   - demand planning and forecasting
   - New product forecasting
   - Sales and Operations Planning
 tags:
   - Agile
+  - Beer forecasting
   - Excel
+  - FMCG
   - forecast
+  - MCMC
+  - Meta-data
   - New product forecasting
+  - New Product Forecasting
   - Prediction intervals
+  - Regression Modelling
   - Sales and operation planning
   - Sales planning
   - supply planning
-  - FMCG
-  - Beer forecasting
   - Value Chain
-  - MCMC
-  - New Product Forecasting
-  - Regression Modelling
-  - Meta-data
-
-draft: false
-  
+slug: boutique-forecasting-for-boutique-beer
+draft: no
 thumbnailImagePosition: left
-thumbnailImage: /img/portrait-pensive-tattooed-hipster-male-stylish-beard-hair-shirt-indie-brewery-portrait-pensive-tattooed-128968370.jpg # //d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city-750.jpg
-coverImage: /img/portrait-pensive-tattooed-hipster-male-stylish-beard-hair-shirt-indie-brewery-portrait-pensive-tattooed-128968370.jpg # //d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city.jpg
+thumbnailImage: /img/portrait-pensive-tattooed-hipster-male-stylish-beard-hair-shirt-indie-brewery-portrait-pensive-tattooed-128968370.jpg
+coverImage: /img/portrait-pensive-tattooed-hipster-male-stylish-beard-hair-shirt-indie-brewery-portrait-pensive-tattooed-128968370.jpg
 coverSize: partial
 metaAlignment: center
 coverMeta: out
-
-comments: true
-favicon: "/img/favicon-32x32.png"
+comments: yes
+favicon: /img/favicon-32x32.png
 ---
 
 
@@ -43,8 +40,13 @@ favicon: "/img/favicon-32x32.png"
 <h2>Introduction</h2>
 <p>Boutique brewery numbers have exploded in Australia in the past 2 decades. So much so that the growth in demand for boutique brews has led corporate brewing companies, CUB, Lion, Asahi and Coca Cola Amatil, to acquire and establish their own boutique beer brands. Data taken from <a href="http://craftbeerreviewer.com/the-brewery-list/" class="uri">http://craftbeerreviewer.com/the-brewery-list/</a> shows that 701 boutique brewing brands now operate around Australia.</p>
 <p><img src="/post/2020-01-20-boutique-forecasting-for-boutique-beer_files/figure-html/brews_state-1.png" width="672" /></p>
-<p>Almost all of these breweries would have multiple beer styles (e.g. pale ale, lager, etc) and the majority would package beer into cans.</p>
-<p>Packaging beer into cans offers a range of advantages:</p>
+<p>While I’m yet to find data on the historical growth of craft beers in Australia, Goldstein Research forecasts the Australian market to reach $345 million by 2025 with CAGR of over 5%.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<p>Given my passion for forecasting, the growth in boutique breweries led me to wondering about how I would proceed with forecasting beer production / sales for a new brewery.</p>
+</div>
+<div id="cans-are-beautiful" class="section level2">
+<h2>Cans are beautiful</h2>
+<p>Almost all breweries would have multiple beer styles (e.g. pale ale, lager, etc) and the majority would package beer into cans.</p>
+<p>Cans are unsung beverage heroes as packaging beer into cans offers a range of advantages:</p>
 <ul>
 <li>Consumers can consume the product off-premise.<br />
 </li>
@@ -53,9 +55,15 @@ favicon: "/img/favicon-32x32.png"
 </li>
 <li>Unlike bottles, cans protect beer from ultraviolet light.<br />
 </li>
-<li>Cans have environmental benefits over bottles as they are lighter (reducing transporting energy), more space-efficient, more robust (fewer breakages) and more easily recycled.</li>
+<li>Cans have environmental benefits over bottles as they are lighter (reducing transporting energy), more space-efficient, more robust (fewer breakages) and more easily recycled.<br />
+</li>
+<li>Cans are safer than glass when taken outdoors (parks, picnic grounds, beer gardens, festivals) for obvious reasons. And I’m not just saying this as a cyclist.</li>
 </ul>
-<p>Given my passion for forecasting, the growth in boutique breweries led me to wondering about how I would proceed with forecasting beer production / sales for a new brewery.</p>
+<p>Based on the 2019 Australian Craft Beer Survey by Beer Cartel, cans are now more popular than bottles, with <em>38%</em> of craft beer drinkers preferring can packaging compared to just 27% of drinkers who prefer bottles.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
+</div>
+<div id="artisan-industry-challenges" class="section level2">
+<h2>Artisan Industry Challenges</h2>
+<p>Boutique breweries are a great example of an industry with volatile demand. Much demand is off a relatively low base, possibly only at the brewery’s own bar. However, sales for individual products can balloon rapidly with word of mouth and ranging in local off-premise and on-premise outlets. For this reason, brewers and their suppliers need systems and processes to rapidly adjust for potential “rainmakers”.</p>
 </div>
 <div id="contributors-to-a-good-forecast" class="section level2">
 <h2>Contributors to a good forecast</h2>
@@ -71,7 +79,7 @@ favicon: "/img/favicon-32x32.png"
 </li>
 <li><em>Fourthly, there should be a relatively low natural, unexplainable random variation. </em><br />
 </li>
-<li><em>And fifthly, the future should be somehow similar to the past.&quot;</em><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></li>
+<li><em>And fifthly, the future should be somehow similar to the past.&quot;</em><a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></li>
 </ul>
 </blockquote>
 <p>The more of these characteristics present when forecasting, the greater the value of statistical forecasting. If fewer are available, forecasters should revert to “judgemental” forecasting, i.e. forecasting by intuition and pragmatism rather than through statistical modelling.</p>
@@ -179,6 +187,11 @@ Many businesses with outstanding products are constrained by cash flow, i.e. th
 <div id="meta-data-approach" class="section level2">
 <h2>Meta-Data Approach</h2>
 <p>The meta-data approach involves comparing a boutique brewer with the complete set of known boutique brewers. This is a similar approach to how banks approach loan applications or insurance companies may approach insurance ratings and premiums.</p>
+<hr />
+<div class="figure">
+<img src="/post/2020-01-20-boutique-forecasting-for-boutique-beer_files/Meta%20data%20forecasting%20flow.png" alt="Process for Meta-Data method of forecasting" />
+<p class="caption">Process for Meta-Data method of forecasting</p>
+</div>
 <p><strong>Process</strong></p>
 <ol style="list-style-type: decimal">
 <li>Identify key meta-data relevant to boutique brewery sales. For example:
@@ -199,7 +212,12 @@ Many businesses with outstanding products are constrained by cash flow, i.e. th
 </li>
 <li>Collaborate closely with the brewery as beer starts to flow. Capture new insights and update the forecast accordingly.</li>
 </ol>
-<p>Note that this is a form of a regression model, possibly with decision trees driven by categorical variables.</p>
+<hr />
+<div class="figure">
+<img src="/post/2020-01-20-boutique-forecasting-for-boutique-beer_files/Meta%20data%20forecasting%20logic.png" alt="Data flow for Meta-Data method of forecasting" />
+<p class="caption">Data flow for Meta-Data method of forecasting</p>
+</div>
+<p>Note that this would apply a form of a regression model, possibly with decision trees driven by categorical variables.</p>
 <p><strong>Strengths</strong></p>
 <ul>
 <li>The inputs are significantly less data-intense compared to the bottom-up approach.<br />
@@ -231,13 +249,35 @@ Many businesses with outstanding products are constrained by cash flow, i.e. th
 <li>A meta-data approach, which is an application of a regression model.</li>
 </ol>
 <p>Which method works best depends entirely on the circumstances. Above all else, there is no substitute for developing a close, collaborative relationship with the brewery, both at the start of the business and then ongoing. Collaborative relationships will not only result in better assumptions and better forecasts, but better risk mitigation and better business outcomes.</p>
-<p><a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
+</div>
+<div id="and-also-7-trends" class="section level2">
+<h2>And also… 7 trends</h2>
+<p>These 7 Australian microbrewery trends in 2019 identified in <a href="https://blog.matthews.com.au/top-7-australian-microbrewery-trends-brewing-for-2019/" target="_blank">Mark Dingley’s blog</a>, read while researching this blog, were interesting enough to list in the appendix.</p>
+<ol style="list-style-type: decimal">
+<li>Local ingredients.<br />
+</li>
+<li>The power of the local story.<br />
+</li>
+<li>Sustainable packaging and processes.<br />
+</li>
+<li>Kombucha.<br />
+</li>
+<li>The brew-pub experience.<br />
+</li>
+<li>Continuing to push flavour boundaries, including mussels, oysters, lollies and red creaming soda!<br />
+</li>
+<li>Microbrewers collaborating.<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></li>
+</ol>
+<p><a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a></p>
 </div>
 <div class="footnotes">
 <hr />
 <ol>
-<li id="fn1"><p>Quote from Rob Hyndman taken from
-<a href="https://www2.monash.edu/impact/podcasts/thought-capital/forecasts-are-always-wrong-but-we-need-them-anyway/" class="uri">https://www2.monash.edu/impact/podcasts/thought-capital/forecasts-are-always-wrong-but-we-need-them-anyway/</a><a href="#fnref1" class="footnote-back">↩</a></p></li>
-<li id="fn2"><p>Top image: ID 128968370 © Vladimirs Poplavskis | Dreamstime.com<a href="#fnref2" class="footnote-back">↩</a></p></li>
+<li id="fn1"><p>Australian market forecast from <a href="https://www.goldsteinresearch.com/report/australia-craft-beer-market" class="uri">https://www.goldsteinresearch.com/report/australia-craft-beer-market</a><a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p><a href="https://www.beercartel.com.au/blog/2019-australian-craft-beer-survey-results/" class="uri">https://www.beercartel.com.au/blog/2019-australian-craft-beer-survey-results/</a><a href="#fnref2" class="footnote-back">↩</a></p></li>
+<li id="fn3"><p>Quote from Rob Hyndman taken from
+<a href="https://www2.monash.edu/impact/podcasts/thought-capital/forecasts-are-always-wrong-but-we-need-them-anyway/" class="uri">https://www2.monash.edu/impact/podcasts/thought-capital/forecasts-are-always-wrong-but-we-need-them-anyway/</a><a href="#fnref3" class="footnote-back">↩</a></p></li>
+<li id="fn4"><p>Top 7 Australian microbrewery trends brewing for 2019 <a href="https://blog.matthews.com.au/top-7-australian-microbrewery-trends-brewing-for-2019/" class="uri">https://blog.matthews.com.au/top-7-australian-microbrewery-trends-brewing-for-2019/</a><a href="#fnref4" class="footnote-back">↩</a></p></li>
+<li id="fn5"><p>Top image: ID 128968370 © Vladimirs Poplavskis | Dreamstime.com<a href="#fnref5" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
