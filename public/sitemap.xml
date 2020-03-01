@@ -43,13 +43,13 @@
   </url>
   
   <url>
-    <loc>/categories/agile/</loc>
+    <loc>/tags/agile/</loc>
     <lastmod>2020-03-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/agile/</loc>
+    <loc>/categories/agile/</loc>
     <lastmod>2020-03-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -138,14 +138,14 @@
   </url>
   
   <url>
-    <loc>/categories/new-product-forecasting/</loc>
-    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
+    <loc>/tags/new-product-forecasting/</loc>
+    <lastmod>2020-03-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/new-product-forecasting/</loc>
-    <lastmod>2020-03-01T00:00:00+00:00</lastmod>
+    <loc>/categories/new-product-forecasting/</loc>
+    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
