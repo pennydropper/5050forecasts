@@ -16,7 +16,7 @@ tags:
   - Supply
 draft: no
 thumbnailImagePosition: left
-thumbnailImage: /img/Retro page header.png
+thumbnailImage: /img/Retro Start Thumbnail.png
 coverImage: /img/Retro page header.png
 coverSize: partial
 metaAlignment: center
@@ -26,7 +26,7 @@ favicon: /img/favicon-32x32.png
 ---
 
 ## Introduction  
-Last week, my team applied a new approach with great success to our performance retrospective.  The approach worked so well that I’m standing up and evangalising the approach for a wider range of teams than those like our's who apply Agile.  
+Last week, my team applied a new approach with great success to our performance retrospective.  The approach worked so well that I’m standing up and evangelising the approach for a wider range of teams than those like our's who apply Agile.  
 
 ## Retrospective Goals and Objectives  
 The goal of our sprint (i.e. our 3-week activity cycle) retrospective is to improve our systems and processes to drive business value.
