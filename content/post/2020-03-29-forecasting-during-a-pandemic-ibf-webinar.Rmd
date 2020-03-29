@@ -1,0 +1,144 @@
+---
+title: Forecasting During a Pandemic - IBF Webinar
+author: James Northrop
+date: '2020-03-29'
+slug: forecasting-during-a-pandemic-ibf-webinar
+categories:
+  - demand planning and forecasting
+  - Sales and Operations Planning
+tags:
+  - Agile
+  - budget
+  - Finance
+  - forecast
+  - New Product Forecasting
+  - Sales and operation planning
+  - Supply
+  - Coronavirus
+  - COVID-19
+keywords:
+  - tech
+draft: no
+thumbnailImagePosition: left
+thumbnailImage: /img/Abe-Lincoln-in-Mask.png
+coverImage: /img/IBF-Forecasting-During-Pandemic.png
+coverSize: partial
+metaAlignment: center
+coverMeta: out
+comments: yes
+favicon: /img/favicon-32x32.png 
+---
+
+# Introduction  
+
+COVID-19 presents demand planning with plenty of challenges, though it also might present opportunities.  An example given in the introduction was of Isaac Newton, who was a mere college student at Cambridge University when the campus closed in 1665 due to the Black Plague.  While practicing the 1600’s version of social distancing, the curious and contemplative Newton formed his groundbreaking ideas on calculus, optics and gravity. These ideas were converted into theory when he returned to the reopened university in 1665. By 1667, Newton was promoted to professorship.^[https://www.washingtonpost.com/history/2020/03/12/during-pandemic-isaac-newton-had-work-home-too-he-used-time-wisely/]
+
+The [Institute of Business Planning and Forecasting](https://ibp.org){target="_blank"} organised a webinar on [“Forecasting During a Pandemic”](https://ibf.org/events/webinar19-03-2020){target="_blank"}.  Most of the webinar, moderated by Eric Wilson from IBP, featured these 3 highly credentialed Demand Managers:
+
+**Dustin Deal**  
+Director of North America Business Operations, Motorola  
+Lenovo
+
+**Patrick Bower**  
+Sr. Director, Global Supply Chain Planning & Customer Service  
+Combe Inc.  
+
+**Andrew D. Schneider, ACPF**  
+Sr. Transformation Manager of Corporate Quality  
+Medtronic
+
+Additional insights were offered at the start by **John Hellriegel CPF**, a Sr. Advisor/Facilitator with the Institute of Business Forecasting & Planning.
+
+# The Challenges 
+
+The scale of the health and economic impacts of this coronavirus are obvious.  However the implications on businesses and supply chains will vary under a number of dimensions and drivers:  
+
+1.  Global macroeconomic activity, including oil price  
+2.  Supply issues  
+3.  Country level drivers, particularly stimulus packages  
+4.  Demand issues  
+
+Obviously, the duration and the shape (U-shaped or V-shaped) is uncertain, though the quoted average “recession duration” was 13 months.  Demand Planning’s goal in handling these changes is as much about helping businesses to make the best decisions as it is to optimise forecast accuracy.
+
+# Overall Approach: Simple vs Sophisticated 
+
+There was a spread of positions on whether to adopt a simple or sophisticated response to the challenge. Unfortunately, this contrast wasn’t discussed overtly.
+
+## The Simple Response  
+
+Patrick Bower’s approach was to “take a breath and make more judicious changes”.  He doubts how much “demand planning” can occur so early in the crisis:  
+
+* There’s a limited amount of data to work with.
+* Observe week-to-week what’s happening.
+* Prioritise demand control processes.
+* Keep assumptions simple and review regularly.
+
+How can demand planners effectively “clean” data given the uncertainty over the “new normal”?
+
+Demand control processes (S&OE) are even more important in this period: Coombe’s twice-weekly plan reviews are likely to occur even more frequently.
+
+## The Sophisticated Response  
+
+The more sophisticated response advocated a number of suggestions:  
+
+1.  Review S&OP processes to adapt to the current challenge.  
+2.  Ramp up data collection and analysis, both inside the supply chain and externally.  
+3.  Recluster products and apply more sophisticated ABC classification.  
+4.  Double down efforts to extract the true demand from the sales figures.  For example, ATP can distort the true demand picture: ensure that lost and substitute product sales are captured.  
+
+# Data, Information and Insights  
+
+Data was a recurring theme through the webinar, approached from a number of directions.
+
+**Journal Everything**  
+All 3 practitioners were unanimous in recommending that demand planners journal “everything” for later reference.  Examples of what to journal included:  
+
+* When (US) states progress into and out of lockdown  
+* Back orders.  
+* Order cancellation.  
+* Infection rates.  
+
+All of this information could be useful later when interpreting data.
+
+**Assumptions**  
+Capturing assumptions, more than ever, are crucial.  Just as crucial is regularly reviewing and updating those assumptions.  One example given in the webinar was around toilet paper; it’s safe to assume that toilet paper consumption is remaining steady even though the product is flying through retail registers.
+
+**Supply Chain and Market Information**  
+Acquire supply chain data around supply disruptions and channel inventory and factor this into the updated sales and operations plans.  Mine data on competitors, their supply positions and marketing activity.
+
+**Become Data Brokers**  
+Above all, demand planners should pitch themselves as data brokers for the business, ready to supply business stakeholders with any of the data listed above.  Above all, demand planners should prepare to assert themselves around updated plans as they may have data that other stakeholders simply don’t hold.
+
+# Sales and Operations Planning  
+
+The 3 experts offered the following advice around Sales and Operations Planning.
+
+**Risk Mitigation**  
+Given the uncertainty and fluidity of the COVID-19 epidemic, risk mitigation is vital.  A specific risk mentioned was order cancellations: it’s vital that businesses do not overexpose themselves to this risk that results in overcommitting to supply.
+
+**Scenario Development**  
+As data brokers, demand planning has a key opportunity in influencing scenario development and to influence strategy.  For example, Hurricane Maria saw some brewers switch to bottling emergency relief water.
+
+**Shape Demand**  
+Demand planners may have valuable insights into how to tweak marketing and sales plans, i.e. shape demand, to mitigate supply risks and exploit newly emerging opportunities.
+
+# Remote Working  
+The experts concurred around the challenges of running S&OP meetings when working remotely.  All of the experts recommended appointing a note taker, distinct from the meeting mediator.
+
+Another suggestion was to consider what interactions work just as well off-line.  Two suggestions listed included Delphi processes and taking advantage of Outlook voting buttons.
+
+One surprising item missing from their suggestions was to use cloud-based kanban boards, such as Jira (Atlassian) and Trello to manage meeting agendas and discussions.  Another suggestion I offer is online retrospective tools such as Retrium, outlined in my [recent blog post on Retrospective Reviews for Process Improvement](../../../2020/03/retrospective-reviews-for-process-improvement-a-retrium-case-study/){target="_blank"}.
+
+# Final Words
+Key advice at the end of the webinar included the following:
+
+* Join the [Institute of Business Forecasting and Planning](https://IBF.org){target="_blank"}  
+* Become data brokers.  Data may need restructuring to extract insights.  
+* Double down on efforts to understand customers and their demand drivers.  
+* Use this as an opportunity to learn.  Reach out to experienced hands and ask what happened during previous recessions.  
+* Stay calm in the chaos, a la George Bailey in “It’s a Wonderful Life”.
+
+The final word was a neat suggested mantra for demand planners during this COVID-19 pandemic:
+
+>**Keep Calm and Plan On**^[Andrew Schneider]
+
