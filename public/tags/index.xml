@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Making 50-50 Demand Forecasts</title>
@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Making 50-50 Demand Forecasts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 24 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,36 +14,45 @@
     <item>
       <title>Agile</title>
       <link>/tags/agile/</link>
-      <pubDate>Sun, 29 Mar 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/agile/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Beer Forecasting</title>
-      <link>/tags/beer-forecasting/</link>
-      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      <title>Continuous Improvement</title>
+      <link>/tags/continuous-improvement/</link>
+      <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/beer-forecasting/</guid>
+      <guid>/tags/continuous-improvement/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Budget</title>
+      <title>Sales and operation planning</title>
+      <link>/tags/sales-and-operation-planning/</link>
+      <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/sales-and-operation-planning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Value Chain</title>
+      <link>/tags/value-chain/</link>
+      <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/value-chain/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>budget</title>
       <link>/tags/budget/</link>
       <pubDate>Sun, 29 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/budget/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Continuous Improvement</title>
-      <link>/tags/continuous-improvement/</link>
-      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/continuous-improvement/</guid>
       <description></description>
     </item>
     
@@ -57,20 +66,11 @@
     </item>
     
     <item>
-      <title>Covid 19</title>
+      <title>COVID-19</title>
       <link>/tags/covid-19/</link>
       <pubDate>Sun, 29 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/covid-19/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Excel</title>
-      <link>/tags/excel/</link>
-      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/excel/</guid>
       <description></description>
     </item>
     
@@ -84,16 +84,7 @@
     </item>
     
     <item>
-      <title>Fmcg</title>
-      <link>/tags/fmcg/</link>
-      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/fmcg/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Forecast</title>
+      <title>forecast</title>
       <link>/tags/forecast/</link>
       <pubDate>Sun, 29 Mar 2020 00:00:00 +0000</pubDate>
       
@@ -102,34 +93,7 @@
     </item>
     
     <item>
-      <title>Management</title>
-      <link>/tags/management/</link>
-      <pubDate>Tue, 14 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/management/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mcmc</title>
-      <link>/tags/mcmc/</link>
-      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/mcmc/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Meta Data</title>
-      <link>/tags/meta-data/</link>
-      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/meta-data/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>New Product Forecasting</title>
+      <title>New product forecasting</title>
       <link>/tags/new-product-forecasting/</link>
       <pubDate>Sun, 29 Mar 2020 00:00:00 +0000</pubDate>
       
@@ -138,7 +102,70 @@
     </item>
     
     <item>
-      <title>Prediction Intervals</title>
+      <title>Supply</title>
+      <link>/tags/supply/</link>
+      <pubDate>Sun, 29 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/supply/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Stakeholder management</title>
+      <link>/tags/stakeholder-management/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/stakeholder-management/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Beer forecasting</title>
+      <link>/tags/beer-forecasting/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/beer-forecasting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Excel</title>
+      <link>/tags/excel/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/excel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>FMCG</title>
+      <link>/tags/fmcg/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/fmcg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MCMC</title>
+      <link>/tags/mcmc/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/mcmc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Meta-data</title>
+      <link>/tags/meta-data/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/meta-data/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Prediction intervals</title>
       <link>/tags/prediction-intervals/</link>
       <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
       
@@ -156,7 +183,7 @@
     </item>
     
     <item>
-      <title>Sales Planning</title>
+      <title>Sales planning</title>
       <link>/tags/sales-planning/</link>
       <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
       
@@ -165,34 +192,7 @@
     </item>
     
     <item>
-      <title>Sales and Operation Planning</title>
-      <link>/tags/sales-and-operation-planning/</link>
-      <pubDate>Sun, 29 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/sales-and-operation-planning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Stakeholder Management</title>
-      <link>/tags/stakeholder-management/</link>
-      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/stakeholder-management/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Supply</title>
-      <link>/tags/supply/</link>
-      <pubDate>Sun, 29 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/supply/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Supply Planning</title>
+      <title>supply planning</title>
       <link>/tags/supply-planning/</link>
       <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
       
@@ -201,16 +201,7 @@
     </item>
     
     <item>
-      <title>Target</title>
-      <link>/tags/target/</link>
-      <pubDate>Sat, 23 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/target/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Uncertainty</title>
+      <title>uncertainty</title>
       <link>/tags/uncertainty/</link>
       <pubDate>Fri, 08 Nov 2019 00:00:00 +0000</pubDate>
       
@@ -219,11 +210,20 @@
     </item>
     
     <item>
-      <title>Value Chain</title>
-      <link>/tags/value-chain/</link>
-      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      <title>Management</title>
+      <link>/tags/management/</link>
+      <pubDate>Tue, 14 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/value-chain/</guid>
+      <guid>/tags/management/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>target</title>
+      <link>/tags/target/</link>
+      <pubDate>Sat, 23 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/target/</guid>
       <description></description>
     </item>
     

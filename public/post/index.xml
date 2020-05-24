@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Making 50-50 Demand Forecasts</title>
@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Making 50-50 Demand Forecasts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 24 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>What! So What! Now What!</title>
+      <link>/2020/05/what-so-what-now-what.en-us/</link>
+      <pubDate>Sun, 24 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/05/what-so-what-now-what.en-us/</guid>
+      <description>Introduction Here’s some simple advice that, once said, makes so much sense that I wonder if it really needs saying.
+When you’re delivering a key message or report in a work environment, consider adopting the “What, So What, Now What” framework.
+Take, as an example, a demand review presentation when the Demand Manager presents the update. If you’re unfamiliar with and S&amp;amp;OP structure, the objective of the monthly demand review is to achieve consensus on sales plans and forecasts that are then published to the broader business.</description>
+    </item>
     
     <item>
       <title>Forecasting During a Pandemic - IBF Webinar</title>
@@ -27,8 +38,7 @@
       
       <guid>/2020/03/retrospective-reviews-for-process-improvement-a-retrium-case-study/</guid>
       <description>Introduction Last week, my team applied a new approach with great success to our performance retrospective. The approach worked so well that I’m standing up and evangelising the approach for a wider range of teams than those like our’s who apply Agile.
- Retrospective Goals and Objectives The goal of our sprint (i.e. our 3-week activity cycle) retrospective is to improve our systems and processes to drive business value.
-The objectives or our retrospectives are to identify what from our previous sprint that worked well and what didn’t work well.</description>
+ Retrospective Goals and Objectives The goal of our sprint (i.e. our 3-week activity cycle) retrospective is to improve our systems and processes to drive business value.</description>
     </item>
     
     <item>
@@ -77,8 +87,7 @@ While I’m yet to find data on the historical growth of craft beers in Australi
       <description>Which is the best department to oversee Demand Planning: Sales, Supply or Finance? This question, often asked, lends itself to my experience of at least 2 years under each of these departments within FMCG businesses.
  Finance from 2006 to 2008
  Supply from 2008 to 2011
- Sales from 2011 to 2015  This blog post, mixing my own observations with my own opinions, covers the following areas:
-The role of demand planning Impressions while under Finance, Supply and Sales Which department should oversee demand planning A key consideration to appointing a demand manager The final word - Sales  Demand Planning’s role</description>
+ Sales from 2011 to 2015  This blog post, mixing my own observations with my own opinions, covers the following areas:</description>
     </item>
     
     <item>
