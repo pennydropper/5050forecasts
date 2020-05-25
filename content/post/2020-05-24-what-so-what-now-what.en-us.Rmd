@@ -29,20 +29,20 @@ Here’s some simple advice that, once said, makes so much sense that I wonder i
 
 When you’re delivering a key message or report in a work environment, consider adopting the **“What, So What, Now What”** framework.
 
-Take, as an example, a demand review presentation when the Demand Manager presents the update.  If you’re unfamiliar with and S&OP structure, the objective of the monthly demand review is to achieve consensus on sales plans and forecasts that are then published to the broader business.
+Take, as an example, a demand review presentation when the Demand Manager presents the demand plan update.  If you’re unfamiliar with the S&OP structure, the objective of the monthly demand review is to achieve consensus on sales plans and forecasts that are then published to the broader business.
 
 **Start with the What**  
 Present unambiguous facts with the appropriate level of detail:  
 
-- How have recent sales compared against forecasts and business commitments.
-- How have recent sales activity performed against assumptions.
-- How has the total market performed against assumptions.
+- How recent sales compared against forecasts and business commitments.
+- How recent sales activity performed against assumptions.
+- How the total market performed against assumptions.
 - Highlight key brands or channels as appropriate.
 
 It’s important that the “What” section presents irrefutable facts that are supported by data where appropriate.  It’s also important to frame the facts at a level of detail appropriate for the audience and the allocated time.
 
-Then, **So What**  
-The “So What” section for a demand review presents the business implications.  Ideally, the business implications are framed in business terms, for example: gross sales revenue; net margin; total volume; market share.  
+**So What**  
+Generally, the "So What" presents the implications of the "What" in terms of people, process, technology or economics.  The “So What” section for a demand review particularly presents the business / commercial implications.  Ideally, business implications are framed in business terms, for example: gross sales revenue; net margin; total volume; market share.  
 
 - What are the updated assumptions at a market, brand and product level, where relevant?
 - Along the lines of this point, what’s changed with the planned sales activity.
@@ -56,7 +56,7 @@ The “Now What” section has 2 main distinct objectives:
 1. Present recommendations requiring senior management decisions.
 2. Present a summary of highlights of the next period’s plan.
 
-In the Agile Showcase presentations, the “Now What” agenda item signposts the next steps taken from the backlog, or present recommendations to the product owners for strategy refinements.
+In the Agile Showcase presentations, the “Now What” agenda item presents the next steps taken from the backlog, or presents recommendations to the product owners for strategy refinements.
 
 **Alternatives to the What / So What / Now What Framework**  
 The What / So What / Now What framework is just one of many frameworks available to help deliver key messages. Other well-known frameworks that work well in the right applications include:  
